@@ -1,0 +1,49 @@
+{% load i18n %}
+
+<div class="modal fade" id="newsFormModal" tabindex="-1" role="dialog" aria-labelledby="newsFormModalTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">{% trans "Поле!" %}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+
+          <div class="container">
+            <ul class="nav nav-pills">
+              <li class="active"><a data-toggle="pill" href="#home">Home</a></li>
+              <li><a data-toggle="pill" href="#menu1">Menu 1</a></li>
+            </ul>
+  
+            <div class="tab-content">
+              <div id="home" class="tab-pane fade in active">
+                <h3>HOME</h3>
+              </div>
+              <div id="menu1" class="tab-pane fade">
+                <h3>Menu 1</h3>
+              </div>
+            </div>
+          </div>
+        </button>
+      </div>
+
+
+
+
+      <div class="modal-body">
+        <form id="postNewsForm" role="form" method="post" action="#" onsubmit="return false">
+          {% csrf_token %}
+          <div class="form-group">
+            <textarea id="newsInput" name="post" rows="3" class="form-control" maxlength="1000"></textarea>
+            <span id="newsCounter" class="pull-right">1000</span>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="postNews" class="btn btn-primary">
+          <i class="fa fa-paper-plane" aria-hidden="true"></i> {% trans 'Опубликовать новость' %}
+        </button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">{% trans 'Отмена' %}</button>
+      </div>
+    </div>
+  </div>
+</div>

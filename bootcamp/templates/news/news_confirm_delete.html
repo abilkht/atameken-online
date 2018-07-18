@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Удалить новость" %}{% endblock %}
+
+{% block content %}
+<h1>{% trans "Удалить выложенный пост" %}</h1>
+
+<p>{% trans 'Вы уверены что хотите удалить новость?' %}</p>
+
+<form method="post" action="{% url 'news:delete_news' news.pk %}">
+  {% csrf_token %}
+  <button class="btn btn-danger" type="submit">{% trans 'Удалить' %}</button>
+</form>
+
+
+{% endblock %}

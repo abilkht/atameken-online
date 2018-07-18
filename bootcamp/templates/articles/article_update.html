@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+{% load crispy_forms_tags %}
+
+{% block head %}
+{% endblock head %}
+
+{% block content %}
+
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="{% url 'news:list' %}">{% trans 'Домой' %}</a></li>
+      <li class="breadcrumb-item"><a href="{% url 'articles:drafts' %}">{% trans 'Черновики' %}</a></li>
+      <li class="breadcrumb-item active" aria-current="page">{% trans 'Обновить блог' %}</li>
+    </ol>
+  </nav>
+  <form action="{% url 'articles:edit_article' form.instance.pk %}" enctype="multipart/form-data"  id="article-form" method="post" role="form">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <div class="form-group">
+      <button type="button" class="btn btn-primary update">{% trans 'Обновить' %}</button>
+      <button type="button" class="btn btn-default draft">{% trans 'Сохранить как черновик' %}</button>
+      <a href="{% url 'articles:drafts' %}" class="btn btn-default">{% trans 'Отмена' %}</a>
+    </div>
+  </form>
+  {{ form.media }}
+
+{% endblock content %}
+
+{% block modal %}
+  <script src="{% static 'js/articles.js' %}"></script>
+{% endblock modal %}
