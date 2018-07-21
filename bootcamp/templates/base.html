@@ -5,9 +5,9 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Atameken ESN{% endblock title %}</title>
-    <link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}">
-    <meta name="description" content="An enterprise Social Network">
-    <meta name="author" content="Sebastian Reyes">
+    <link rel="icon" type="image/png" href="{% static 'img/atahome.png' %}">
+    <meta name="description" content="An Enterprise Social Network">
+    <meta name="author" content="AT">
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -41,11 +41,11 @@
                   </li>
                 </ul>
                 <ul class="navbar-nav mr-auto">
-                  <li class="nav-item"><a class="nav-link" href="{% url 'news:list' %}">{% trans 'Лента' %} <span class="sr-only">(current)</span></a></li>
-                  <li class="nav-item"><a class="nav-link" href="{% url 'articles:list' %}">Блог</a></li>
-                  <li class="nav-item"><a class="nav-link" href="{% url 'qa:index_noans' %}">{% trans 'Форум' %}</a></li>
+                  <li class="nav-item"><a class="nav-link" href="{% url 'news:list' %}">{% trans 'Новости' %} <span class="sr-only">(current)</span></a></li>
+                  <li class="nav-item"><a class="nav-link" href="{% url 'articles:list' %}">Информация</a></li>
+                  <li class="nav-item"><a class="nav-link" href="{% url 'qa:index_noans' %}">{% trans 'Сообщество' %}</a></li>
                   <li class="nav-item"><a class="nav-link" href="{% url 'messager:messages_list' %}">{% trans 'Чат' %}</a></li>
-                  <li class="nav-item"><a class="nav-link" href="{% url 'users:list' %}">{% trans 'Список' %}</a></li>
+                  <li class="nav-item"><a class="nav-link" href="{% url 'users:list' %}">{% trans 'Компании' %}</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                   {% if not hide_search %}

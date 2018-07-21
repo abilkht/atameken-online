@@ -20,7 +20,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('timestamp', models.DateTimeField(auto_now_add=True)),
                 ('uuid_id', models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False)),
-                ('content', models.TextField(max_length=280)),
+                ('content', models.TextField(max_length=1000)),
                 ('reply', models.BooleanField(default=False, verbose_name='Is a reply?')),
                 ('liked', models.ManyToManyField(blank=True, related_name='liked_news', to=settings.AUTH_USER_MODEL)),
                 ('parent', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='thread', to='news.News')),

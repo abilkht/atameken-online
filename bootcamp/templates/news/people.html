@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load render_table from django_tables2 %}
+
+{% block head_title %}{% trans "list" %}{% endblock %}
+
+{% block content %}
+<h1>{% trans "List" %}</h1>
+
+  <button class="btn btn-danger" type="submit">{% trans 'Удалить' %}</button>
+
+
+
+{% endblock %}

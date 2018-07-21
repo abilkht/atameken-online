@@ -1,6 +1,7 @@
 from django.conf.urls import url
 
 from bootcamp.news import views
+from .views import people
 
 app_name = 'news'
 urlpatterns = [
@@ -12,4 +13,5 @@ urlpatterns = [
     url(r'^get-thread/$', views.get_thread, name='get_thread'),
     url(r'^post-comment/$', views.post_comment, name='post_comments'),
     url(r'^update-interactions/$', views.update_interactions, name='update_interactions'),
+    url(r'^people/$', views.people),
 ]

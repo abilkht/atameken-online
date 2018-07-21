@@ -1,5 +1,5 @@
 {% load i18n %}
-
+{% load render_table from django_tables2 %}
 <div class="modal fade" id="newsFormModal" tabindex="-1" role="dialog" aria-labelledby="newsFormModalTitle" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -10,13 +10,13 @@
 
           <div class="container">
             <ul class="nav nav-pills">
-              <li class="active"><a data-toggle="pill" href="#home">Home</a></li>
+              <li class="active"><a data-toggle="pill" href="people.html">Home</a></li>
               <li><a data-toggle="pill" href="#menu1">Menu 1</a></li>
             </ul>
   
             <div class="tab-content">
-              <div id="home" class="tab-pane fade in active">
-                <h3>HOME</h3>
+              <div id="people" class="tab-pane fade in active">
+                
               </div>
               <div id="menu1" class="tab-pane fade">
                 <h3>Menu 1</h3>

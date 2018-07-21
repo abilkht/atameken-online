@@ -5,10 +5,26 @@ from django.template.loader import render_to_string
 from django.urls import reverse_lazy
 from django.utils.translation import ugettext_lazy as _
 from django.views.generic import ListView, DeleteView
+from django.shortcuts import render
+from django_tables2 import RequestConfig
+from .models import Person
+from .tables import PersonTable
+import django_tables2 as tables
 
 from bootcamp.helpers import ajax_required, AuthorRequiredMixin
 from bootcamp.news.models import News
 
+class PersonTable(tables.Table):
+    class Meta:
+        model = Person
+        attrs = {"class": "paleblue"}
+        template_name = 'django_tables2/bootstrap.html'
+
+def people(request):
+    table = PersonTable(Person.objects.all())
+    RequestConfig(request).configure(table)
+    smth = render_to_string('news/people.html', {'table': table})
+    return HttpResponse(smth)
 
 class NewsListView(LoginRequiredMixin, ListView):
     """A really simple ListView, with some JS magic on the UI."""
@@ -35,7 +51,7 @@ def post_news(request):
         user = request.user
         post = request.POST['post']
         post = post.strip()
-        if len(post) > 0 and len(post) <= 280:
+        if len(post) > 0 and len(post) <= 1000:
             posted = News.objects.create(
                 user=user,
                 content=post,
@@ -49,9 +65,9 @@ def post_news(request):
             return HttpResponse(html)
 
         else:
-            lenght = len(post) - 280
+            lenght = len(post) - 1000
             return HttpResponseBadRequest(
-                content=_(f'Text is {lenght} characters longer than accepted.'))
+                content=_(f'Текст {lenght} слишком большой или пустой.'))
 
     else:
         return HttpResponseBadRequest(content=_('Wrong request type.'))

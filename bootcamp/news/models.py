@@ -2,6 +2,7 @@ import uuid
 
 from django.conf import settings
 from django.db import models
+from django.forms import ModelForm
 from django.urls import reverse
 from django.utils.translation import ugettext_lazy as _
 
@@ -23,7 +24,7 @@ class News(models.Model):
     timestamp = models.DateTimeField(auto_now_add=True)
     uuid_id = models.UUIDField(
         primary_key=True, default=uuid.uuid4, editable=False)
-    content = models.TextField(max_length=280)
+    content = models.TextField(max_length=1000)
     liked = models.ManyToManyField(settings.AUTH_USER_MODEL,
         blank=True, related_name="liked_news")
     reply = models.BooleanField(verbose_name=_("Is a reply?"), default=False)
@@ -101,3 +102,7 @@ class News(models.Model):
 
     def get_likers(self):
         return self.liked.all()
+
+
+class Person(models.Model):
+    name = models.CharField(max_length=100, verbose_name='full name')
