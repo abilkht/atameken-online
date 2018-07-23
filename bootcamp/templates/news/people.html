@@ -7,8 +7,13 @@
 {% block content %}
 <h1>{% trans "List" %}</h1>
 
-  <button class="btn btn-danger" type="submit">{% trans 'Удалить' %}</button>
+  <button class="btn btn-danger" type="submit">{% trans 'asd' %}</button>
+  <form action="/your-name/" method="post">
+    <label for="your_name">Your name: </label>
+    <input id="your_name" type="text" name="your_name" maxlength="100" required="" value="{{ current_name }}">
+    <input type="submit" value="OK">
+</form>
 
-
+{% render_table table %}
 
 {% endblock %}

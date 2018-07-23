@@ -10,7 +10,7 @@
 <h1>{% trans "E-mail" %}</h1>
 
 {% if user.emailaddress_set.all %}
-<p>{% trans 'Данный e-mail адрес связаны с :' %}</p>
+<p>{% trans 'Данный e-mail адрес связан с :' %}</p>
 
 <form action="{% url 'account_email' %}" class="email_list" method="post">
 {% csrf_token %}
@@ -24,9 +24,9 @@
 
     {{ emailaddress.email }}
     {% if emailaddress.verified %}
-    <span class="verified">{% trans "Подтвержденно" %}</span>
+    <span class="verified">{% trans "Подтверждено" %}</span>
     {% else %}
-    <span class="unverified">{% trans "Неподтвержденно" %}</span>
+    <span class="unverified">{% trans "Не подтверждено" %}</span>
     {% endif %}
     {% if emailaddress.primary %}<span class="primary">{% trans "Primary" %}</span>{% endif %}
   </label>

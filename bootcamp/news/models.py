@@ -2,7 +2,6 @@ import uuid
 
 from django.conf import settings
 from django.db import models
-from django.forms import ModelForm
 from django.urls import reverse
 from django.utils.translation import ugettext_lazy as _
 

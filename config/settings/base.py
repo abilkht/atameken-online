@@ -250,8 +250,8 @@ ACCOUNT_EMAIL_REQUIRED = True
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
-#ACCOUNT_ADAPTER = 'bootcamp.users.adapters.AccountAdapter'
-ACCOUNT_ADAPTER = 'invitations.models.InvitationsAdapter'
+ACCOUNT_ADAPTER = 'bootcamp.users.adapters.AccountAdapter'
+#ACCOUNT_ADAPTER = 'invitations.models.InvitationsAdapter'
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
 SOCIALACCOUNT_ADAPTER = 'bootcamp.users.adapters.SocialAccountAdapter'
 

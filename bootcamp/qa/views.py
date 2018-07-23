@@ -62,7 +62,7 @@ class CreateQuestionView(LoginRequiredMixin, CreateView):
     """
     form_class = QuestionForm
     template_name = "qa/question_form.html"
-    message = _("Your question has been created.")
+    message = _("Ваш вопрос создан.")
 
     def form_valid(self, form):
         form.instance.user = self.request.user
@@ -79,7 +79,7 @@ class CreateAnswerView(LoginRequiredMixin, CreateView):
     """
     model = Answer
     fields = ["content", ]
-    message = _("Thank you! Your answer has been posted.")
+    message = _("Спасибо! Ваш ответ опубликован.")
 
     def form_valid(self, form):
         form.instance.user = self.request.user

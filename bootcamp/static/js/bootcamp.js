@@ -104,7 +104,7 @@ $(function () {
         console.error("Disconnected from " + ws_path);
     };
 
-    // Listen the WebSocket bridge created throug django-channels library.
+    // Listen the WebSocket bridge created through django-channels library.
     webSocket.listen(function(event) {
         switch (event.key) {
             case "notification":

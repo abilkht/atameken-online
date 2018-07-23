@@ -48,7 +48,7 @@ $(function () {
     // Counts textarea characters to provide data to user.
     $("#newsInput").keyup(function () {
         var charCount = $(this).val().length;
-        $("#newsCounter").text(280 - charCount);
+        $("#newsCounter").text(1000 - charCount);
     });
 
     $("#replyInput").keyup(function () {

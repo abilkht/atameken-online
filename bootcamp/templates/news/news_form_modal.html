@@ -10,13 +10,13 @@
 
           <div class="container">
             <ul class="nav nav-pills">
-              <li class="active"><a data-toggle="pill" href="people.html">Home</a></li>
-              <li><a data-toggle="pill" href="#menu1">Menu 1</a></li>
+              <li class="active"><a href="{% url 'news:people' %}">Home</a></li>
+              <li><a data-toggle="pill" href="#postNewsForm">Menu 1</a></li>
             </ul>
   
             <div class="tab-content">
               <div id="people" class="tab-pane fade in active">
-                
+
               </div>
               <div id="menu1" class="tab-pane fade">
                 <h3>Menu 1</h3>
@@ -32,10 +32,25 @@
       <div class="modal-body">
         <form id="postNewsForm" role="form" method="post" action="#" onsubmit="return false">
           {% csrf_token %}
-          <div class="form-group">
-            <textarea id="newsInput" name="post" rows="3" class="form-control" maxlength="1000"></textarea>
-            <span id="newsCounter" class="pull-right">1000</span>
-          </div>
+
+            <div class="form-group">
+              <label for="newsInput">Первая:</label>
+              <textarea id="newsInput" name="post1" rows="3" class="form-control" maxlength="1000"></textarea>
+              <span id="newsCounter" class="pull-right">1000</span>
+            </div>
+
+            <div class="form-group">
+              <label for="newsInput1">Вторая:</label>
+              <textarea id="newsInput1" name="post2" rows="3" class="form-control" maxlength="1000"></textarea>
+              <span id="newsCounter" class="pull-right">1000</span>
+            </div>
+
+            <div class="form-group">
+              <label for="newsInput2">Третья:</label>
+              <textarea id="newsInput2" name="post3" rows="3" class="form-control" maxlength="1000"></textarea>
+              <span id="newsCounter" class="pull-right">1000</span>
+            </div>
+
         </form>
       </div>
       <div class="modal-footer">

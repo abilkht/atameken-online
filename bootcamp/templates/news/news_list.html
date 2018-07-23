@@ -12,21 +12,17 @@
     <!-- Container -->
     <div class="container" style="margin-top:15px">
       <div class="row">
-        <div class="col-md-3">
-          <!-- <h1>{% trans 'Лента' %}</h1> -->
-         <!--  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newsFormModal">
-            <i class="fa fa-share-alt" aria-hidden="true"></i> {% trans 'Опубликовать' %}
-          </button> -->
+        <div class="col-md-0">
         </div>
-        <div class="col-md-6">
+        <div class="col-md-12">
           <div class="container">
             <div class="row">
               <div class="col">
-            <h3>{% trans 'Последние новости' %}</h3>
+                <a href="{% url 'news:people' %}"><h3>{% trans 'Последние новости' %}</h3></a>
               </div>
         
          
-              <div class="col col-lg-3" style="margin-right:35px">
+              <div class="col col-md-3" style="margin-right:35px">
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newsFormModal">
                   <i class="fa fa-share-alt" aria-hidden="true"></i> {% trans 'Опубликовать' %}
                 </button>

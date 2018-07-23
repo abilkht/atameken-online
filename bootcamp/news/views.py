@@ -8,23 +8,24 @@ from django.views.generic import ListView, DeleteView
 from django.shortcuts import render
 from django_tables2 import RequestConfig
 from .models import Person
-from .tables import PersonTable
 import django_tables2 as tables
 
 from bootcamp.helpers import ajax_required, AuthorRequiredMixin
 from bootcamp.news.models import News
 
+
 class PersonTable(tables.Table):
     class Meta:
         model = Person
-        attrs = {"class": "paleblue"}
         template_name = 'django_tables2/bootstrap.html'
+
 
 def people(request):
     table = PersonTable(Person.objects.all())
     RequestConfig(request).configure(table)
-    smth = render_to_string('news/people.html', {'table': table})
-    return HttpResponse(smth)
+    smth = render(request, 'news/people.html', {'table': table})
+    return smth
+
 
 class NewsListView(LoginRequiredMixin, ListView):
     """A really simple ListView, with some JS magic on the UI."""
@@ -50,8 +51,8 @@ def post_news(request):
     if request.method == 'POST':
         user = request.user
         post = request.POST['post']
-        post = post.strip()
-        if len(post) > 0 and len(post) <= 1000:
+
+        if 0 < len(post) <= 1000:
             posted = News.objects.create(
                 user=user,
                 content=post,
@@ -65,9 +66,9 @@ def post_news(request):
             return HttpResponse(html)
 
         else:
-            lenght = len(post) - 1000
+            length = len(post) - 1000
             return HttpResponseBadRequest(
-                content=_(f'Текст {lenght} слишком большой или пустой.'))
+                content=_(f'Текст {length} слишком большой или пустой.'))
 
     else:
         return HttpResponseBadRequest(content=_('Wrong request type.'))
@@ -77,7 +78,7 @@ def post_news(request):
 @ajax_required
 def like(request):
     """Function view to receive AJAX, returns the count of likes a given news
-    has recieved."""
+    has received."""
     if request.method == 'POST':
         news_id = request.POST['news']
         news = News.objects.get(pk=news_id)
