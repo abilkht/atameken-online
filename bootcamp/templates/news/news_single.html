@@ -1,7 +1,6 @@
 {% load i18n %}
 {% load humanize static %}
 {% load thumbnail %}
-
 <li class="infinite-item card" news-id="{{ news.uuid_id }}">
   <div class="card-body">
     <div class="profile-picture">
@@ -23,6 +22,8 @@
         </strong>
       </p>
       <p>{{ news }}</p>
+      <p>{{ request }}</p>
+      <p>{{ news2 }}</p>
       {% if news.image %}
         <img class="card-img-top" src="{{ news.image }}" alt="Фото карточки">
       {% endif %}

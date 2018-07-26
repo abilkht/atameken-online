@@ -10,12 +10,14 @@
 {% block content %}
 
   <div class="page-header">
-    <h1>{% trans 'Участники' %}</h1>
+    <center><h1>{% trans 'Пользователи <b>Atameken ESN<b>' %}</h1></center>
   </div>
 
-  <ul class="user-profiles-list">
+  <ul class="user-profiles-list card" style="background-color: white;
+  box-shadow: 0px 5px 20px #555;">
     {% for user in user_list %}
-      <li>
+      <li class="rounded" style="background-color: white;
+   transition: all 0.2s;">
         <div class="user-avatar">
           <a href="{% url 'users:detail' user.username  %}" class="user-avatar">
             {% thumbnail user.picture "x80" as im %}
@@ -48,3 +50,9 @@
   </ul>
 
 {% endblock content %}
+
+
+
+
+
+

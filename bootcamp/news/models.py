@@ -19,13 +19,16 @@ class News(models.Model):
         settings.AUTH_USER_MODEL, null=True, related_name="publisher",
         on_delete=models.SET_NULL)
     parent = models.ForeignKey("self", blank=True,
-        null=True, on_delete=models.CASCADE, related_name="thread")
+                               null=True, on_delete=models.CASCADE, related_name="thread")
     timestamp = models.DateTimeField(auto_now_add=True)
     uuid_id = models.UUIDField(
         primary_key=True, default=uuid.uuid4, editable=False)
     content = models.TextField(max_length=1000)
+    content_two = models.TextField(max_length=1000, default='content_two')
+    content_three = models.TextField(max_length=1000, default='content_three')
+    content_four = models.TextField(max_length=1000, default='content_four')
     liked = models.ManyToManyField(settings.AUTH_USER_MODEL,
-        blank=True, related_name="liked_news")
+                                   blank=True, related_name="liked_news")
     reply = models.BooleanField(verbose_name=_("Is a reply?"), default=False)
 
     class Meta:
@@ -41,11 +44,11 @@ class News(models.Model):
         if not self.reply:
             channel_layer = get_channel_layer()
             payload = {
-                    "type": "receive",
-                    "key": "additional_news",
-                    "actor_name": self.user.username
+                "type": "receive",
+                "key": "additional_news",
+                "actor_name": self.user.username
 
-                }
+            }
             async_to_sync(channel_layer.group_send)('notifications', payload)
 
     def get_absolute_url(self):
@@ -101,7 +104,3 @@ class News(models.Model):
 
     def get_likers(self):
         return self.liked.all()
-
-
-class Person(models.Model):
-    name = models.CharField(max_length=100, verbose_name='full name')

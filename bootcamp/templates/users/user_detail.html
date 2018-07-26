@@ -10,14 +10,24 @@
 
 {% block content %}
   <div class="container">
+    <div class="row" style="margin:auto">
+      <div class="col-sm-3" style="display: flex;">
+        <div card="card text-center">
+          <div class="card-body">
+            {% thumbnail object.picture "x150" as im %}
+            <img src="{{ im.url }}" alt="Picture Profile" id="pic" class="pull-left rounded-circle">
+            {% empty %}
+            <img class="pull-center" src="{% static 'img/user.png' %}" height="180px" alt="No Profile Picture" />
+              {% endthumbnail %}
+            </div>
+            <div class="card-body">
+            <a class="btn btn-dark pull-center" style="margin-top:5px" href="{% url 'users:update' %}">{% trans 'Редактировать' %}</a>
+          </div>
+        </div>
+  </div>
 
-    {% thumbnail object.picture "x250" as im %}
-      <img src="{{ im.url }}" alt="Picture Profile" id="pic">
-    {% empty %}
-      <img class="pull-right" src="{% static 'img/user.png' %}" height="250px" alt="No Profile Picture" />
-    {% endthumbnail %}
+    <div id="contact-info" class="col-sm-9 vcard">
 
-    <div id="contact-info" class="vcard">
         <h1 class="fn">
           {{ object.username|title }}
           {% if object.short_bio %}
@@ -35,8 +45,9 @@
           {% if object.location %}
             <i class="fa fa-map-marker" aria-hidden="true"></i>  {{ object.location }} <br />
           {% endif %}
+
         </p>
-    </div>
+
     <div id="objective"><p>{{ object.bio }}</p></div>
     <div class="clear"></div>
     {% if object.personal_url %}
@@ -55,12 +66,12 @@
       <a href="{{ object.facebook_account }}" style="font-size: 2em" title="{% trans 'Facebook Profile' %}"><i class="fa fa-facebook"></i>  </a>
     {% endif %}
 
-    <a class="btn btn-dark pull-right" style="margin-right: 45px; margin-top:5px" href="{% url 'users:update' %}">{% trans 'Редактировать' %}</a>
+   </div>
   </div>
   {% if request.user.username == object.username %}
     <!-- Data tiles -->
-    <div class="row tile_count">
-      <div class="col-md-2 col-sm-3 col-xs-4 tile_stats_count">
+    <!-- <div class="row tile_count" style="text-align: center "> -->
+ <!--      <div class="col-md-2 col-sm-3 col-xs-4 tile_stats_count">
         <span class="count_top"><i class="glyphicon glyphicon-envelope"></i> {% trans 'Посты' %}</span>
         <div class="count">0</div>
       </div>
@@ -79,11 +90,12 @@
       <div class="col-md-2 col-sm-3 col-xs-4 tile_stats_count">
         <span class="count_top"><i class="glyphicon glyphicon-education"></i> {% trans 'Ответы' %}</span>
         <div class="count">0</div>
-      </div>
+      </div> -->
       <!-- <div class="col-md-2 col-sm-3 col-xs-4 tile_stats_count">
         <span class="count_top"><i class="glyphicon glyphicon-fire"></i> {% trans 'Global Interactions' %}</span>
         <div class="count">0</div>
       </div> -->
+<!--     </div> -->
     </div>
     <!-- /data tiles -->
   {% endif %}
