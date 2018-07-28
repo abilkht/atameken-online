@@ -23,10 +23,10 @@ class News(models.Model):
     timestamp = models.DateTimeField(auto_now_add=True)
     uuid_id = models.UUIDField(
         primary_key=True, default=uuid.uuid4, editable=False)
-    content = models.TextField(max_length=1000)
-    content_two = models.TextField(max_length=1000, default='content_two')
-    content_three = models.TextField(max_length=1000, default='content_three')
-    content_four = models.TextField(max_length=1000, default='content_four')
+    content = models.TextField(max_length=1000, verbose_name=_("Наименование"))
+    content_two = models.TextField(max_length=1000, default='content_two',verbose_name=_("Редакция проекта"))
+    content_three = models.TextField(max_length=1000, default='content_three',verbose_name=_("Предлагаемая редакция"))
+    content_four = models.TextField(max_length=1000, default='content_four',verbose_name=_("Обоснование"))
     liked = models.ManyToManyField(settings.AUTH_USER_MODEL,
                                    blank=True, related_name="liked_news")
     reply = models.BooleanField(verbose_name=_("Is a reply?"), default=False)

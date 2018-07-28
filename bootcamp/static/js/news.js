@@ -50,10 +50,6 @@ $(function () {
         var charCount = $(this).val().length;
         $("#newsCounter").text(1000 - charCount);
     });
-    $("#newsInput1").keyup(function () {
-        var charCount = $(this).val().length;
-        $("#newsCounter1").text(1000 - charCount);
-    });
     $("#newsInput2").keyup(function () {
         var charCount = $(this).val().length;
         $("#newsCounter2").text(1000 - charCount);
@@ -61,6 +57,10 @@ $(function () {
     $("#newsInput3").keyup(function () {
         var charCount = $(this).val().length;
         $("#newsCounter3").text(1000 - charCount);
+    });
+    $("#newsInput4").keyup(function () {
+        var charCount = $(this).val().length;
+        $("#newsCounter4").text(1000 - charCount);
     });
 
     $("#replyInput").keyup(function () {
@@ -71,30 +71,19 @@ $(function () {
     $("input, textarea").attr("autocomplete", "off");
 
     $("#postNews").click(function () {
-        // var data = $("#postNewsForm").serialize();
-        // var data1 = $("#postNewsForm1").serialize();
-        // var data2 = $("#postNewsForm2").serialize();
-        // var data3 = $("#postNewsForm3").serialize();
-
-        // var dataArray = {
-        //     "dData":data,
-        //     "dData1":data1,
-        //     "dData2":data2,
-        //     "dData3":data3,
-        // };
+        datastring = $("#postNewsForm, #postNewsFormTwo, #postNewsFormThree, #postNewsFormFour").serialize();
         // Ajax call after pushing button, to register a News object.
         $.ajax({
             url: '/news/post-news/',
-            // data: {u_data : JSON.stringify(dataArray)},
-            data: $("#postNewsForm").serialize(),
+            data: datastring,
             type: 'POST',
             cache: false,
             success: function (data) {
                 $("ul.stream").prepend(data);
                 $("#newsInput").val("");
-                $("#newsInput1").val("");
                 $("#newsInput2").val("");
                 $("#newsInput3").val("");
+                $("#newsInput4").val("");
                 $("#newsFormModal").modal("hide");
                 hide_stream_update();
             },
@@ -104,29 +93,6 @@ $(function () {
         });
     });
 
-    $("#postNews").click(function () {
-
-        // Ajax call after pushing button, to register a News object.
-        $.ajax({
-            url: '/news/post-news1/',
-            // data: {u_data : JSON.stringify(dataArray)},
-            data: $("#postNewsForm1").serialize(),
-            type: 'POST',
-            cache: false,
-            success: function (data) {
-                $("ul.stream").prepend(data);
-                $("#newsInput").val("");
-                $("#newsInput1").val("");
-                $("#newsInput2").val("");
-                $("#newsInput3").val("");
-                $("#newsFormModal").modal("hide");
-                hide_stream_update();
-            },
-            error : function(data){
-                alert(data.responseText);
-            },
-        });
-    });
 
     $("#replyNews").click(function () {
         // Ajax call to register a reply to any given News object.

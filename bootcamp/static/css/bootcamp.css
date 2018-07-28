@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Audiowide);
 
+nav a {
+  color: black;
+}
+
 body {
   padding-top: 80px;
 }

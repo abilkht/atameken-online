@@ -28,7 +28,7 @@ def paginate_data(qs, page_size, page, paginated_type, **kwargs):
 
 
 def ajax_required(f):
-    """Not a mixin, but a nice decorator to validate than a request is AJAX"""
+    """Not a mixin, but a nice decorator to validate that a request is AJAX"""
     def wrap(request, *args, **kwargs):
         if not request.is_ajax():
             return HttpResponseBadRequest()
@@ -41,7 +41,7 @@ def ajax_required(f):
 
 
 class AuthorRequiredMixin(View):
-    """Mixin to validate than the loggedin user is the creator of the object
+    """Mixin to validate that the loggedin user is the creator of the object
     to be edited or updated."""
     def dispatch(self, request, *args, **kwargs):
         obj = self.get_object()

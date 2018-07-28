@@ -1,3 +1,4 @@
+@import:url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
 body,
 html {
   width: 100%;
@@ -9,9 +10,9 @@ body {
 }
 
 hr {
-  max-width: 50px;
+  max-width: 70px;
   border-width: 3px;
-  border-color: #F05F40;
+  border-color: white;
 }
 
 hr.light {
@@ -19,14 +20,14 @@ hr.light {
 }
 
 a {
-  color: #F05F40;
+  color: white;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   transition: all 0.2s;
 }
 
 a:hover {
-  color: #f05f40;
+  color: white;
 }
 
 h1,
@@ -294,6 +295,14 @@ header.masthead p {
 }
 
 @media (min-width: 768px) {
+  header.masthead p {
+    font-size: 1.15rem;
+  }
+}
+
+
+
+@media (min-width: 768px) {
   .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
     font-size: 16px;
   }
@@ -319,15 +328,28 @@ header.masthead p {
 }
 
 .btn-primary {
-  background-color: #F05F40;
-  border-color: #F05F40;
+
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  color: #fff;
-  background-color: #ee4b28 !important;
+
+
 }
 
 .btn-primary:active, .btn-primary:focus {
   box-shadow: 0 0 0 0.2rem rgba(240, 95, 64, 0.5) !important;
 }
+
+.button-1 {
+  background-color: #ffb100;;
+  border: 3px solid #ffb100;;
+  border-radius: 50px;
+  -webkit-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
+
+}
+.button-1:hover {
+  box-shadow: 0 0 10px 0 #ffb100 inset, 0 0 20px 2px #ffb100;
+  border: 3px solid #ffb100;
+}
+

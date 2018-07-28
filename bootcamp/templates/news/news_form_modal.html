@@ -22,38 +22,39 @@
             </div>
           </form>
 
-          <form id="postNewsForm1" role="form" method="post" action="#" onsubmit="return false">
+          <form id="postNewsFormTwo" role="form" method="post" action="#" onsubmit="return false">
           {% csrf_token %}
             <div class="form-group">
-              <label for="newsInput1">Вторая:</label>
-              <textarea id="newsInput1" name="post" rows="3" class="form-control" maxlength="1000"></textarea>
-              <span id="newsCounter1" class="pull-right">1000</span>
-            </div>
-          </form>
-
-          <form id="postNewsForm2" role="form" method="post" action="#" onsubmit="return false">
-          {% csrf_token %}
-            <div class="form-group">
-              <label for="newsInput2">Третья:</label>
-              <textarea id="newsInput2" name="post" rows="3" class="form-control" maxlength="1000"></textarea>
+              <label for="newsInput2">Вторая:</label>
+              <textarea id="newsInput2" name="post2" rows="3" class="form-control" maxlength="1000"></textarea>
               <span id="newsCounter2" class="pull-right">1000</span>
             </div>
           </form>
 
-          <form id="postNewsForm3" role="form" method="post" action="#" onsubmit="return false">
+          <form id="postNewsFormThree" role="form" method="post" action="#" onsubmit="return false">
           {% csrf_token %}
             <div class="form-group">
-              <label for="newsInput3">Четвертая:</label>
-              <textarea id="newsInput3" name="post" rows="3" class="form-control" maxlength="1000"></textarea>
+              <label for="newsInput3">Третья:</label>
+              <textarea id="newsInput3" name="post3" rows="3" class="form-control" maxlength="1000"></textarea>
               <span id="newsCounter3" class="pull-right">1000</span>
+            </div>
+          </form>
+
+          <form id="postNewsFormFour" role="form" method="post" action="#" onsubmit="return false">
+          {% csrf_token %}
+            <div class="form-group">
+              <label for="newsInput4">Четвертая:</label>
+              <textarea id="newsInput4" name="post4" rows="3" class="form-control" maxlength="1000"></textarea>
+              <span id="newsCounter4" class="pull-right">1000</span>
             </div>
           </form>
 
       </div>
       <div class="modal-footer">
-        <button type="button" id="postNews" class="btn btn-primary">
+          <button type="button" id="postNews" class="btn btn-primary">
           <i class="fa fa-paper-plane" aria-hidden="true"></i> {% trans 'Опубликовать новость' %}
-        </button>
+          </button>
+
         <button type="button" class="btn btn-default" data-dismiss="modal">{% trans 'Отмена' %}</button>
       </div>
     </div>

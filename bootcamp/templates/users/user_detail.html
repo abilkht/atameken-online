@@ -15,14 +15,16 @@
         <div card="card text-center">
           <div class="card-body">
             {% thumbnail object.picture "x150" as im %}
-            <img src="{{ im.url }}" alt="Picture Profile" id="pic" class="pull-left rounded-circle">
+            <img src="{{ im.url }}" alt="Picture Profile" id="pic" class="rounded-circle">
             {% empty %}
             <img class="pull-center" src="{% static 'img/user.png' %}" height="180px" alt="No Profile Picture" />
               {% endthumbnail %}
             </div>
+        {% if request.user == object %}
             <div class="card-body">
             <a class="btn btn-dark pull-center" style="margin-top:5px" href="{% url 'users:update' %}">{% trans 'Редактировать' %}</a>
-          </div>
+            </div>
+        {% endif %}
         </div>
   </div>
 

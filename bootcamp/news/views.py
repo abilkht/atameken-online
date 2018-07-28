@@ -17,13 +17,13 @@ class NewsTable(tables.Table):
     class Meta:
         model = News
         fields = ('content', 'content_two', 'content_three', 'content_four')
-        attrs = {'class':'table table-hover'}
+        attrs = {'class': 'table table-hover'}
         template_name = 'django_tables2/semantic.html'
 
 
 def tablify(request):
     table = NewsTable(News.objects.all())
-    #table = NewsTable(News.objects.values_list('content', 'content_two', 'content_three', 'content_four', named=True))
+    # table = NewsTable(News.objects.values_list('content', 'content_two', 'content_three', 'content_four', named=True))
     RequestConfig(request).configure(table)
     return render(request, 'news/news_table.html', {'table': table})
 
@@ -52,19 +52,27 @@ def post_news(request):
     if request.method == 'POST':
         user = request.user
         post = request.POST['post']
+        post2 = request.POST['post2']
+        post3 = request.POST['post3']
+        post4 = request.POST['post4']
 
         post = post.strip()
-        if 0 < len(post) <= 1000:
+        post2 = post2.strip()
+        post3 = post3.strip()
+        post4 = post4.strip()
+
+        if 0 < len(post) and len(post2) and len(post3) and len(post4) <= 1000:
             posted = News.objects.create(
                 user=user,
                 content=post,
-                content_three=post,
+                content_two=post2,
+                content_three=post3,
+                content_four=post4,
             )
             html = render_to_string(
                 'news/news_single.html',
                 {
                     'news': posted,
-                    'news2': posted,
                     'request': request,
                 })
             return HttpResponse(html)
@@ -78,36 +86,100 @@ def post_news(request):
         return HttpResponseBadRequest(content=_('Wrong request type.'))
 
 
-@login_required
-@ajax_required
-def post_news1(request):
-    """A function view to implement the post functionality with AJAX allowing
-    to create News instances as parent ones."""
-    if request.method == 'POST':
-        user = request.user
-        post = request.POST['post']
-
-        post = post.strip()
-        if 0 < len(post) <= 1000:
-            posted = News.objects.create(
-                user=user,
-                content_two=post,
-            )
-            html = render_to_string(
-                'news/news_single.html',
-                {
-                    'news1': posted,
-                    'request': request
-                })
-            return HttpResponse(html)
-
-        else:
-            length = len(post) - 1000
-            return HttpResponseBadRequest(
-                content=_(f'Текст {length} слишком большой или пустой.'))
-
-    else:
-        return HttpResponseBadRequest(content=_('Wrong request type.'))
+# @login_required
+# @ajax_required
+# def post_news_two(request):
+#     """A function view to implement the post functionality with AJAX allowing
+#     to create News instances as parent ones."""
+#     if request.method == 'POST':
+#         user = request.user
+#         post2 = request.POST['posttwo']
+#
+#         post2 = post2.strip()
+#         if 0 < len(post2) <= 1000:
+#             posted2 = News.objects.create(
+#                 user=user,
+#                 content_two=post2,
+#             )
+#             html = render_to_string(
+#                 'news/news_single.html',
+#                 {
+#                     'news2': posted2,
+#                     'request': request,
+#                 })
+#             return HttpResponse(html)
+#
+#         else:
+#             length = len(post2) - 1000
+#             return HttpResponseBadRequest(
+#                 content=_(f'Текст {length} слишком большой или пустой.'))
+#
+#     else:
+#         return HttpResponseBadRequest(content=_('Wrong request type.'))
+#
+#
+# @login_required
+# @ajax_required
+# def post_news_three(request):
+#     """A function view to implement the post functionality with AJAX allowing
+#     to create News instances as parent ones."""
+#     if request.method == 'POST':
+#         user3 = request.user
+#         post3 = request.POST['postthree']
+#
+#         post3 = post3.strip()
+#         if 0 < len(post3) <= 1000:
+#             posted3 = News.objects.create(
+#                 user=user3,
+#                 content_three=post3,
+#             )
+#             html = render_to_string(
+#                 'news/news_single.html',
+#                 {
+#                     'news3': posted3,
+#                     'request': request,
+#                 })
+#             return HttpResponse(html)
+#
+#         else:
+#             length = len(post3) - 1000
+#             return HttpResponseBadRequest(
+#                 content=_(f'Текст {length} слишком большой или пустой.'))
+#
+#     else:
+#         return HttpResponseBadRequest(content=_('Wrong request type.'))
+#
+#
+# @login_required
+# @ajax_required
+# def post_news_four(request):
+#     """A function view to implement the post functionality with AJAX allowing
+#     to create News instances as parent ones."""
+#     if request.method == 'POST':
+#         user4 = request.user
+#         post4 = request.POST['postfour']
+#
+#         post4 = post4.strip()
+#         if 0 < len(post4) <= 1000:
+#             posted4 = News.objects.create(
+#                 user=user4,
+#                 content_four=post4,
+#             )
+#             html = render_to_string(
+#                 'news/news_single.html',
+#                 {
+#                     'news4': posted4,
+#                     'request': request
+#                 })
+#             return HttpResponse(html)
+#
+#         else:
+#             length = len(post4) - 1000
+#             return HttpResponseBadRequest(
+#                 content=_(f'Текст {length} слишком большой или пустой.'))
+#
+#     else:
+#         return HttpResponseBadRequest(content=_('Wrong request type.'))
 
 
 @login_required

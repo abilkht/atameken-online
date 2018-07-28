@@ -159,3 +159,14 @@
 .remove-news:hover {
   color: #333333;
 }
+.button3 {
+  color: white;
+  background: linear-gradient(to right, $purple , $blue-gray);
+  border-radius: 8px;
+  transition: .2s ease-in-out;
+  border-color: #004a7a;
+}
+
+.button3:hover {
+  border-radius: 30px;
+}

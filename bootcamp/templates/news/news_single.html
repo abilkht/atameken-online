@@ -21,9 +21,10 @@
           <a href="{% url 'users:detail' news.user.username  %}">{{ news.user.get_profile_name|title }}</a>
         </strong>
       </p>
-      <p>{{ news }}</p>
-      <p>{{ request }}</p>
-      <p>{{ news2 }}</p>
+      <p>1) {{ news.content }}</p>
+      <p>2) {{ news.content_two }}</p>
+      <p>3) {{ news.content_three }}</p>
+      <p>4) {{ news.content_four }}</p>
       {% if news.image %}
         <img class="card-img-top" src="{{ news.image }}" alt="Фото карточки">
       {% endif %}
