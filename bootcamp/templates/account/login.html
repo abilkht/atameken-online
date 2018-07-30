@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>{% trans 'Вход Аккаунта' %}</title>
+    <title>{% trans 'Авторизация' %}</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="icon" type="image/png" href="{% static 'img/atahome.png' %}">
@@ -19,8 +19,8 @@
 
     <div class="limiter">
       <div class="container-login100">
-        <div class="wrap-login100 p-l-85 p-r-85 p-t-55 p-b-55">
-          <span class="login100-form-title p-b-32">{% trans 'Вход аккаунта' %}</span>
+        <div class="card wrap-login100 p-l-85 p-r-85 p-t-55 p-b-55" style="box-shadow: 0 0 10px rgba(0,0,0,0.5); background-color: #ebebeb;">
+          <span class="login100-form-title p-b-32" style="text-align: center">{% trans 'Вход в систему' %}</span>
           <span class="txt3">
             {% if socialaccount_providers %}
               <p>{% blocktrans with site.name as site_name %}Please sign in with one
@@ -34,7 +34,6 @@
               </div>
               {% include "socialaccount/snippets/login_extra.html" %}
             {% else %}
-              <p>{% blocktrans %}Зарегистрируетесь, если нет аккаунта.{% endblocktrans %}</p>
             {% endif %}
           </span>
           <form class="login" method="POST" action="{% url 'account_login' %}">
@@ -44,10 +43,10 @@
               <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
             {% endif %}
             <div class="form-group container-login100-form-btn">
-              <button type="submit" class="login100-form-btn">{% trans 'Вход' %}</button>
+              <button type="submit" class="btn btn-secondary" style="background-color: #004a7a;width:100%">{% trans 'Войти' %}</button>
             </div>
             <div class="form-group container-login100-form-btn">
-              <a href="{% url 'account_signup' %}" class="btn btn-link">{% trans 'Или войдите в Atameken ESN' %}</a>
+              <a href="{% url 'account_signup' %}" class="btn btn-link">{% trans 'Зарегистрироваться в Amateken ESN' %}</a>
               <a href="{% url 'account_reset_password' %}" class="btn btn-link pull-right">{% trans 'Забыли пароль?' %}</a>
             </div>
           </form>
@@ -56,3 +55,10 @@
     </div>
   </body>
 </html>
+<style type="text/css">
+  button:hover {
+    box-shadow: 0 0 10px 0 #004a7a inset, 0 0 10px 2px #004a7a;
+    border: 0.5px solid #004a7a;
+  }
+
+</style>

@@ -178,7 +178,10 @@ iframe {
   align-items: center;
   padding: 15px;
 
-  background-color: #ebebeb;
+  /*background-color: #ebebeb;*/
+  background-image: url("../img/backback.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 
@@ -195,6 +198,7 @@ iframe {
 
 .login100-form {
   width: 100%;
+
 }
 
 .login100-form-title {
