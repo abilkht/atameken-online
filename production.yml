@@ -33,6 +33,7 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
       - postgres_backup:/backups
+    env_file: .env
 
   caddy:
     build:
