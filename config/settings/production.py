@@ -1,4 +1,5 @@
 import logging
+import os
 
 from .base import *  # noqa
 from .base import env
@@ -9,6 +10,8 @@ from .base import env
 SECRET_KEY = env('SECRET_KEY')
 # https://docs.djangoproject.com/en/dev/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
+
+port = int(os.environ.get('PORT'))
 
 # DATABASES
 # ------------------------------------------------------------------------------
@@ -108,7 +111,7 @@ TEMPLATES[0]['OPTIONS']['loaders'] = [  # noqa F405
 # https://docs.djangoproject.com/en/dev/ref/settings/#default-from-email
 DEFAULT_FROM_EMAIL = env(
     'DEFAULT_FROM_EMAIL',
-    default='Bootcamp <noreply@vitor@freitas.com trybootcamp.vitorfs.com>'
+    default='Atameken <noreply@atameken.com atameken.com>'
 )
 # https://docs.djangoproject.com/en/dev/ref/settings/#server-email
 SERVER_EMAIL = env('SERVER_EMAIL', default=DEFAULT_FROM_EMAIL)
