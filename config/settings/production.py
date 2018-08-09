@@ -111,7 +111,7 @@ TEMPLATES[0]['OPTIONS']['loaders'] = [  # noqa F405
 # https://docs.djangoproject.com/en/dev/ref/settings/#default-from-email
 DEFAULT_FROM_EMAIL = env(
     'DEFAULT_FROM_EMAIL',
-    default='Atameken <sandbox44de4f2c06c747599b497fc621c73332.mailgun.org>'
+    default='Atameken <postmaster@sandbox44de4f2c06c747599b497fc621c73332.mailgun.org>'
 )
 # https://docs.djangoproject.com/en/dev/ref/settings/#server-email
 SERVER_EMAIL = env('SERVER_EMAIL', default=DEFAULT_FROM_EMAIL)
