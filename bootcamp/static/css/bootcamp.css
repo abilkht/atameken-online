@@ -90,3 +90,7 @@ header .navbar-brand {
   margin-left: 45px;
   margin-bottom: 0;
 }
+.menu .nav-link {
+        color: #004a7a;
+}
+

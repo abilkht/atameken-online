@@ -2,12 +2,13 @@
 
 {% load i18n %}
 
-{% block head_title %}{% trans "Подтвердите e-mail адресс" %}{% endblock %}
+{% block head_title %}{% trans "Подтвердите e-mail адрес" %}{% endblock %}
 
 {% block inner %}
-    <h1>{% trans "Подтвердите e-mail адресс" %}</h1>
+<div class="card" style="margin:auto;padding:20px;text-align: center;box-shadow: 0 0 10px rgba(0,0,0,0.5); " >
+    <h1>{% trans "Подтвердите e-mail адрес" %}</h1>
 
-    <p>{% blocktrans %}Мы отправили подтверждение на e-mail. Перейдите по ссылке,чтобы продолжить. Пожалуйста, свяжитесь с нами, если не пришло письмо в течение нескольких минут.{% endblocktrans %}</p>
-
+    <p>{% blocktrans %}Мы отправили вам подтверждение на e-mail. Перейдите по ссылке, чтобы активировать ваш аккаунт.{% endblocktrans %}</p>
+</div>
 {% endblock %}
 

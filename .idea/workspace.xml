@@ -2,7 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a6c94aa-ae33-4415-9930-5acbfd8452ac" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/config/settings/production.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings/production.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootcamp/static/css/bootcamp.css" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/static/css/bootcamp.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootcamp/static/css/creative.css" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/static/css/creative.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootcamp/static/css/user_form.css" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/static/css/user_form.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootcamp/static/css/user_profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/static/css/user_profile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootcamp/static/img/user.png" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/static/img/user.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootcamp/templates/account/email_confirm.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/templates/account/email_confirm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootcamp/templates/account/verification_sent.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/templates/account/verification_sent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootcamp/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootcamp/templates/messager/message_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/templates/messager/message_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootcamp/templates/messager/single_message.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/templates/messager/single_message.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootcamp/templates/news/news_single.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/templates/news/news_single.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootcamp/templates/users/user_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/templates/users/user_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootcamp/templates/users/user_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/templates/users/user_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dump.rdb" beforeDir="false" afterPath="$PROJECT_DIR$/dump.rdb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,49 +47,95 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name=".env" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.env">
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bootcamp/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" column="73" selection-start-line="33" selection-start-column="73" selection-end-line="33" selection-end-column="73" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Procfile" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Procfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="26" selection-start-column="26" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="production.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/requirements/production.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="454">
-              <caret line="86" column="25" selection-start-line="86" selection-start-column="25" selection-end-line="86" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/settings/base.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="production.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config/settings/production.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="118" column="69" selection-start-line="118" selection-start-column="69" selection-end-line="118" selection-end-column="69" />
+            <state relative-caret-position="344">
+              <caret line="90" column="125" selection-start-line="90" selection-start-column="125" selection-end-line="90" selection-end-column="139" />
               <folding>
-                <element signature="e#0#14#0" expanded="true" />
+                <element signature="n#style#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#button#0;n#div#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#0;n#ul#1;n#div#1;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#1;n#ul#1;n#div#1;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#2;n#ul#1;n#div#1;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#3;n#ul#1;n#div#1;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#4;n#ul#1;n#div#1;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#ul#3;n#div#1;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#0;n#div#0;n#ul#3;n#div#1;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#li#0;n#div#0;n#ul#3;n#div#1;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#5604#5610#0#HTML" expanded="true" />
+                <element signature="e#6173#6179#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#li#0;n#div#0;n#ul#3;n#div#1;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#6925#6932#1#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user_detail.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bootcamp/templates/users/user_detail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="745">
+              <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#1046#1052#1#HTML" expanded="true" />
+                <element signature="n#style#0;n#small#0;n#h1#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#2;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#3;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#4;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user_profile.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bootcamp/static/css/user_profile.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2229">
+              <caret line="169" lean-forward="true" selection-end-line="169" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user_form.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bootcamp/static/css/user_form.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="single_message.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bootcamp/templates/messager/single_message.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="96" selection-start-line="3" selection-start-column="96" selection-end-line="3" selection-end-column="96" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#li#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#li#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#b#0;n#div#0;n#div#0;n#li#0;n#!!top" expanded="true" />
+                <element signature="e#705#711#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#li#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="message_list.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bootcamp/templates/messager/message_list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="22" column="114" selection-start-line="22" selection-start-column="114" selection-end-line="22" selection-end-column="114" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#1;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -131,26 +191,17 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/bootcamp/templates/users/user_form.html" />
-        <option value="$PROJECT_DIR$/env/lib/python3.6/site-packages/django_tables2/templates/django_tables2/bootstrap.html" />
-        <option value="$PROJECT_DIR$/bootcamp/templates/messager/message_list.html" />
-        <option value="$PROJECT_DIR$/bootcamp/helpers.py" />
-        <option value="$PROJECT_DIR$/bootcamp/news/admin.py" />
         <option value="$PROJECT_DIR$/bootcamp/templates/news/news_two.html" />
         <option value="$PROJECT_DIR$/bootcamp/templates/news/news_four.html" />
         <option value="$PROJECT_DIR$/bootcamp/templates/news/news_three.html" />
         <option value="$PROJECT_DIR$/bootcamp/news/urls.py" />
-        <option value="$PROJECT_DIR$/bootcamp/templates/news/news_single.html" />
         <option value="$PROJECT_DIR$/bootcamp/static/js/news.js" />
-        <option value="$PROJECT_DIR$/bootcamp/static/css/user_form.css" />
         <option value="$PROJECT_DIR$/bootcamp/news/models.py" />
         <option value="$PROJECT_DIR$/env/lib/python3.6/site-packages/django_tables2/templates/django_tables2/semantic.html" />
         <option value="$PROJECT_DIR$/bootcamp/static/css/util.css" />
         <option value="$PROJECT_DIR$/bootcamp/users/admin.py" />
-        <option value="$PROJECT_DIR$/bootcamp/templates/users/user_detail.html" />
         <option value="$PROJECT_DIR$/bootcamp/users/views.py" />
         <option value="$PROJECT_DIR$/bootcamp/users/models.py" />
-        <option value="$PROJECT_DIR$/bootcamp/static/css/user_profile.css" />
         <option value="$PROJECT_DIR$/bootcamp/templates/news/news_table.html" />
         <option value="$PROJECT_DIR$/bootcamp/templates/articles/article_list.html" />
         <option value="$PROJECT_DIR$/bootcamp/templates/qa/question_list.html" />
@@ -163,9 +214,6 @@
         <option value="$PROJECT_DIR$/bootcamp/static/css/messager.css" />
         <option value="$PROJECT_DIR$/bootcamp/templates/account/password_reset.html" />
         <option value="$PROJECT_DIR$/bootcamp/templates/account/logout.html" />
-        <option value="$PROJECT_DIR$/bootcamp/templates/messager/single_message.html" />
-        <option value="$PROJECT_DIR$/bootcamp/static/css/creative.css" />
-        <option value="$PROJECT_DIR$/bootcamp/static/css/bootcamp.css" />
         <option value="$PROJECT_DIR$/production.yml" />
         <option value="$PROJECT_DIR$/compose/production/django/entrypoint.sh" />
         <option value="$PROJECT_DIR$/requirements/base.txt" />
@@ -176,12 +224,24 @@
         <option value="$PROJECT_DIR$/bootcamp/templates/account/login.html" />
         <option value="$PROJECT_DIR$/bootcamp/templates/account/signup.html" />
         <option value="$PROJECT_DIR$/bootcamp/templates/pages/home.html" />
-        <option value="$PROJECT_DIR$/bootcamp/templates/base.html" />
         <option value="$PROJECT_DIR$/requirements/production.txt" />
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/config/settings/base.py" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/config/settings/production.py" />
+        <option value="$PROJECT_DIR$/.travis.yml" />
+        <option value="$PROJECT_DIR$/bootcamp/templates/account/email_confirm.html" />
+        <option value="$PROJECT_DIR$/bootcamp/templates/account/verification_sent.html" />
+        <option value="$PROJECT_DIR$/bootcamp/templates/messager/single_message.html" />
+        <option value="$PROJECT_DIR$/bootcamp/templates/base.html" />
+        <option value="$PROJECT_DIR$/bootcamp/templates/messager/message_list.html" />
+        <option value="$PROJECT_DIR$/bootcamp/templates/news/news_single.html" />
+        <option value="$PROJECT_DIR$/bootcamp/static/css/user_form.css" />
+        <option value="$PROJECT_DIR$/bootcamp/static/css/bootcamp.css" />
+        <option value="$PROJECT_DIR$/bootcamp/static/css/creative.css" />
+        <option value="$PROJECT_DIR$/bootcamp/templates/users/user_form.html" />
+        <option value="$PROJECT_DIR$/bootcamp/static/css/user_profile.css" />
+        <option value="$PROJECT_DIR$/bootcamp/templates/users/user_detail.html" />
       </list>
     </option>
   </component>
@@ -204,6 +264,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -214,24 +275,94 @@
             <path>
               <item name="bootcamp" type="b2602c69:ProjectViewProjectNode" />
               <item name="bootcamp" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="bootcamp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bootcamp" type="b2602c69:ProjectViewProjectNode" />
               <item name="bootcamp" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="settings" type="462c0819:PsiDirectoryNode" />
+              <item name="bootcamp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bootcamp" type="b2602c69:ProjectViewProjectNode" />
               <item name="bootcamp" type="462c0819:PsiDirectoryNode" />
-              <item name="requirements" type="462c0819:PsiDirectoryNode" />
+              <item name="bootcamp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bootcamp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bootcamp" type="462c0819:PsiDirectoryNode" />
+              <item name="bootcamp" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bootcamp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bootcamp" type="462c0819:PsiDirectoryNode" />
+              <item name="bootcamp" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="account" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bootcamp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bootcamp" type="462c0819:PsiDirectoryNode" />
+              <item name="bootcamp" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="messager" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bootcamp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bootcamp" type="462c0819:PsiDirectoryNode" />
+              <item name="bootcamp" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="news" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bootcamp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bootcamp" type="462c0819:PsiDirectoryNode" />
+              <item name="bootcamp" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bootcamp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bootcamp" type="462c0819:PsiDirectoryNode" />
+              <item name="env" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bootcamp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bootcamp" type="462c0819:PsiDirectoryNode" />
+              <item name="env" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bootcamp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bootcamp" type="462c0819:PsiDirectoryNode" />
+              <item name="env" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="python3.6" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bootcamp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bootcamp" type="462c0819:PsiDirectoryNode" />
+              <item name="env" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="python3.6" type="462c0819:PsiDirectoryNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bootcamp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bootcamp" type="462c0819:PsiDirectoryNode" />
+              <item name="env" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="python3.6" type="462c0819:PsiDirectoryNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
+              <item name="allauth" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -286,7 +417,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32969698" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5007153" side_tool="true" weight="0.32969698" />
@@ -295,12 +425,12 @@
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32969698" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49928468" weight="0.32969698" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.89454544" visible="true" weight="0.14735337" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8933333" visible="true" weight="0.14949928" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.3298969" />
       <window_info anchor="right" id="SciView" order="4" />
       <window_info id="Structure" order="1" sideWeight="0.10488246" side_tool="true" weight="0.14306152" />
-      <window_info id="Favorites" order="2" sideWeight="0.10545454" side_tool="true" visible="true" weight="0.14735337" />
+      <window_info id="Favorites" order="2" sideWeight="0.10666667" side_tool="true" visible="true" weight="0.14949928" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -318,71 +448,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/compose/production/django/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/env/bin/docker-compose">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/compose/production/postgres/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/env/lib/python3.6/site-packages/django/db/backends/postgresql_psycopg2/schema.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/env/lib/python3.6/site-packages/django/db/backends/postgresql_psycopg2/utils.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/env/lib/python3.6/site-packages/django/db/backends/postgresql_psycopg2/operations.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/env/lib/python3.6/site-packages/django/db/backends/postgresql_psycopg2/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/env/lib/python3.6/site-packages/django/db/backends/postgresql_psycopg2/base.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/env/lib/python3.6/site-packages/django/db/backends/postgresql/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3244" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/env/lib/python3.6/site-packages/django/db/backends/dummy/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-320" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/env/lib/python3.6/site-packages/django/db/backends/ddl_references.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/env/lib/python3.6/site-packages/django/db/models/sql/datastructures.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/env/lib/python3.6/site-packages/django/bin/django-admin.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dump.rdb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bootcamp/schema.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bootcamp/news/migrations/0006_auto_20180728_1731.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bootcamp/users/tests/test_admin.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.rst">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bootcamp/users/migrations/0002_auto_20180728_1202.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/compose/production/postgres/restore.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-7" />
@@ -390,13 +455,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/env.example">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor" />
@@ -428,20 +486,6 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/runtime.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="12" selection-start-column="12" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bootcamp/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="66" selection-start-line="8" selection-start-column="66" selection-end-line="8" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bootcamp/templates/pages/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -472,13 +516,6 @@
     <entry file="file://$PROJECT_DIR$/dev.yml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/production.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="767">
-          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/requirements/local.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -506,7 +543,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/urls.py">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/routing.py">
       <provider selected="true" editor-type-id="text-editor" />
@@ -518,13 +561,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements/production.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="86" column="25" selection-start-line="86" selection-start-column="25" selection-end-line="86" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/settings/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -532,26 +568,223 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/settings/production.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1605">
+          <caret line="111" column="25" selection-start-line="111" selection-start-column="25" selection-end-line="111" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/locale/es/LC_MESSAGES/django.po">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-729" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runtime.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" selection-start-column="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1851" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/locale/README.rst">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compose/production/postgres/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compose/production/caddy/Caddyfile">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/production.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="26" selection-start-column="26" selection-end-column="26" />
+          <caret column="55" selection-start-column="55" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements/production.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1290">
+          <caret line="86" column="25" selection-start-line="86" selection-start-column="25" selection-end-line="86" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="73" selection-start-line="33" selection-start-column="73" selection-end-line="33" selection-end-column="73" />
+        <state>
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/settings/production.py">
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="118" column="69" selection-start-line="118" selection-start-column="69" selection-end-line="118" selection-end-column="69" />
+        <state relative-caret-position="420">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/env/lib/python3.6/site-packages/allauth/models.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootcamp/templates/account/email_confirm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="204" selection-start-line="16" selection-start-column="204" selection-end-line="16" selection-end-column="204" />
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootcamp/templates/account/verification_sent.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootcamp/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="90" column="125" selection-start-line="90" selection-start-column="125" selection-end-line="90" selection-end-column="139" />
+          <folding>
+            <element signature="n#style#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#button#0;n#div#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#1;n#div#1;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#1;n#div#1;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#2;n#ul#1;n#div#1;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#3;n#ul#1;n#div#1;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#4;n#ul#1;n#div#1;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#ul#3;n#div#1;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#0;n#div#0;n#ul#3;n#div#1;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#li#0;n#div#0;n#ul#3;n#div#1;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#5604#5610#0#HTML" expanded="true" />
+            <element signature="e#6173#6179#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#li#0;n#div#0;n#ul#3;n#div#1;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#6925#6932#1#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootcamp/templates/messager/message_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="22" column="114" selection-start-line="22" selection-start-column="114" selection-end-line="22" selection-end-column="114" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootcamp/templates/messager/single_message.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="96" selection-start-line="3" selection-start-column="96" selection-end-line="3" selection-end-column="96" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#li#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#li#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#b#0;n#div#0;n#div#0;n#li#0;n#!!top" expanded="true" />
+            <element signature="e#705#711#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#li#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootcamp/static/css/user_form.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootcamp/templates/users/user_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="103" selection-start-line="20" selection-start-column="103" selection-end-line="20" selection-end-column="103" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootcamp/templates/news/news_single.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1125">
+          <caret line="75" column="61" selection-start-line="75" selection-start-column="61" selection-end-line="75" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootcamp/static/css/creative.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="745">
+          <caret line="358" lean-forward="true" selection-start-line="358" selection-end-line="358" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootcamp/static/css/bootcamp.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="745">
+          <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootcamp/static/css/user_profile.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2229">
+          <caret line="169" lean-forward="true" selection-end-line="169" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootcamp/templates/users/user_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="745">
+          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#1046#1052#1#HTML" expanded="true" />
+            <element signature="n#style#0;n#small#0;n#h1#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#2;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#3;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#4;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

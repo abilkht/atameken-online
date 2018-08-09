@@ -23,16 +23,25 @@
     {% endblock css %}
     {% block head %}{% endblock head %}
   </head>
+
   <body>
     {% block body %}
       <div class="m-b-1">
         {% if request.user.is_authenticated %}
           <nav class="navbar fixed-top navbar-expand-md navbar-dark" style="background-color: white; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
-            <div class="container" >
-              <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <a class="navbar-brand" href="{% url 'news:list' %}" style="color: #004a7a; margin-right:7px;">Atameken<a class="navbar-brand" href="{% url 'news:list' %}" style="color:#ffb100;">ESN</a></a>
+            <div class="container">
+              <div style="display: flex">
+                <div>
+                  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="">
+                  <span class="fa fa-navicon" style="color: #004a7a;"></span>
+                  </button>
+                </div>
+
+                <div>
+                  <a class="navbar-brand" href="{% url 'news:list' %}" style="color: #004a7a;" id="company">Atameken <font color="#ffb100">ESN</font></a>
+                </div>
+              </div>
+
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                   <li class="nav-item">
@@ -41,47 +50,66 @@
                     </a>
                   </li>
                 </ul>
+
                 <ul class="menu navbar-nav mr-auto">
-                  <li class="nav-item"><a class="nav-link" href="{% url 'news:list' %}" style="color: #004a7a;">{% trans 'Новости' %} <span class="sr-only">(current)</span></a></li>
-                  <li class="nav-item"><a class="nav-link" href="{% url 'articles:list' %}" style="color: #004a7a;">Информация</a></li>
-                  <li class="nav-item"><a class="nav-link" href="{% url 'qa:index_noans' %}" style="color: #004a7a;">{% trans 'Сообщество' %}</a></li>
-                  <li class="nav-item"><a class="nav-link" href="{% url 'messager:messages_list' %}" style="color: #004a7a;">{% trans 'Чат' %}</a></li>
-                  <li class="nav-item"><a class="nav-link" href="{% url 'users:list' %}" style="color: #004a7a;">{% trans 'Компании' %}</a></li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'news:list' %}" style="color: #004a7a;">{% trans 'Новости' %} <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'articles:list' %}" style="color: #004a7a;">Информация</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'qa:index_noans' %}" style="color: #004a7a;">{% trans 'Сообщество' %}</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'messager:messages_list' %}" style="color: #004a7a;">{% trans 'Чат' %}</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'users:list' %}" style="color: #004a7a;">{% trans 'Компании' %}</a>
+                  </li>
                 </ul>
+
+
                 <ul class="nav navbar-nav">
                   {% if not hide_search %}
-                    <form class="form-inline navbar-left" role="search" action="{% url 'search:results' %}">
+                    <form class="form-inline navbar" role="search" action="{% url 'search:results' %}" id="searchCSS">
                       <div class="input-group">
-                        <input name="query" type="search" id="searchInput" class="form-control" placeholder="{% trans 'Поиск' %}" aria-label="Search">
+                        <input name="query" type="search" id="searchInput" class="form-control" placeholder="{% trans 'Поиск' %}" aria-label="Search" >
                         <div class="input-group-append">
                           <span class="input-group-text"><i class="fa fa-search" aria-hidden="true"></i></span>
                         </div>
                       </div>
                     </form>
                   {% endif %}
+                </ul>
 
-                  <li class="nav-item dropdown">
+               <ul class="navbar-nav">
+                  <div class="row" style="white-space: nowrap" id="profileCSS">
+                  <li class="nav-item dropdown" id="profileDrop">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #004a7a;">
                       {% thumbnail request.user.picture "x30" as im %}
-                        <img src="{{ im.url }}" style="border-radius: 50%;" alt="{% trans 'User Image' %}" class="user-image">
+                        <img src="{{ im.url }}" style="border-radius: 50%;" alt="{% trans 'User Image' %}" class="user-image rounded-circle">
                       {% empty %}
-                        <img src="{% static 'img/user.png' %}" height="30px" alt="{% trans 'No Profile Picture' %}" />
+                        <img src="{% static 'img/user.png' %}" height="30px" alt="{% trans 'No Profile Picture' %}" class="rounded-circle"/>
                       {% endthumbnail %}
                       {{ request.user.username }}
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown" >
-                      <a class="dropdown-item" href="{% url 'users:detail' request.user.username  %}" id="eliminate"><i class="fa fa-cogs fa-fw" aria-hidden="true"></i>&nbsp; {% trans 'Настройки профиля' %}</a>
+
+                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="{% url 'users:detail' request.user.username  %}">
+                        <i class="fa fa-user" aria-hidden="true"></i>&nbsp; {% trans 'Профиль' %}</a>
                       <div class="dropdown-divider"></div>
-                           <a><form class="dropdown-item"  method="post" action="{% url 'account_logout' %}">
+                           <form class="dropdown-item"  method="post" action="{% url 'account_logout' %}">
                                 {% csrf_token %}
                                 {% if redirect_field_value %}
                                     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                                 {% endif %}
                                 <i class="fa fa-sign-out fa-fw" aria-hidden="true"></i>&nbsp;
-                                <button class="logout-btn" style="background-color: none;background: none; color: inherit; border: none; width:100%;text-align:left;" type="submit">{% trans 'Выйти' %}</button>
-                            </form></a>
-                    </div>
+                                <button class="logout-btn" style="background-color: none;background: none; color: inherit; border: none; width:100%;height:80%;text-align:left;" type="submit">{% trans 'Выйти' %}</button>
+                            </form>
+                      </div>
                   </li>
+                </div>
                 </ul>
               </div>
             </div>
@@ -101,38 +129,59 @@
         {% block content %}
           <p>Use this document as a way to quick start any new project.</p>
         {% endblock content %}
-
       </div>
+
+
       <style>
-    nav a .active {
-      color: red;
-      }    .menu .nav-link {
-       text-decoration: none;
-       position: relative;
-     }
+      .menu .nav-link {
+        text-decoration: none;
+        position: relative;
+        }
 
-    .menu .nav-link:after {
-      position: absolute;
-      content: '';
-      height: 2px;
-      bottom: -4px;
-      margin: 0 auto;
-      left: 0;
-      right: 0;
-      width: 50%;
-      -o-transition:.5s;
-      -ms-transition:.5s;
-      -moz-transition:.5s;
-      -webkit-transition:.5s;
-      transition:.5s;
-    }
-    .menu .nav-link:hover:after {
-      width: 80%;
-      background: #004a7a;
-    }
+      @media (min-width: 768px) {
+      .menu .nav-link:after {
+        position: absolute;
+        content: '';
+        height: 2px;
+        bottom: -4px;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        width: 50%;
+        -o-transition:.5s;
+        -ms-transition:.5s;
+        -moz-transition:.5s;
+        -webkit-transition:.5s;
+        transition:.5s;
+      }
 
+      .menu .nav-link:hover:after {
+        width: 80%;
+        background: #004a7a;
+        }
+      }
+      .menu .new-nav-link {
+        color: #ffb100 !important;
+      }
 
+      @media (max-width: 768px) {
+        #company {
+          margin-top: -5px;
+          position: fixed;
+          right: 0;
+        }
+        #searchCSS {
+          margin-left:-15px;
+        }
+        #profileCSS {
+          margin-left:3px;
+        }
+        #navbarSupportedContent {
+          padding-top:15px;
+        }
+      }
       </style>
+
       <!-- /container -->
 
       <!-- Le javascript
@@ -154,13 +203,12 @@
                   source: "{% url 'search:suggestions' %}",
                   minLength: 2
               });
-          });
         </script>
+
         <script type="text/javascript">
           $(function() {
-  $('nav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
-});
-
+            $('nav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('new-nav-link').removeClass('menu');
+        });
         </script>
 
 
@@ -170,6 +218,5 @@
 
     {% endblock body %}
   </body>
-
   <!-- /.container -->
 </html>

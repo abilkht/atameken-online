@@ -1,20 +1,21 @@
 {% load static i18n humanize %}
 {% load thumbnail %}
 
-<li >
-  <div style="margin: 10px">
+<li class="card" style="background-color: #F5F5F5;margin-top:10px;padding-top:4px;padding-top:10px;width:auto;">
+  <div style="margin-left: 10px;"  >
         {% thumbnail message.sender.picture "x45" as im %}
-      <img class="picture" src="{{ im.url }}" alt="{% trans 'Фото профиля' %}">
+      <img class="picture" src="{{ im.url }}" alt="{% trans 'Фото профиля' %}" >
         {% empty %}
       <img class="picture" src="{% static 'img/user.png' %}" height="45px" alt="{% trans 'Нет фото профиля' %}" />
         {% endthumbnail %}
-  </div>
-  <div style="background-color: #ebebeb;width: 400px; margin:1px" class="rounded">
+<div style="padding-bottom:0;">
     <b>
       <a style="color: #004a7a;" href="{% url 'users:detail' message.sender.username  %}">{{ message.sender.get_profile_name|title }}</a>
     </b>
-    <small> - {{ message.timestamp|date:'N d G:i' }}</small>
-    <br>
+    <small> &nbsp; {{ message.timestamp|date:'G:i | d.m.Y ' }}</small>
     <p style="font-size:14px">{{ message.message }}</p>
   </div>
+
+  </div>
+
 </li>

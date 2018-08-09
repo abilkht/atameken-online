@@ -9,15 +9,16 @@ body {
 }
 
 #page-wrap {
-    width: 800px;
-    margin: 40px auto 60px;
+    /*width: 800px;
+    margin: 40px auto 60px;*/
 }
 
 #pic {
-    border:1px solid white;
-    border-radius:100%;
+    float: right;
+    /*margin: -30px 0 0 0;*/
 
 }
+
 
 h1 {
     margin: 0 0 16px 0;
@@ -62,8 +63,8 @@ ul {
 }
 
 #objective {
-    width: 500px;
-    float: left;
+
+
 }
 
 #objective p {
@@ -74,9 +75,16 @@ ul {
 
 
 /** top tiles  */
+.row .tile_count {
+  /*margin-right: auto;
+  margin-left: auto;*/
+}
 .tile_count {
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;
     margin-top: 20px;
+    margin-left: 100px;
+    margin-right: auto;*/
+
   }
   .tile_count .tile_stats_count {
     border-bottom: 1px solid #D9DEE4;
@@ -89,7 +97,17 @@ ul {
 
   @media (min-width: 992px) {
     footer {
-      margin-left: 230px;
+      /*margin-left: 230px;*/
+    }
+  }
+   @media (max-width: 992px) {
+    #contact-info {
+      text-align: center;
+    }
+  }
+  @media (max-width: 992px) {
+    .tile_count {
+      margin-left: 0
     }
   }
 
@@ -126,6 +144,7 @@ ul {
   @media (min-width: 992px) and (max-width: 1100px) {
     .tile_count .tile_stats_count .count {
       font-size: 30px;
+
     }
   }
   .tile_count .tile_stats_count span {
@@ -139,4 +158,12 @@ ul {
   .tile_count .tile_stats_count .count_bottom i {
     width: 12px;
   }
-  /** /top tiles **/
+   @media (max-width:768px) {
+    body {
+      padding-top: 70px;
+    }
+    h1 {
+      font-size: 30px;
+      padding-top: 10px
+    }
+  }

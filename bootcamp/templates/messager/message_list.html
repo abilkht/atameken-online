@@ -20,9 +20,9 @@
         <a href="{% url 'messager:conversation_detail' user.username  %}"
            class="list-group-item list-group-item-action {% if active == user.username %}active{% endif %}">
           {% thumbnail user.picture "x30" as im %}
-            <img src="{{ im.url }}" alt="{% trans 'Фото Профиля' %}">
+            <img src="{{ im.url }}" alt="{% trans 'Фото Профиля' %}" class="rounded" style="width:30px;height:30px">
           {% empty %}
-            <img src="{% static 'img/user.png' %}" height="30px" alt="{% trans 'Нет фото профиля' %}" />
+            <img src="{% static 'img/user.png' %}" height="30px" alt="{% trans 'Нет фото профиля' %}" class="rounded"/>
           {% endthumbnail %}
           {{ user.get_profile_name|title }}
         </a>
