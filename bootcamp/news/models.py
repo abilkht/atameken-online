@@ -29,6 +29,8 @@ class News(models.Model):
     content_four = models.TextField(max_length=1000, default='content_four',verbose_name=_("Обоснование"))
     liked = models.ManyToManyField(settings.AUTH_USER_MODEL,
                                    blank=True, related_name="liked_news")
+    disliked = models.ManyToManyField(settings.AUTH_USER_MODEL,
+                                      blank=True, related_name="disliked_news")
     reply = models.BooleanField(verbose_name=_("Is a reply?"), default=False)
 
     class Meta:
@@ -62,6 +64,17 @@ class News(models.Model):
             self.liked.add(user)
             notification_handler(user, self.user,
                                  Notification.LIKED, action_object=self,
+                                 id_value=str(self.uuid_id),
+                                 key='social_update')
+
+    def switch_dislike(self, user):
+        if user in self.disliked.all():
+            self.disliked.remove(user)
+
+        else:
+            self.disliked.add(user)
+            notification_handler(user, self.user,
+                                 Notification.DISLIKED, action_object=self,
                                  id_value=str(self.uuid_id),
                                  key='social_update')
 
@@ -104,3 +117,9 @@ class News(models.Model):
 
     def get_likers(self):
         return self.liked.all()
+
+    def count_dislikers(self):
+        return self.disliked.count()
+
+    def get_dislikers(self):
+        return self.disliked.all()

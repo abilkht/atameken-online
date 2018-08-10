@@ -115,23 +115,51 @@ $(function () {
         // Ajax call on action on like button.
         var li = $(this).closest("li");
         var news = $(li).attr("news-id");
-        payload = {
+        var payload1 = {
             'news': news,
             'csrf_token': csrftoken
         }
         $.ajax({
             url: '/news/like/',
-            data: payload,
+            data: payload1,
             type: 'POST',
             cache: false,
             success: function (data) {
                 $(".like .like-count", li).text(data.likes);
-                if ($(".like .heart", li).hasClass("fa fa-heart")) {
-                    $(".like .heart", li).removeClass("fa fa-heart");
-                    $(".like .heart", li).addClass("fa fa-heart-o");
+                if ($(".like .heart", li).hasClass("fa fa-chevron-up vote up-vote question-voted")) {
+                    $(".like .heart", li).removeClass("fa fa-chevron-up vote up-vote question-voted");
+                    $(".like .heart", li).addClass("fa fa-chevron-up vote up-vote question-voted-o");
                 } else {
-                    $(".like .heart", li).removeClass("fa fa-heart-o");
-                    $(".like .heart", li).addClass("fa fa-heart");
+                    $(".like .heart", li).removeClass("fa fa-chevron-up vote up-vote question-voted-o");
+                    $(".like .heart", li).addClass("fa fa-chevron-up vote up-vote question-voted");
+                }
+            }
+        });
+        return false;
+    });
+
+    $("ul.stream").on("click", ".dislike", function () {
+        // Ajax call on action on dislike button.
+        var li = $(this).closest("li");
+        var news = $(li).attr("news-id");
+        var payload2 = {
+            'news': news,
+            'csrf_token': csrftoken
+        }
+
+        $.ajax({
+            url: '/news/dislike/',
+            data: payload2,
+            type: 'POST',
+            cache: false,
+            success: function (data) {
+                $(".dislike .dislike-count", li).text(data.dislikes);
+                if ($(".dislike .heart", li).hasClass("fa fa-chevron-down vote down-vote question-voted")) {
+                    $(".dislike .heart", li).removeClass("fa fa-chevron-down vote down-vote question-voted");
+                    $(".dislike .heart", li).addClass("fa fa-chevron-down vote down-vote question-voted-o");
+                } else {
+                    $(".dislike .heart", li).removeClass("fa fa-chevron-down vote down-vote question-voted-o");
+                    $(".dislike .heart", li).addClass("fa fa-chevron-down vote down-vote question-voted");
                 }
             }
         });

@@ -10,7 +10,7 @@ class NewsType(DjangoObjectType):
     """DjangoObjectType to acces the News model."""
     count_thread = graphene.Int()
     count_likers = graphene.Int()
-
+    count_dislikers = graphene.Int()
     class Meta:
         model = News
 
@@ -20,6 +20,8 @@ class NewsType(DjangoObjectType):
     def resolve_count_likers(self, info, **kwargs):
         return self.liked_news.count()
 
+    def resolve_count_dislikers(self, info, **kwargs):
+        return self.disliked_news.count()
 
 class NewsPaginatedType(graphene.ObjectType):
     """A paginated type generic object to provide pagination to the news

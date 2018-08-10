@@ -84,6 +84,7 @@ class Notification(models.Model):
         <Sebastian> <commented> <Article> <2 hours ago>
     """
     LIKED = 'L'
+    DISLIKED = 'D'
     COMMENTED = 'C'
     FAVORITED = 'F'
     ANSWERED = 'A'
@@ -98,6 +99,7 @@ class Notification(models.Model):
     REPLY = 'R'
     NOTIFICATION_TYPES = (
         (LIKED, _('liked')),
+        (DISLIKED, ('disliked')),
         (COMMENTED, _('commented')),
         (FAVORITED, _('cavorited')),
         (ANSWERED, _('answered')),
@@ -169,7 +171,10 @@ class Notification(models.Model):
             return 'fa-users'
 
         elif self.verb == 'L':
-            return 'fa-heart'
+            return 'fa fa-chevron-up vote up-vote question-voted'
+
+        elif self.verb == 'D':
+            return 'fa fa-chevron-down vote down-vote question-voted'
 
         elif self.verb == 'F':
             return 'fa-star'

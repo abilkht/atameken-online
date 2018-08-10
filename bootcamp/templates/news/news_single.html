@@ -49,36 +49,55 @@
           <a href="{% url 'users:detail' news.user.username  %}">{{ news.user.get_profile_name|title }}</a>
         </strong>
       </p>
-      <p>1) {{ news.content }}</p>
-      <p>2) {{ news.content_two }}</p>
-      <p>3) {{ news.content_three }}</p>
-      <p>4) {{ news.content_four }}</p>
+    <table class="table">
+        <thead>
+    <tr>
+         <th scope="col">Наименование</th>
+         <th scope="col">Редакция Проекта</th>
+         <th scope="col">Предлагаемая Редакция</th>
+         <th scope="col">Обоснование</th>
+    </tr>
+ </thead>
+
+<tbody>
+    <tr>
+      <td>{{ news.content }}</td>
+      <td>{{ news.content_two }}</td>
+      <td>{{ news.content_three }}</td>
+      <td>{{ news.content_four }}</td>
+    </tr>
+  </tbody>
+
+    </table>
       {% if news.image %}
         <img class="card-img-top" src="{{ news.image }}" alt="Фото карточки">
       {% endif %}
     </div>
   </div>
   <div class="interaction" id="interaction">
-    <a href="#" class="like" title="{% for i in news.get_likers %}{{ i }}&#10;{% endfor %}">
+
+      <a href="#" class="like" title="{% for i in news.get_likers %}{{ i }}&#10;{% endfor %}">
       {% if request.user in news.get_likers %}
         <i class="fa fa-chevron-up vote up-voted question-vote" aria-hidden="true"></i>
       {% else %}
         <i class="fa fa-chevron-up vote up-vote question-vote" aria-hidden="true"></i>
       {% endif %}
       <span class="like-count">{{ news.count_likers }}</span>
-    </a>
-    <a href="#" class="dislike" title="{% for i in news.get_dislikers %}{{ i }}&#10;{% endfor %}">
-      {% if request.user in news.get_dislikers %}
-        <i class="fa fa-chevron-down voted down-vote question-vote" aria-hidden="true"></i>
-      {% else %}
-        <i class="fa fa-chevron-down vote down-vote question-vote" aria-hidden="true"></i>
-      {% endif %}
-      <span class="dislike-count">{{ news.count_dislikers }}0</span>
-    </a>
-    <a href="#" class="comment"><i class="fa fa-comment-o" aria-hidden="true"></i>
+      </a>
+
+      <a href="#" class="dislike" title="{% for i in news.get_dislikers %}{{ i }}&#10;{% endfor %}">
+        {% if request.user in news.get_dislikers %}
+            <i class="fa fa-chevron-down voted down-vote question-vote" aria-hidden="true"></i>
+        {% else %}
+            <i class="fa fa-chevron-down vote down-vote question-vote" aria-hidden="true"></i>
+        {% endif %}
+      <span class="dislike-count">{{ news.count_dislikers }}</span>
+      </a>
+
+      <a href="#" class="comment"><i class="fa fa-comment-o" aria-hidden="true"></i>
       <span class="comment-count">{{ news.count_thread }}</span>
-    </a>
-    <span class="timestamp">{{ news.timestamp|naturaltime }}</span>
+      </a>
+      <span class="timestamp">{{ news.timestamp|naturaltime }}</span>
   </div>
 </li>
 <style>

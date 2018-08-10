@@ -31,15 +31,28 @@
       </div>
     </div>
     <div class="interaction" id="interaction">
-      <a href="#" class="like" title="{% for i in news.get_likers %}{{ i }}&#10;{% endfor %}">
+
+        <a href="#" class="like" title="{% for i in news.get_likers %}{{ i }}&#10;{% endfor %}">
         {% if request.user in news.get_likers %}
-          <i class="heart fa fa-heart" aria-hidden="true"></i>
+          <i class="fa fa-chevron-up vote down-vote question-voted" aria-hidden="true"></i>
         {% else %}
-          <i class="heart fa fa-heart-o" aria-hidden="true"></i>
+          <i class="fa fa-chevron-up vote up-vote question-voted-o" aria-hidden="true"></i>
         {% endif %}
-        <span class="like-count">{{ news.count_likers }}</span>
+        <span class="like-count">{{ news.count_likers}}</span>
       </a>
       <span class="timestamp">{{ reply.timestamp|naturaltime }}</span>
+
+
+       <a href="#" class="dislike" title="{% for i in news.get_dislikers %}{{ i }}&#10;{% endfor %}">
+        {% if request.user in news.get_dislikers %}
+          <i class="fa fa-chevron-down vote down-vote question-voted" aria-hidden="true"></i>
+        {% else %}
+          <i class="fa fa-chevron-down vote down-vote question-voted-o" aria-hidden="true"></i>
+        {% endif %}
+        <span class="dislike-count">{{ news.count_dislikers }}</span>
+      </a>
+        <span class="timestamp">{{ reply.timestamp|naturaltime }}</span>
+
     </div>
   </li>
 {% endfor %}

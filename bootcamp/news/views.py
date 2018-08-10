@@ -101,6 +101,22 @@ def like(request):
     else:
         return HttpResponseBadRequest(content=_('Wrong request type.'))
 
+@login_required
+@ajax_required
+def dislike(request):
+    """Function view to receive AJAX, returns the count of likes a given news
+    has received."""
+    if request.method == 'POST':
+        news_id = request.POST['news']
+        news = News.objects.get(pk=news_id)
+        user = request.user
+        news.switch_dislike(user)
+        return JsonResponse({"dislikes": news.count_dislikers()})
+
+    else:
+        return HttpResponseBadRequest(content=_('Wrong request type.'))
+
+
 
 @login_required
 @ajax_required
@@ -146,5 +162,5 @@ def post_comment(request):
 def update_interactions(request):
     data_point = request.POST['id_value']
     news = News.objects.get(pk=data_point)
-    data = {'likes': news.count_likers(), 'comments': news.count_thread()}
+    data = {'likes': news.count_likers(),'dislikes': news.count_dislikers(), 'comments': news.count_thread()}
     return JsonResponse(data)
