@@ -85,14 +85,14 @@
       <span class="like-count">{{ news.count_likers }}</span>
       </a>
 
-      <a href="#" class="dislike" title="{% for i in news.get_dislikers %}{{ i }}&#10;{% endfor %}">
-        {% if request.user in news.get_dislikers %}
-            <i class="fa fa-chevron-down voted down-vote question-vote" aria-hidden="true"></i>
-        {% else %}
-            <i class="fa fa-chevron-down vote down-vote question-vote" aria-hidden="true"></i>
-        {% endif %}
-      <span class="dislike-count">{{ news.count_dislikers }}</span>
-      </a>
+{#      <a href="#" class="dislike" title="{% for i in news.get_dislikers %}{{ i }}&#10;{% endfor %}">#}
+{#        {% if request.user in news.get_dislikers %}#}
+{#            <i class="fa fa-chevron-down voted down-vote question-vote" aria-hidden="true"></i>#}
+{#        {% else %}#}
+{#            <i class="fa fa-chevron-down vote down-vote question-vote" aria-hidden="true"></i>#}
+{#        {% endif %}#}
+{#      <span class="dislike-count">{{ news.count_dislikers }}</span>#}
+{#      </a>#}
 
       <a href="#" class="comment"><i class="fa fa-comment-o" aria-hidden="true"></i>
       <span class="comment-count">{{ news.count_thread }}</span>
