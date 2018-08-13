@@ -117,7 +117,7 @@ $(function () {
         var news = $(li).attr("news-id");
         var payload1 = {
             'news': news,
-            '{{ csrf_token }}': csrftoken
+            'csrf_token': csrftoken
         }
         $.ajax({
             url: '/news/like/',
@@ -145,7 +145,7 @@ $(function () {
         var news = $(li).attr("news-id");
         var payload2 = {
             'news': news,
-            '{{ csrf_token }}': csrftoken
+            'csrf_token': csrftoken
         }
 
         $.ajax({
