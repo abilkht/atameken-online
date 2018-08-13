@@ -96,7 +96,7 @@ def like(request):
         news = News.objects.get(pk=news_id)
         user = request.user
         news.switch_like(user)
-        return JsonResponse({"likes": news.count_likers()})
+        return JsonResponse({"likes": news.count_likers(), 'dislikes': news.count_dislikers()})
 
     else:
         return HttpResponseBadRequest(content=_('Wrong request type.'))
@@ -112,7 +112,7 @@ def dislike(request):
         news = News.objects.get(pk=news_id)
         user = request.user
         news.switch_dislike(user)
-        return JsonResponse({"dislikes": news.count_dislikers()})
+        return JsonResponse({"likes": news.count_likers(), "dislikes": news.count_dislikers()})
 
     else:
         return HttpResponseBadRequest(content=_('Wrong request type.'))

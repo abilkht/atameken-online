@@ -125,6 +125,7 @@ $(function () {
             type: 'POST',
             cache: false,
             success: function (data) {
+                $(".dislike .dislike-count", li).text(data.dislikes);
                 $(".like .like-count", li).text(data.likes);
                 if ($(".like .heart", li).hasClass("fa fa-chevron-up vote up-vote question-voted")) {
                     $(".like .heart", li).removeClass("fa fa-chevron-up vote up-vote question-voted");
@@ -133,7 +134,6 @@ $(function () {
                     $(".like .heart", li).removeClass("fa fa-chevron-up vote up-vote question-voted-o");
                     $(".like .heart", li).addClass("fa fa-chevron-up vote up-vote question-voted");
                 }
-                location.reload(true);
             }
         });
         return false;

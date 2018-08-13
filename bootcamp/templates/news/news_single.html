@@ -15,38 +15,6 @@
           <a href="{% url 'news:delete_news' news.pk %}" class="deletePost">
           <i class="fa fa-times pull-right" aria-hidden="true" title="{% trans 'Нажмите чтобы удалить новость' %}"></i>
         </a>
-{#        <a href="news_confirm_delete.html" data-toggle="modal" data-target="#DeletePost" style="color: #004a7a;" class="deletePost">#}
-{#          <i class="fa fa-times pull-right" aria-hidden="true" title="{% trans 'Нажмите, чтобы удалить новость' %}"></i>#}
-{#        </a>#}
-{#          {% include 'news/news_confirm_delete.html' %}#}
-      <!--Modal!-->
-{#      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">#}
-{#        <div class="modal-dialog" role="document">#}
-{#          <div class="modal-content">#}
-{#           <div class="modal-header">#}
-{#            <legend class="modal-title" id="exampleModalLabel" >Удаление поста</legend>#}
-{#            <button type="button" class="close" data-dismiss="modal" aria-label="Close">#}
-{#              <span aria-hidden="true">&times;</span>#}
-{#            </button>#}
-{#            </div>#}
-{##}
-{#          <div class="modal-body">#}
-{#            <p>{% trans 'Вы уверены что хотите удалить новость?' %}</p>#}
-{#          </div>#}
-{##}
-{#          <div class="modal-footer">#}
-{#            <form method="post" action="{% url 'news:delete_news' news.pk %}" style="margin-right: auto">#}
-{#              {% csrf_token %}#}
-{#              <button class="btn btn-danger" type="submit" >{% trans 'Удалить' %}</button>#}
-{#              <button type="button" class="btn btn-default" data-dismiss="modal">Отменить</button>#}
-{#            </form>#}
-{#          </div>#}
-{##}
-{#        </div>#}
-{#      </div>#}
-{#    </div>#}
-<!--Modal!-->
-
       {% endif %}
       <p>
         <strong>
@@ -78,31 +46,33 @@
       {% endif %}
     </div>
   </div>
-  <div class="interaction" id="interaction">
+    <form id="interactions" role="form" method="post" action="#!" onsubmit="return false">
         {% csrf_token %}
-      <a href="#!" class="like" title="{% for i in news.get_likers %}{{ i }}&#10;{% endfor %}">
-      {% if request.user in news.get_likers %}
-        <i class="fa fa-chevron-up vote up-voted question-voted" aria-hidden="true"></i>
-      {% else %}
-        <i class="fa fa-chevron-up vote up-vote question-vote" aria-hidden="true"></i>
-      {% endif %}
-      <span class="like-count">{{ news.count_likers }}</span>
-      </a>
+        <div class="interaction" id="interaction">
+            <a href="#!" class="like" title="{% for i in news.get_likers %}{{ i }}&#10;{% endfor %}">
+                {% if request.user in news.get_likers %}
+                    <i class="fa fa-chevron-up vote up-voted question-voted" aria-hidden="true"></i>
+                {% else %}
+                    <i class="fa fa-chevron-up vote up-vote question-vote" aria-hidden="true"></i>
+                {% endif %}
+                <span class="like-count">{{ news.count_likers }}</span>
+            </a>
 
-      <a href="#!" class="dislike" title="{% for i in news.get_dislikers %}{{ i }}&#10;{% endfor %}">
-        {% if request.user in news.get_dislikers %}
-            <i class="fa fa-chevron-down voted down-vote question-voted" aria-hidden="true"></i>
-        {% else %}
-            <i class="fa fa-chevron-down vote down-vote question-vote" aria-hidden="true"></i>
-        {% endif %}
-      <span class="dislike-count">{{ news.count_dislikers }}</span>
-      </a>
+            <a href="#!" class="dislike" title="{% for i in news.get_dislikers %}{{ i }}&#10;{% endfor %}">
+                {% if request.user in news.get_dislikers %}
+                    <i class="fa fa-chevron-down voted down-vote question-voted" aria-hidden="true"></i>
+                {% else %}
+                    <i class="fa fa-chevron-down vote down-vote question-vote" aria-hidden="true"></i>
+                {% endif %}
+                <span class="dislike-count">{{ news.count_dislikers }}</span>
+            </a>
 
-      <a href="#!" class="comment"><i class="fa fa-comment-o" aria-hidden="true"></i>
-      <span class="comment-count">{{ news.count_thread }}</span>
-      </a>
-      <span class="timestamp">{{ news.timestamp|naturaltime }}</span>
-  </div>
+            <a href="#!" class="comment"><i class="fa fa-comment-o" aria-hidden="true"></i>
+                <span class="comment-count">{{ news.count_thread }}</span>
+            </a>
+                <span class="timestamp">{{ news.timestamp|naturaltime }}</span>
+        </div>
+    </form>
 </li>
 <style>
   .deletePost i:hover {
