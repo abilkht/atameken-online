@@ -4,7 +4,7 @@ from django.http import HttpResponse, HttpResponseBadRequest, JsonResponse
 from django.template.loader import render_to_string
 from django.urls import reverse_lazy
 from django.utils.translation import ugettext_lazy as _
-from django.views.decorators.csrf import csrf_protect
+from django.views.decorators.csrf import ensure_csrf_cookie
 from django.views.generic import ListView, DeleteView
 from django.shortcuts import render
 import django_tables2 as tables
@@ -88,7 +88,7 @@ def post_news(request):
 
 @login_required
 @ajax_required
-@csrf_protect
+@ensure_csrf_cookie
 def like(request):
     """Function view to receive AJAX, returns the count of likes a given news
     has received."""
@@ -105,7 +105,7 @@ def like(request):
 
 @login_required
 @ajax_required
-@csrf_protect
+@ensure_csrf_cookie
 def dislike(request):
     """Function view to receive AJAX, returns the count of dislikes a given news
     has received."""
