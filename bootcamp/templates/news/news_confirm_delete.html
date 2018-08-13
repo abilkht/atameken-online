@@ -1,3 +1,38 @@
+{#{% extends "base.html" %}#}
+{##}
+{#{% load i18n %}#}
+{##}
+{#{% block head_title %}{% trans "Удалить новость" %}{% endblock %}#}
+{##}
+{#{% block content %}#}
+{#<div class="modal fade" id="DeletePost" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">#}
+{#        <div class="modal-dialog" role="document">#}
+{#          <div class="modal-content">#}
+{#           <div class="modal-header">#}
+{#            <legend class="modal-title" id="DeletePost" >Удаление поста</legend>#}
+{#            <button type="button" class="close" data-dismiss="modal" aria-label="Close">#}
+{#              <span aria-hidden="true">&times;</span>#}
+{#            </button>#}
+{#            </div>#}
+{##}
+{#          <div class="modal-body">#}
+{#            <p>{% trans 'Вы уверены что хотите удалить новость?' %}</p>#}
+{#          </div>#}
+{##}
+{#          <div class="modal-footer">#}
+{#            <form method="post" action="{% url 'news:delete_news' news.pk %}" style="margin-right: auto">#}
+{#              {% csrf_token %}#}
+{#              <button class="btn btn-danger" type="submit" >{% trans 'Удалить' %}</button>#}
+{#              <button type="button" class="btn btn-default" data-dismiss="modal">Отменить</button>#}
+{#            </form>#}
+{#          </div>#}
+{##}
+{#        </div>#}
+{#      </div>#}
+{#    </div>#}
+{#{% endblock %}#}
+
+
 {% extends "base.html" %}
 
 {% load i18n %}
@@ -5,14 +40,19 @@
 {% block head_title %}{% trans "Удалить новость" %}{% endblock %}
 
 {% block content %}
-<h1>{% trans "Удалить выложенный пост" %}</h1>
+    <div class="card" style="padding:15px;margin-top:30px;width:35%;margin-left:auto;margin-right:auto;text-align: center;box-shadow: 0 0 10px rgba(0,0,0,0.5);">
 
-<p>{% trans 'Вы уверены что хотите удалить новость?' %}</p>
+<legend>{% trans 'Вы уверены, что хотите удалить публикацию?' %}</legend>
 
 <form method="post" action="{% url 'news:delete_news' news.pk %}">
   {% csrf_token %}
-  <button class="btn btn-danger" type="submit">{% trans 'Удалить' %}</button>
+  <button class="btn btn-danger" type="submit" style="width:50%">{% trans 'Удалить' %}</button>
 </form>
-
-
+    </div>
+<style>
+button:hover {
+    box-shadow: 0 0 10px 0 #dc3545 inset, 0 0 10px 2px #dc3545;
+    border: 0.5px solid #dc3545;
+  }
+</style>
 {% endblock %}

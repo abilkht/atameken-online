@@ -16,14 +16,13 @@ from bootcamp.news.models import News
 class NewsTable(tables.Table):
     class Meta:
         model = News
-        fields = ('content', 'content_two', 'content_three', 'content_four')
+        fields = ('content', 'content_two', 'content_three', 'content_four', 'liked', 'disliked')
         attrs = {'class': 'table table-hover'}
         template_name = 'django_tables2/semantic.html'
 
 
 def tablify(request):
     table = NewsTable(News.objects.all())
-    # table = NewsTable(News.objects.values_list('content', 'content_two', 'content_three', 'content_four', named=True))
     RequestConfig(request).configure(table)
     return render(request, 'news/news_table.html', {'table': table})
 
@@ -101,10 +100,11 @@ def like(request):
     else:
         return HttpResponseBadRequest(content=_('Wrong request type.'))
 
+
 @login_required
 @ajax_required
 def dislike(request):
-    """Function view to receive AJAX, returns the count of likes a given news
+    """Function view to receive AJAX, returns the count of dislikes a given news
     has received."""
     if request.method == 'POST':
         news_id = request.POST['news']
@@ -115,7 +115,6 @@ def dislike(request):
 
     else:
         return HttpResponseBadRequest(content=_('Wrong request type.'))
-
 
 
 @login_required
@@ -162,5 +161,5 @@ def post_comment(request):
 def update_interactions(request):
     data_point = request.POST['id_value']
     news = News.objects.get(pk=data_point)
-    data = {'likes': news.count_likers(),'dislikes': news.count_dislikers(), 'comments': news.count_thread()}
+    data = {'likes': news.count_likers(), 'dislikes': news.count_dislikers(), 'comments': news.count_thread()}
     return JsonResponse(data)

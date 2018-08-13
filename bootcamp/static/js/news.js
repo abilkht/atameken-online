@@ -133,6 +133,7 @@ $(function () {
                     $(".like .heart", li).removeClass("fa fa-chevron-up vote up-vote question-voted-o");
                     $(".like .heart", li).addClass("fa fa-chevron-up vote up-vote question-voted");
                 }
+                location.reload(true);
             }
         });
         return false;

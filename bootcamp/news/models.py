@@ -24,9 +24,9 @@ class News(models.Model):
     uuid_id = models.UUIDField(
         primary_key=True, default=uuid.uuid4, editable=False)
     content = models.TextField(max_length=1000, verbose_name=_("Наименование"))
-    content_two = models.TextField(max_length=1000, default='content_two',verbose_name=_("Редакция проекта"))
-    content_three = models.TextField(max_length=1000, default='content_three',verbose_name=_("Предлагаемая редакция"))
-    content_four = models.TextField(max_length=1000, default='content_four',verbose_name=_("Обоснование"))
+    content_two = models.TextField(max_length=1000, default='content_two', verbose_name=_("Редакция проекта"))
+    content_three = models.TextField(max_length=1000, default='content_three', verbose_name=_("Предлагаемая редакция"))
+    content_four = models.TextField(max_length=1000, default='content_four', verbose_name=_("Обоснование"))
     liked = models.ManyToManyField(settings.AUTH_USER_MODEL,
                                    blank=True, related_name="liked_news")
     disliked = models.ManyToManyField(settings.AUTH_USER_MODEL,
@@ -57,7 +57,14 @@ class News(models.Model):
         return reverse("news:detail", kwargs={"uuid_id": self.uuid})
 
     def switch_like(self, user):
-        if user in self.liked.all():
+        if user in self.disliked.all():
+            self.disliked.remove(user)
+            self.liked.add(user)
+            notification_handler(user, self.user,
+                                 Notification.DISLIKED, action_object=self,
+                                 id_value=str(self.uuid_id),
+                                 key='social_update')
+        elif user in self.liked.all():
             self.liked.remove(user)
 
         else:
@@ -68,7 +75,14 @@ class News(models.Model):
                                  key='social_update')
 
     def switch_dislike(self, user):
-        if user in self.disliked.all():
+        if user in self.liked.all():
+            self.liked.remove(user)
+            self.disliked.add(user)
+            notification_handler(user, self.user,
+                                 Notification.LIKED, action_object=self,
+                                 id_value=str(self.uuid_id),
+                                 key='social_update')
+        elif user in self.disliked.all():
             self.disliked.remove(user)
 
         else:
@@ -115,11 +129,11 @@ class News(models.Model):
     def count_likers(self):
         return self.liked.count()
 
-    def get_likers(self):
-        return self.liked.all()
-
     def count_dislikers(self):
         return self.disliked.count()
+
+    def get_likers(self):
+        return self.liked.all()
 
     def get_dislikers(self):
         return self.disliked.all()

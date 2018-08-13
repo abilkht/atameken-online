@@ -7,7 +7,7 @@ from bootcamp.helpers import paginate_data
 
 
 class NewsType(DjangoObjectType):
-    """DjangoObjectType to acces the News model."""
+    """DjangoObjectType to access the News model."""
     count_thread = graphene.Int()
     count_likers = graphene.Int()
     count_dislikers = graphene.Int()
