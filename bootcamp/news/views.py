@@ -88,7 +88,6 @@ def post_news(request):
 
 @login_required
 @ajax_required
-@ensure_csrf_cookie
 def like(request):
     """Function view to receive AJAX, returns the count of likes a given news
     has received."""
@@ -105,7 +104,6 @@ def like(request):
 
 @login_required
 @ajax_required
-@ensure_csrf_cookie
 def dislike(request):
     """Function view to receive AJAX, returns the count of dislikes a given news
     has received."""
