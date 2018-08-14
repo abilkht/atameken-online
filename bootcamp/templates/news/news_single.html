@@ -1,33 +1,38 @@
 {% load i18n %}
 {% load humanize static %}
 {% load thumbnail %}
-<li class="infinite-item card" news-id="{{ news.uuid_id }}">
+<li class="infinite-item card container" news-id="{{ news.uuid_id }}">
   <div class="card-body">
-    <div class="profile-picture">
-      {% thumbnail news.user.picture "x60" as im %}
-        <img src="{{ im.url }}" class="pull-left" style="border-radius: 50%;" alt="{% trans 'Фото пользователя' %}" class="user-image">
-      {% empty %}
-        <img src="{% static 'img/user.png' %}" class="pull-left" height="60px" alt="{% trans 'Нет фото профиля' %}" />
-      {% endthumbnail %}
-    </div>
+{#    <div class="profile-picture">#}
+{#      {% thumbnail news.user.picture "x60" as im %}#}
+{#        <img src="{{ im.url }}" class="pull-left" style="border-radius: 50%;" alt="{% trans 'Фото пользователя' %}" class="user-image">#}
+{#      {% empty %}#}
+{#        <img src="{% static 'img/user.png' %}" class="pull-left" height="60px" alt="{% trans 'Нет фото профиля' %}" />#}
+{#      {% endthumbnail %}#}
+{#    </div>#}
     <div class="post">
       {% if news.user == request.user %}
-          <a href="{% url 'news:delete_news' news.pk %}" class="deletePost">
-          <i class="fa fa-times pull-right" aria-hidden="true" title="{% trans 'Нажмите чтобы удалить новость' %}"></i>
+
+          <a href="{% url 'news:delete_news' news.pk %}" class="deletePost" style="padding:5px">
+{#          <i class="fa fa-times pull-right" </i>#}
+          <i class="fa fa-trash-o pull-right" aria-hidden="true" title="{% trans 'Нажмите чтобы удалить новость' %}"></i>
         </a>
+           <a href="{% url 'news:delete_news' news.pk %}" class="deletePost" style="padding:2rem">
+           <i class="fa fa-pencil-square-o pull-right" aria-hidden="true"></i>
+          </a>
       {% endif %}
-      <p>
-        <strong>
-          <a href="{% url 'users:detail' news.user.username  %}">{{ news.user.get_profile_name|title }}</a>
-        </strong>
-      </p>
-    <table class="table">
+{#      <p>#}
+{#        <strong>#}
+{#          <a href="{% url 'users:detail' news.user.username  %}">{{ news.user.get_profile_name|title }}</a>#}
+{#        </strong>#}
+{#      </p>#}
+    <table class="table  table-bordered table-hover">
         <thead>
     <tr>
-         <th scope="col">Наименование</th>
-         <th scope="col">Редакция Проекта</th>
-         <th scope="col">Предлагаемая Редакция</th>
-         <th scope="col">Обоснование</th>
+         <th scope="col" class="first">Наименование</th>
+         <th scope="col" class="second">Редакция проекта</th>
+         <th scope="col" class="second">Предлагаемая редакция</th>
+         <th scope="col" class="second">Обоснование</th>
     </tr>
         </thead>
 
@@ -48,7 +53,7 @@
   </div>
     <form id="interactions" role="form" method="post" action="#!" onsubmit="return false">
         {% csrf_token %}
-        <div class="interaction" id="interaction">
+        <div class="interaction" id="interaction" style="margin-left:2rem">
             <a href="#!" class="like" title="{% for i in news.get_likers %}{{ i }}&#10;{% endfor %}">
                 {% if request.user in news.get_likers %}
                     <i class="fa fa-chevron-up vote up-voted question-voted" aria-hidden="true"></i>
@@ -70,7 +75,7 @@
             <a href="#!" class="comment"><i class="fa fa-comment-o" aria-hidden="true"></i>
                 <span class="comment-count">{{ news.count_thread }}</span>
             </a>
-                <span class="timestamp">{{ news.timestamp|naturaltime }}</span>
+                <span class="timestamp" style="padding-right:2rem">{{ news.timestamp|date:'G:i | d.m.Y ' }}</span>
         </div>
     </form>
 </li>
@@ -78,5 +83,15 @@
   .deletePost i:hover {
     color: red;
   }
-
+  th {
+    background-color: #F5F5F5;
+    color: #004a7a;
+    width:25%;
+  }
+    {#.first {#}
+    {#    width:16%;#}
+    {#}#}
+    {#.second {#}
+    {#    width:21%;#}
+    {#}#}
 </style>
