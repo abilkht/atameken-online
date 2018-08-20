@@ -6,24 +6,26 @@
 
 {% block content %}
 
-  <nav aria-label="breadcrumb">
+<!--   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="{% url 'news:list' %}">{% trans 'Лента' %}</a></li>
       <li class="breadcrumb-item"><a href="{% url 'qa:index_all' %}">{% trans 'Блог' %}</a></li>
       <li class="breadcrumb-item active" aria-current="page">{% trans 'Задать вопрос' %}</li>
     </ol>
-  </nav>
-  <form action="{% url 'qa:ask_question' %}" enctype="multipart/form-data"  id="question-form" method="post" role="form">
+  </nav> -->
+
+  <div class="card" style="padding:10px; margin-top:10px;margin-bottom:10px;box-shadow: 0 0 10px rgba(0,0,0,0.5);margin-right: auto;margin-left: auto;">
+  <form action="{% url 'qa:ask_question' %}" enctype="multipart/form-data"  id="question-form" method="post" role="form"><h1 style="text-align: center;color: #004a7a">Задать вопрос</h1><hr>
     {% csrf_token %}
     {{ form|crispy }}
     <div class="form-group">
-      <button id="publish" type="button" class="btn btn-primary">{% trans 'Опубликовать' %}</button>
-      <button id="draft" type="button" class="btn btn-default">{% trans 'Сохранить как черновик' %}</button>
+      <button id="publish" type="button" class="btn btn-primary" style="background-color: #004a7a"> <i class="fa fa-reply" aria-hidden="true"></i> {% trans 'Опубликовать' %}</button>
+      <button id="draft" type="button" class="btn btn-default"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> {% trans 'Сохранить как черновик' %}</button>
       <a href="{% url 'qa:index_all' %}" class="btn btn-default">{% trans 'Отмена' %}</a>
     </div>
   </form>
   {{ form.media }}
-
+</div>
 {% endblock content %}
 
 {% block modal %}

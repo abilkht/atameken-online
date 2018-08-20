@@ -8,19 +8,20 @@
 
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="{% url 'news:list' %}">{% trans 'Домой' %}</a></li>
-      <li class="breadcrumb-item"><a href="{% url 'qa:index_all' %}">{% trans 'Форум' %}</a></li>
+<!--       <li class="breadcrumb-item"><a href="{% url 'qa:index_all' %}">{% trans 'Обсуждения' %}</a></li> -->
       <li class="breadcrumb-item active" aria-current="page">{% trans 'Ответить на вопрос' %}</li>
     </ol>
   </nav>
+<div class="card" style="padding:10px; box-shadow: 0 0 10px rgba(0,0,0,0.5);margin-right: auto;margin-left: auto;margin-top:10px">
   <form action="{% url 'qa:propose_answer' view.kwargs.question_id %}" id="answerForm" method="post" role="form">
     {% csrf_token %}
     {{ form|crispy }}
     <div class="form-group">
-      <button id="answer" type="submit" class="btn btn-primary">{% trans 'Ответить' %}</button>
+      <button id="answer" type="submit" class="btn btn-secondary" style="background-color: #004a7a"> <i class="fa fa-reply" aria-hidden="true"></i>{% trans ' Ответить' %}</button>
       <a href="{% url 'qa:index_all' %}" class="btn btn-default">{% trans 'Отмена' %}</a>
     </div>
   </form>
   {{ form.media }}
+</div>
 
 {% endblock content %}

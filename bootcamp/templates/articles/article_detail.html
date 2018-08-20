@@ -7,25 +7,26 @@
 {% block content %}
   <!-- Page Content -->
   <div class="container">
-    <nav aria-label="breadcrumb">
+   <!--  <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="{% url 'news:list' %}">{% trans 'Домой' %}</a></li>
-        <li class="breadcrumb-item"><a href="{% url 'articles:list' %}">{% trans 'Блог' %}</a></li>
-        <li class="breadcrumb-item active" aria-current="page">{{ article.title|title }}</li>
+        <li class="breadcrumb-item"><a href="{% url 'articles:list' %}" style="color:#004a7a;font-size:1.5rem">{% trans 'Лента' %}</a></li>
+        <li class="breadcrumb-item active" aria-current="page" style="color:#004a7a;font-size:1.5rem;opacity: 0.8;">{{ article.title|title }}</li>
       </ol>
-    </nav>
-    <div class="row">
+    </nav> -->
+    <div class="row" >
       <!-- Post Content Column -->
       <div class="col-lg-8">
         <!-- Title -->
-        <h1 class="mt-4">{{ article.title|title }}</h1>
+        <h2 class="mt-4" id="titleArticle" style=" text-transform:uppercase;text-align: center;">{{ article.title|title }}</h2>
+        <hr>
         <!-- Author -->
-        <p class="lead">{% trans 'by' %}
+
+        <i class="lead fa fa-user"></i> Автор:
           <a href="{% url 'users:detail' article.user.username %}">{{ article.user.get_profile_name|title }}</a>
         </p>
-        <hr>
+
         <!-- Date/Time -->
-        <p>{% trans 'Опубликованные' %} {{ article.timestamp|naturaltime }}  </p>
+        <p><i class="lead fa fa-clock-o"></i>{% trans ' Опубликован в' %} {{ article.timestamp|date:'d.m.Y, G:i '  }}  </p>
         <hr>
         <!-- Featured Image -->
         {% thumbnail article.image "900x300" as im %}
@@ -49,7 +50,7 @@
                 {% csrf_token %}
                 {{ form|crispy }}
                 <input type="hidden" name="next" value="{% url 'articles:article' article.slug %}" />
-                <input type="submit" value="{% trans 'Add comment' %}" id="id_submit" />
+                <input type="submit" value="{% trans 'Прокомментировать' %}" id="id_submit" />
               </form>
             {% endif %}
           </div>
@@ -77,17 +78,17 @@
       <div class="col-md-4">
 
         <!-- Write Article Widget -->
-        {% if request.user.is_authenticated %}
+        <!-- {% if request.user.is_authenticated %}
           <div class="card my-4">
             <div class="card-body text-center">
               <a class="btn btn-success" href="{% url 'articles:write_new' %}" title="{% trans 'Написать новый блог' %}"><i class="fa fa-pencil" aria-hidden="true"></i> {% trans 'Новый блог' %}</a>
               <a class="btn btn-primary" href="{% url 'articles:edit_article' article.id %}" title="{% trans 'Изменить блог' %}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> {% trans 'Изменить' %}</a>
             </div>
           </div>
-        {% endif %}
+        {% endif %} -->
         <!-- Cloud Tag Widget -->
         <div class="card my-4">
-          <h5 class="card-header">{% trans 'Облако тэгов' %}</h5>
+          <h5 class="card-header">{% trans 'Хэштеги' %}</h5>
           <div class="card-body">
             {% for tag in article.tags.all %}
               <a href="#"><span class="badge badge-info">{{ tag }}</span></a>
@@ -98,5 +99,8 @@
     </div>
     <!-- /.row -->
   </div>
+  <style type="text/css">
+
+  </style>
   <!-- /.container -->
 {% endblock content %}

@@ -12,15 +12,20 @@
 
   <!-- Page Content -->
   <div class="container">
-    <nav aria-label="breadcrumb">
+    <nav aria-label="breadcrumb" id="headArticles">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="{% url 'news:list' %}">{% trans 'Лента' %}</a></li>
-        <li class="breadcrumb-item active"><a href="{% url 'articles:list' %}">{% trans 'Блоги' %}</a></li>
+        <li class="breadcrumb-item active"><a href="{% url 'articles:list' %}" style="color:#004a7a;font-size:1.5rem">{% trans 'Лента' %}</a></li>
+        <div class="ml-auto">
+           {% if request.user.is_authenticated %}
+              <a class="btn btn-danger" href="{% url 'articles:write_new' %}" title="{% trans 'Напишите новый блог' %}"><i class="fa fa-pencil" aria-hidden="true"></i> {% trans 'Написать статью' %}</a>
+              <a class="btn btn-primary" href="{% url 'articles:drafts' %}" title="{% trans 'Черновики' %}" style="background-color: #004a7a;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> {% trans 'Черновики' %}</a>
+        {% endif %}
+        </div>
       </ol>
     </nav>
-    <div class="row">
+    <div>
       <!-- Blog Entries Column -->
-      <div class="col-md-8">
+      <div class="col-md" style="" id="articles">
         {% for article in articles %}
           <!-- Blog Post -->
           <div class="card mb-4">
@@ -30,17 +35,18 @@
               <img class="card-img-top" src="http://placehold.it/750x300" alt="Фото карточки">
             {% endthumbnail %}
             <div class="card-body">
-              <h2 class="card-title">{{ article.title|title }}</h2>
+              <h2 class="card-title" style="text-align: center;text-transform: uppercase;">{{ article.title|title }}</h2>
               <p class="card-text">{{ article.get_markdown|safe|truncatechars:150 }}</p>
-              <a href="{% url 'articles:article' article.slug %}" class="btn btn-primary">{% trans 'Узнать больше' %} &rarr;</a>
+              <a href="{% url 'articles:article' article.slug %}" class="btn btn-primary" style="background-color: #004a7a">{% trans 'Узнать по-подробнее' %} &rarr;</a>
             </div>
             <div class="card-footer text-muted">
-              {% trans 'Опубликованные' %} {{ article.timestamp|naturaltime }}
-              <i class="lead fa fa-user"></i>
-              <a href="{% url 'users:detail' article.user.username %}">{{ article.user.get_profile_name|title }}</a>
-              {% for tag in article.tags.names %}
-                <a href="#">{{ tag }}</a>
-              {% endfor %}
+              <i class="lead fa fa-user"></i> Автор:
+              <a href="{% url 'users:detail' article.user.username %}"> {{ article.user.get_profile_name|title }}</a>
+              <div style="float:right">{% trans 'Опубликован в' %} {{ article.timestamp|date:'G:i | d.m.Y '  }}</div>
+
+              <!-- {% for tag in article.tags.names %}
+                <a href="#">#{{ tag }}</a>
+              {% endfor %} -->
             </div>
           </div>
         {% empty %}
@@ -74,27 +80,39 @@
       <!-- Sidebar Widgets Column -->
       <div class="col-md-4">
         <!-- Write Article Widget -->
-        {% if request.user.is_authenticated %}
-          <div class="card my-4">
-            <div class="card-body text-center">
-              <a class="btn btn-success" href="{% url 'articles:write_new' %}" title="{% trans 'Напишите новый блог' %}"><i class="fa fa-pencil" aria-hidden="true"></i> {% trans 'Написать блог' %}</a>
-              <a class="btn btn-primary" href="{% url 'articles:drafts' %}" title="{% trans 'Черновики' %}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> {% trans 'Черновики' %}</a>
-            </div>
-          </div>
-        {% endif %}
+        <!-- {% if request.user.is_authenticated %} -->
+          <!-- <div class="card my-4"> -->
+           <!--  <div class="card-body text-center"> -->
+              <!-- <a class="btn btn-success" href="{% url 'articles:write_new' %}" title="{% trans 'Напишите новый блог' %}"><i class="fa fa-pencil" aria-hidden="true"></i> {% trans 'Написать блог' %}</a>
+              <a class="btn btn-primary" href="{% url 'articles:drafts' %}" title="{% trans 'Черновики' %}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> {% trans 'Черновики' %}</a> -->
+           <!--  </div> -->
+      <!--     </div> -->
+       <!--  {% endif %} -->
         <!-- Cloud Tag Widget -->
-        <div class="card my-4">
+        <!-- <div class="card my-4">
           <h5 class="card-header">{% trans 'Список тэгов' %}</h5>
           <div class="card-body">
             {% for tag, count in popular_tags %}
               <a href="#"><span class="badge badge-info">{{ count }} {{ tag }}</span></a>
             {% endfor %}
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
     <!-- /.row -->
   </div>
   <!-- /.container -->
+  <style type="text/css">
+   @media (min-width: 768px) {
+    #articles  {
+      width:80%;
+      margin:auto
+    }
+    #headArticles {
+      width:100%;
+      margin:auto
+    }
+  }
+  </style>
 
 {% endblock content %}

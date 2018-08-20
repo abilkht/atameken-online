@@ -7,22 +7,25 @@
 
 {% block content %}
 
-  <nav aria-label="breadcrumb">
+<!--   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="{% url 'news:list' %}">{% trans 'Домой' %}</a></li>
-      <li class="breadcrumb-item"><a href="{% url 'articles:list' %}">{% trans 'Блог' %}</a></li>
-      <li class="breadcrumb-item active" aria-current="page">{% trans 'Напишите новый блог' %}</li>
+      <li class="breadcrumb-item"><a href="{% url 'articles:list' %}" style="color:#004a7a">{% trans 'Лента' %}</a></li>
+      <li class="breadcrumb-item active" aria-current="page" style="color:#004a7a; opacity: 0.8;">{% trans 'Публикация' %}</li>
     </ol>
-  </nav>
+  </nav> -->
+<div class="card" style="padding:10px; box-shadow: 0 0 10px rgba(0,0,0,0.5);margin-right: auto;margin-left: auto;margin-top:10px">
   <form action="{% url 'articles:write_new' %}" enctype="multipart/form-data"  id="article-form" method="post" role="form">
+
+    <h1 style="text-align: center;">Публикация статьи</h1><hr>
     {% csrf_token %}
     {{ form|crispy }}
     <div class="form-group">
-      <button type="button" class="btn btn-primary publish">{% trans 'Опубликовать' %}</button>
-      <button type="button" class="btn btn-default draft">{% trans 'Сохранить как черновик' %}</button>
+      <button type="button" class="btn btn-primary publish" style="background-color: #004a7a"> <i class="fa fa-reply" aria-hidden="true"></i> {% trans 'Опубликовать' %}</button>
+      <button type="button" class="btn btn-default draft"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> {% trans 'Сохранить как черновик' %}</button>
       <a href="{% url 'articles:list' %}" class="btn btn-default">{% trans 'Отмена' %}</a>
     </div>
   </form>
+</div>
   {{ form.media }}
 
 {% endblock content %}

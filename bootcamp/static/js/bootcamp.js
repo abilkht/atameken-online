@@ -48,6 +48,7 @@ $(function () {
             cache: false,
             success: function (data) {
                 $(".like-count", newsToUpdate).text(data.likes);
+                $(".dislike-count", newsToUpdate).text(data.dislikes);
                 $(".comment-count", newsToUpdate).text(data.comments);
             },
         });
