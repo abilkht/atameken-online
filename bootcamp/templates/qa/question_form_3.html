@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+{% load crispy_forms_tags %}
+
+{% block title %}{% trans 'Задать вопрос' %}{% endblock %}
+
+{% block content %}
+
+  <div class="card" style="padding:10px; margin-top:10px;margin-bottom:10px;box-shadow: 0 0 10px rgba(0,0,0,0.5);margin-right: auto;margin-left: auto;">
+  <form action="{% url 'qa:ask_question3' %}" enctype="multipart/form-data"  id="question-form-3" method="post" role="form"><h1 style="text-align: center;color: #004a7a">Задать вопрос</h1><hr>
+    {% csrf_token %}
+    {{ form|crispy }}
+    <div class="form-group">
+      <button id="publish3" type="button" class="btn btn-primary" style="background-color: #004a7a"> <i class="fa fa-reply" aria-hidden="true"></i> {% trans 'Опубликовать' %}</button>
+      <button id="draft3" type="button" class="btn btn-default"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> {% trans 'Сохранить как черновик' %}</button>
+      <a href="{% url 'qa:index_all3' %}" class="btn btn-default">{% trans 'Отмена' %}</a>
+    </div>
+  </form>
+  {{ form.media }}
+  </div>
+{% endblock content %}
+
+{% block modal %}
+  <script src="{% static 'js/qa.js' %}"></script>
+{% endblock modal %}

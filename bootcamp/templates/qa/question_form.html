@@ -6,14 +6,6 @@
 
 {% block content %}
 
-<!--   <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="{% url 'news:list' %}">{% trans 'Лента' %}</a></li>
-      <li class="breadcrumb-item"><a href="{% url 'qa:index_all' %}">{% trans 'Блог' %}</a></li>
-      <li class="breadcrumb-item active" aria-current="page">{% trans 'Задать вопрос' %}</li>
-    </ol>
-  </nav> -->
-
   <div class="card" style="padding:10px; margin-top:10px;margin-bottom:10px;box-shadow: 0 0 10px rgba(0,0,0,0.5);margin-right: auto;margin-left: auto;">
   <form action="{% url 'qa:ask_question' %}" enctype="multipart/form-data"  id="question-form" method="post" role="form"><h1 style="text-align: center;color: #004a7a">Задать вопрос</h1><hr>
     {% csrf_token %}

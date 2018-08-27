@@ -5,11 +5,16 @@ from django.contrib import messages
 from django.http import HttpResponseBadRequest, JsonResponse
 from django.urls import reverse
 from django.utils.translation import ugettext as _
-from django.views.generic import CreateView, ListView, DetailView
+from django.views.generic import CreateView, ListView, DetailView, TemplateView
 
 from bootcamp.helpers import ajax_required
-from bootcamp.qa.models import Question, Answer
-from bootcamp.qa.forms import QuestionForm
+from bootcamp.qa.models import Question, Answer, Question2, Answer2, Question3, Answer3
+from bootcamp.qa.forms import QuestionForm, Question2Form, Question3Form
+
+
+class IndexView(TemplateView):
+    """View to render the index page."""
+    template_name = "qa/question_main.html"
 
 
 class QuestionsIndexListView(LoginRequiredMixin, ListView):
@@ -17,6 +22,7 @@ class QuestionsIndexListView(LoginRequiredMixin, ListView):
     model = Question
     paginate_by = 20
     context_object_name = "questions"
+    template_name = "qa/question_list.html"
 
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
@@ -28,6 +34,7 @@ class QuestionsIndexListView(LoginRequiredMixin, ListView):
 class QuestionAnsListView(QuestionsIndexListView):
     """CBV to render a list view with all question which have been already
     marked as answered."""
+
     def get_queryset(self, **kwargs):
         return Question.objects.get_answered()
 
@@ -40,6 +47,7 @@ class QuestionAnsListView(QuestionsIndexListView):
 class QuestionListView(QuestionsIndexListView):
     """CBV to render a list view with all question which haven't been marked
     as answered."""
+
     def get_queryset(self, **kwargs):
         return Question.objects.get_unanswered()
 
@@ -54,6 +62,7 @@ class QuestionDetailView(LoginRequiredMixin, DetailView):
     that Question."""
     model = Question
     context_object_name = "question"
+    template_name = "qa/question_detail.html"
 
 
 class CreateQuestionView(LoginRequiredMixin, CreateView):
@@ -79,7 +88,8 @@ class CreateAnswerView(LoginRequiredMixin, CreateView):
     """
     model = Answer
     fields = ["content", ]
-    message = _("Спасибо! Ваш ответ опубликован.")
+
+    # message = _("Спасибо! Ваш ответ опубликован.")
 
     def form_valid(self, form):
         form.instance.user = self.request.user
@@ -87,9 +97,181 @@ class CreateAnswerView(LoginRequiredMixin, CreateView):
         return super().form_valid(form)
 
     def get_success_url(self):
-        messages.success(self.request, self.message)
+        # messages.success(self.request, self.message)
         return reverse(
             "qa:question_detail", kwargs={"pk": self.kwargs["question_id"]})
+
+
+class Questions2IndexListView(LoginRequiredMixin, ListView):
+    """CBV [2] to render a list with all the registered questions."""
+    model = Question2
+    paginate_by = 20
+    context_object_name = "questions"
+    template_name = "qa/question_list_2.html"
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        context["popular_tags"] = Question2.objects.get_counted_tags()
+        context["active"] = "all"
+        return context
+
+
+class Question2AnsListView(Questions2IndexListView):
+    """CBV [2] to render a list view with all question which have been already
+    marked as answered."""
+
+    def get_queryset(self, **kwargs):
+        return Question2.objects.get_answered()
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        context["active"] = "answered"
+        return context
+
+
+class Question2ListView(Questions2IndexListView):
+    """CBV [2] to render a list view with all question which haven't been marked
+    as answered."""
+
+    def get_queryset(self, **kwargs):
+        return Question2.objects.get_unanswered()
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        context["active"] = "unanswered"
+        return context
+
+
+class Question2DetailView(LoginRequiredMixin, DetailView):
+    """View [2] to call a given Question object and to render all the details about
+    that Question."""
+    model = Question2
+    context_object_name = "question"
+    template_name = "qa/question_detail_2.html"
+
+
+class CreateQuestion2View(LoginRequiredMixin, CreateView):
+    """
+    View [2] to handle the creation of a new question
+    """
+    form_class = Question2Form
+    template_name = "qa/question_form_2.html"
+    message = _("Ваш вопрос создан.")
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+
+    def get_success_url(self):
+        messages.success(self.request, self.message)
+        return reverse("qa:index_noans2")
+
+
+class CreateAnswer2View(LoginRequiredMixin, CreateView):
+    """
+    View [2] to create new answers for a given question
+    """
+    model = Answer2
+    fields = ["content", ]
+    template_name = "qa/answer_form_2.html"
+
+    # message = _("Спасибо! Ваш ответ опубликован.")
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        form.instance.question_id = self.kwargs["question_id"]
+        return super().form_valid(form)
+
+    def get_success_url(self):
+        # messages.success(self.request, self.message)
+        return reverse(
+            "qa:question_detail2", kwargs={"pk": self.kwargs["question_id"]})
+
+
+class Questions3IndexListView(LoginRequiredMixin, ListView):
+    """CBV [3] to render a list with all the registered questions."""
+    model = Question3
+    paginate_by = 20
+    context_object_name = "questions"
+    template_name = "qa/question_list_3.html"
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        context["popular_tags"] = Question3.objects.get_counted_tags()
+        context["active"] = "all"
+        return context
+
+
+class Question3AnsListView(Questions3IndexListView):
+    """CBV [3] to render a list view with all question which have been already
+    marked as answered."""
+
+    def get_queryset(self, **kwargs):
+        return Question3.objects.get_answered()
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        context["active"] = "answered"
+        return context
+
+
+class Question3ListView(Questions3IndexListView):
+    """CBV [3] to render a list view with all question which haven't been marked
+    as answered."""
+
+    def get_queryset(self, **kwargs):
+        return Question3.objects.get_unanswered()
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        context["active"] = "unanswered"
+        return context
+
+
+class Question3DetailView(LoginRequiredMixin, DetailView):
+    """View [3] to call a given Question object and to render all the details about
+    that Question."""
+    model = Question3
+    context_object_name = "question"
+    template_name = "qa/question_detail_3.html"
+
+
+class CreateQuestion3View(LoginRequiredMixin, CreateView):
+    """
+    View [3] to handle the creation of a new question
+    """
+    form_class = Question3Form
+    template_name = "qa/question_form_3.html"
+    message = _("Ваш вопрос создан.")
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+
+    def get_success_url(self):
+        messages.success(self.request, self.message)
+        return reverse("qa:index_noans3")
+
+
+class CreateAnswer3View(LoginRequiredMixin, CreateView):
+    """
+    View [3] to create new answers for a given question
+    """
+    model = Answer3
+    template_name = "qa/answer_form_3.html"
+    fields = ["content", ]
+
+    # message = _("Спасибо! Ваш ответ опубликован.")
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        form.instance.question_id = self.kwargs["question_id"]
+        return super().form_valid(form)
+
+    def get_success_url(self):
+        # messages.success(self.request, self.message)
+        return reverse(
+            "qa:question_detail3", kwargs={"pk": self.kwargs["question_id"]})
 
 
 @login_required

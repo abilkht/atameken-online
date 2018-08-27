@@ -1,13 +1,12 @@
+import django_tables2 as tables
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponse, HttpResponseBadRequest, JsonResponse
+from django.shortcuts import render
 from django.template.loader import render_to_string
 from django.urls import reverse_lazy
 from django.utils.translation import ugettext_lazy as _
-from django.views.decorators.csrf import ensure_csrf_cookie
 from django.views.generic import ListView, DeleteView
-from django.shortcuts import render
-import django_tables2 as tables
 from django_tables2 import RequestConfig
 
 from bootcamp.helpers import ajax_required, AuthorRequiredMixin

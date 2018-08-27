@@ -13,7 +13,7 @@
      <!--  <li class="breadcrumb-item"><a href="{% url 'news:list' %}">{% trans 'Лента' %}</a></li> -->
         <li class="breadcrumb-item" aria-current="page" style="font-size: 1.5rem">{% trans 'Вопросы' %}</li>
 <div class="ml-auto">
-<a href="{% url 'qa:ask_question' %}" class="btn btn-primary pull-right" style="background-color: #004a7a">
+<a href="{% url 'qa:ask_question2' %}" class="btn btn-primary pull-right" style="background-color: #004a7a">
       <i class="fa fa-plus-circle" aria-hidden="true" ></i> {% trans "Создать тему" %}
     </a>
 </div>
@@ -34,23 +34,23 @@
   <div>
     <ul class="nav nav-tabs">
       <li class="nav-item">
-        <a class="nav-link{% if active == 'unanswered' %} active{% endif %}" href="{% url 'qa:index_noans' %}" >
+        <a class="nav-link{% if active == 'unanswered' %} active{% endif %}" href="{% url 'qa:index_noans2' %}" >
           {% trans "Неотвеченные" %}
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link{% if active == 'answered' %} active{% endif %}" href="{% url 'qa:index_ans' %}" style="color: #004a7a">
+        <a class="nav-link{% if active == 'answered' %} active{% endif %}" href="{% url 'qa:index_ans2' %}" style="color: #004a7a">
           {% trans "Отвеченные" %}
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link{% if active == 'all' %} active{% endif %}" href="{% url 'qa:index_all' %}" style="color: #004a7a">
+        <a class="nav-link{% if active == 'all' %} active{% endif %}" href="{% url 'qa:index_all2' %}" style="color: #004a7a">
           {% trans "Все вопросы" %}
         </a>
       </li>
     </ul>
     {% for question in questions %}
-      {% include 'qa/question_sample.html' with question=question %}
+      {% include 'qa/question_sample_2.html' with question=question %}
     {% empty %}
       <h4 class="no-data">{% trans "Нет вопросов для показа" %}</h4>
     {% endfor %}

@@ -39,11 +39,39 @@ $(function () {
         $("#question-form").submit();
     });
 
+    $("#publish2").click(function () {
+        // function to operate the Publish button in the question form, marking
+        // the question status as published.
+        $("input[name='status']").val("O");
+        $("#question-form-2").submit();
+    });
+
+    $("#publish3").click(function () {
+        // function to operate the Publish button in the question form, marking
+        // the question status as published.
+        $("input[name='status']").val("O");
+        $("#question-form-3").submit();
+    });
+
     $("#draft").click(function () {
         // Function to operate the Draft button in the question form, marking
         // the question status as draft.
         $("input[name='status']").val("D");
         $("#question-form").submit();
+    });
+
+    $("#draft2").click(function () {
+        // Function to operate the Draft button in the question form, marking
+        // the question status as draft.
+        $("input[name='status']").val("D");
+        $("#question-form-2").submit();
+    });
+
+    $("#draft3").click(function () {
+        // Function to operate the Draft button in the question form, marking
+        // the question status as draft.
+        $("input[name='status']").val("D");
+        $("#question-form-3").submit();
     });
 
     $(".question-vote").click(function () {

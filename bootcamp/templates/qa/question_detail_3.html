@@ -11,12 +11,12 @@
 
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="{% url 'qa:index_noans' %}">{% trans 'Обсуждения' %}</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'qa:index_noans3' %}">{% trans 'Обсуждения' %}</a></li>
         <li class="breadcrumb-item active" aria-current="page">{{ question.title }}</li>
       </ol>
     </nav>
     <div class="page-header">
-      <!-- <a href="{% url 'qa:ask_question' %}" class="btn btn-primary pull-right">
+      <!-- <a href="{% url 'qa:ask_question3' %}" class="btn btn-primary pull-right">
         <i class="fa fa-pencil" aria-hidden="true"></i> {% trans "Спросить" %}
       </a> -->
       <h1><b>{{ question.title }}</b></h1>
@@ -59,7 +59,7 @@
     <div class="row">
       <ul class="col-md-12">
         {% for answer in question.answer_set.all %}
-          {% include 'qa/answer_sample.html' with answer=answer %}
+          {% include 'qa/answer_sample_3.html' with answer=answer %}
         {% empty %}
           <div class="text-center">
            <!--  <h6>{% trans 'Нажимая на кнопку, вы принимаете условия пользовательского соглашения.' %}</h6> -->
@@ -68,7 +68,7 @@
           </div>
         {% endfor %}
       </ul>
-      <a href="{% url 'qa:propose_answer' question.id %}" class="btn btn-primary pull-right" role="button" style="margin:auto;background-color: #004a7a;"><i class="fa fa-share" aria-hidden="true"></i>{% trans " Ответить на вопрос" %}</a>
+      <a href="{% url 'qa:propose_answer3' question.id %}" class="btn btn-primary pull-right" role="button" style="margin:auto;background-color: #004a7a;"><i class="fa fa-share" aria-hidden="true"></i>{% trans " Ответить на вопрос" %}</a>
     </div>
 {% endblock content %}
 

@@ -37,7 +37,7 @@
             <div class="card-body">
               <h2 class="card-title" style="text-align: center;text-transform: uppercase;">{{ article.title|title }}</h2>
               <p class="card-text">{{ article.get_markdown|safe|truncatechars:150 }}</p>
-              <a href="{% url 'articles:article' article.slug %}" class="btn btn-primary" style="background-color: #004a7a">{% trans 'Узнать по-подробнее' %} &rarr;</a>
+              <a href="{% url 'articles:article' article.slug %}" class="btn btn-primary" style="background-color: #004a7a">{% trans 'Подробнее' %} &rarr;</a>
             </div>
             <div class="card-footer text-muted">
               <i class="lead fa fa-user"></i> Автор:
