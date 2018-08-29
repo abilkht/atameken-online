@@ -53,6 +53,41 @@ $(function () {
         $("#question-form-3").submit();
     });
 
+    $("#publish4").click(function () {
+        // function to operate the Publish button in the question form, marking
+        // the question status as published.
+        $("input[name='status']").val("O");
+        $("#question-form-4").submit();
+    });
+
+    $("#publish5").click(function () {
+        // function to operate the Publish button in the question form, marking
+        // the question status as published.
+        $("input[name='status']").val("O");
+        $("#question-form-5").submit();
+    });
+
+    $("#publish6").click(function () {
+        // function to operate the Publish button in the question form, marking
+        // the question status as published.
+        $("input[name='status']").val("O");
+        $("#question-form-6").submit();
+    });
+
+    $("#publish7").click(function () {
+        // function to operate the Publish button in the question form, marking
+        // the question status as published.
+        $("input[name='status']").val("O");
+        $("#question-form-7").submit();
+    });
+
+    $("#publish8").click(function () {
+        // function to operate the Publish button in the question form, marking
+        // the question status as published.
+        $("input[name='status']").val("O");
+        $("#question-form-8").submit();
+    });
+
     $("#draft").click(function () {
         // Function to operate the Draft button in the question form, marking
         // the question status as draft.
@@ -72,6 +107,41 @@ $(function () {
         // the question status as draft.
         $("input[name='status']").val("D");
         $("#question-form-3").submit();
+    });
+
+    $("#draft4").click(function () {
+        // Function to operate the Draft button in the question form, marking
+        // the question status as draft.
+        $("input[name='status']").val("D");
+        $("#question-form-4").submit();
+    });
+
+    $("#draft5").click(function () {
+        // Function to operate the Draft button in the question form, marking
+        // the question status as draft.
+        $("input[name='status']").val("D");
+        $("#question-form-5").submit();
+    });
+
+    $("#draft6").click(function () {
+        // Function to operate the Draft button in the question form, marking
+        // the question status as draft.
+        $("input[name='status']").val("D");
+        $("#question-form-6").submit();
+    });
+
+    $("#draft7").click(function () {
+        // Function to operate the Draft button in the question form, marking
+        // the question status as draft.
+        $("input[name='status']").val("D");
+        $("#question-form-7").submit();
+    });
+
+    $("#draft8").click(function () {
+        // Function to operate the Draft button in the question form, marking
+        // the question status as draft.
+        $("input[name='status']").val("D");
+        $("#question-form-8").submit();
     });
 
     $(".question-vote").click(function () {

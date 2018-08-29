@@ -1,0 +1,31 @@
+{% load humanize i18n static humanize %}
+{% load thumbnail %}
+
+<div class="card questions">
+  <div class="card-body" >
+    <div class="question-info pull-left text-center">
+      <h3 class="{% if question.has_answer %}bg-success text-white{% endif %}">{{ question.count_answers }}</h3>
+      <small class="text-secondary">{% trans 'Ответы' %}</small>
+      <h3>{{ question.total_votes }}</h3>
+      <small class="text-secondary">{% trans 'Голоса' %}</small>
+    </div>
+    <div>
+
+      <h4 class="card-title">
+        <a href="{% url 'qa:question_detail4' question.pk %}" style="color: #004a7a">{{ question.title }}</a>
+      </h4>
+      <p>{{ question.get_markdown|safe|truncatechars:100 }}</p>
+       {% if question.tags.names %}
+          <p style="">
+            {% for tag in question.tags.names %}
+              <span class="badge badge-primary" style="background-color: #004a7a">{{ tag }}</span>
+            {% endfor %}
+          </p>
+        {% endif %}
+      <div class="question-user pull-right">
+         <a href="{% url 'users:detail' question.user.username  %}" style="color: #004a7a">{{ question.user.get_profile_name }}</a>
+        <span class="text-secondary">{% trans 'задал вопрос в' %} {{ question.timestamp|date:'G:i, d.m.Y' }}</span>
+      </div>
+    </div>
+  </div>
+</div>

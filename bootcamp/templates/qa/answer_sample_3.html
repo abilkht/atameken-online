@@ -18,7 +18,7 @@
     <div class="answer-user">
       <!-- <a><img src="{{ answer.user.picture }}" class="user"></a> -->
       <a><img src="https://i1.wp.com/www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png?fit=256%2C256&quality=100&ssl=1" class="user" style="width:2%;height:2%;color: #004a7a;"></a>
-      <a href="#" class="username " style="color: #004a7a;">{{ answer.user.username }}</a>
+      <a href="{% url 'users:detail' answer.user.username %}" class="username " style="color: #004a7a;">{{ answer.user.username }}</a>
       <small class="answered">{% trans "ответил" %} {{ answer.timestamp|naturaltime }}</small>
     </div>
     <div class="answer-description">

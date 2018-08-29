@@ -35,6 +35,9 @@
       </div>
       <div class="col-md-11" style="margin-top:1.2rem">
         <p>{{ question.get_markdown|safe }}</p>
+            {% if question.file %}
+          <p>Прикрепленный файл: <a href="{{ question.file.url }}">{{ question.file }}</a></p>
+            {% endif %}
         {% if question.tags.names %}
             <p>
               {% for tag in question.tags.names %}

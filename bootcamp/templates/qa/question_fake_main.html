@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block title %}{% trans "Вопросы" %}{% endblock %}
+
+{% block head %}
+  <link href="{% static 'css/qa.css' %}" rel="stylesheet">
+{% endblock head %}
+
+{% block content %}
+ <div class="container" style="padding-left:3rem;padding-top:1rem">
+  <div class="row">
+    <div class="col-sm">
+     <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="http://today.kz/static/uploads/339ebf2f-d0fa-49f7-a130-b9e04b1ab6f8.jpeg" alt="Card image cap">
+  <div class="card-body">
+    <h6 class="card-title">Государственные закупки Республики Казахстан</h6>
+    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+    <a href="{% url 'qa:index_noans' %}" class="btn btn-primary" style="background-color: #004a7a">Посмотреть</a>
+  </div>
+</div>
+    </div>
+    <div class="col-sm">
+      <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="http://today.kz/static/uploads/2b60c797-50c9-4587-b40b-37e0e0796e7e.jpeg" alt="Card image cap">
+  <div class="card-body">
+    <h6 class="card-title">Закупки АО ФНБ "Самрук-Казына"</h6>
+   <!--  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+    <a href="{% url 'qa:index_noans2' %}" class="btn btn-primary" style="background-color: #004a7a">Посмотреть</a>
+  </div>
+</div>
+    </div>
+    <div class="col-sm">
+      <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="https://cf.ppt-online.org/files/slide/w/w8yVQEdUz6trIS7ABH1eCiLa5qFcYRPfDMTkpl/slide-0.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h6 class="card-title">Закупки недропользователей NADLoC</h6>
+   <!--  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+    <a href="{% url 'qa:index_noans3' %}" class="btn btn-primary" style="background-color: #004a7a">Посмотреть</a>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+<br>
+<div class="container" style="padding-left:3rem">
+  <div class="row">
+    <div class="col-sm">
+     <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="https://minsknews.by/wp-content/uploads/2014/08/Investitsii-7.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h6 class="card-title">Закупки негосударственного сектора</h6>
+    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+    <a href="{% url 'qa:index_noans4' %}" class="btn btn-primary" style="background-color: #004a7a">Посмотреть</a>
+  </div>
+</div>
+    </div>
+    <div class="col-sm">
+      <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="https://static-nur.akamaized.net/pogudx74ongbaqide.d866ce01.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h6 class="card-title">Закупки системообразующих предприятий</h6>
+   <!--  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+    <a href="{% url 'qa:index_noans5' %}" class="btn btn-primary" style="background-color: #004a7a">Посмотреть</a>
+  </div>
+</div>
+    </div>
+    <div class="col-sm">
+      <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="https://i.kapital.kz/c/3a0a1df99bf7d74450971ff3e51eb628/n/1024/768/d/a/d/5/3/eb868860d116d5116536ae7d394.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h6 class="card-title">Прочие закупки</h6>
+   <!--  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+    <a href="{% url 'qa:index_noans6' %}" class="btn btn-primary" style="background-color: #004a7a">Посмотреть</a>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
+
+<style type="text/css">
+
+</style>
+{% block modal %}
+  <script src="{% static 'js/qa.js' %}"></script>
+{% endblock modal %}
