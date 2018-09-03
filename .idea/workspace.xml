@@ -2,46 +2,85 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a6c94aa-ae33-4415-9930-5acbfd8452ac" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/articles/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/articles/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/articles/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/articles/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/articles/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/articles/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/qa/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/qa/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/qa/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/qa/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/qa/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/qa/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/qa/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/qa/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/static/js/qa.js" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/static/js/qa.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/templates/articles/article_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/templates/articles/article_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/templates/articles/article_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/templates/articles/article_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/templates/messager/message_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/templates/messager/message_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/templates/pages/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/templates/pages/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/templates/qa/answer_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/templates/qa/answer_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/templates/qa/answer_form_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/templates/qa/answer_form_2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/templates/qa/answer_form_3.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/templates/qa/answer_form_3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/templates/qa/answer_form_4.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/templates/qa/answer_form_4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/templates/qa/answer_form_5.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/templates/qa/answer_form_5.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/templates/qa/answer_form_6.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/templates/qa/answer_form_6.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/templates/qa/answer_form_7.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/templates/qa/answer_form_7.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/templates/qa/answer_form_8.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/templates/qa/answer_form_8.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/templates/qa/answer_sample.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/templates/qa/answer_sample.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/templates/qa/answer_sample_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/templates/qa/answer_sample_2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/templates/qa/answer_sample_3.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/templates/qa/answer_sample_3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/templates/qa/answer_sample_4.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/templates/qa/answer_sample_4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/templates/qa/answer_sample_5.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/templates/qa/answer_sample_5.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/templates/qa/answer_sample_6.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/templates/qa/answer_sample_6.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/templates/qa/answer_sample_7.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/templates/qa/answer_sample_7.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/templates/qa/answer_sample_8.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/templates/qa/answer_sample_8.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/templates/qa/question_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/templates/qa/question_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/templates/qa/question_detail_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/templates/qa/question_detail_2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/templates/qa/question_detail_3.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/templates/qa/question_detail_3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/templates/qa/question_detail_4.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/templates/qa/question_detail_4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/templates/qa/question_detail_5.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/templates/qa/question_detail_5.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/templates/qa/question_detail_6.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/templates/qa/question_detail_6.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/templates/qa/question_detail_7.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/templates/qa/question_detail_7.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/templates/qa/question_detail_8.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/templates/qa/question_detail_8.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/templates/qa/question_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/templates/qa/question_main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/settings/production.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings/production.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore-1.10.62.dist-info/DESCRIPTION.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore-1.10.62.dist-info/INSTALLER" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore-1.10.62.dist-info/METADATA" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore-1.10.62.dist-info/RECORD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore-1.10.62.dist-info/WHEEL" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore-1.10.62.dist-info/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore-1.10.62.dist-info/top_level.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/awsrequest.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/awsrequest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/compat.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/compat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/alexaforbusiness/2017-11-09/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/alexaforbusiness/2017-11-09/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/autoscaling/2011-01-01/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/autoscaling/2011-01-01/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/cloudhsmv2/2017-04-28/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/cloudhsmv2/2017-04-28/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/codebuild/2016-10-06/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/codebuild/2016-10-06/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/cognito-idp/2016-04-18/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/cognito-idp/2016-04-18/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/connect/2017-08-08/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/connect/2017-08-08/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/dax/2017-04-19/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/dax/2017-04-19/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/devicefarm/2015-06-23/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/devicefarm/2015-06-23/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/directconnect/2012-10-25/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/directconnect/2012-10-25/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/discovery/2015-11-01/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/discovery/2015-11-01/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/dlm/2018-01-12/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/dlm/2018-01-12/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/dynamodb/2012-08-10/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/dynamodb/2012-08-10/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/ec2/2016-11-15/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/ec2/2016-11-15/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/ecs/2014-11-13/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/ecs/2014-11-13/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/eks/2017-11-01/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/eks/2017-11-01/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/elasticbeanstalk/2010-12-01/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/elasticbeanstalk/2010-12-01/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/elbv2/2015-12-01/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/elbv2/2015-12-01/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/endpoints.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/endpoints.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/es/2015-01-01/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/es/2015-01-01/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/events/2015-10-07/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/events/2015-10-07/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/glacier/2012-06-01/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/glacier/2012-06-01/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/glue/2017-03-31/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/glue/2017-03-31/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/greengrass/2017-06-07/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/greengrass/2017-06-07/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/health/2016-08-04/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/health/2016-08-04/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/inspector/2016-02-16/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/inspector/2016-02-16/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/iot/2015-05-28/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/iot/2015-05-28/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/iotanalytics/2017-11-27/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/iotanalytics/2017-11-27/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/kinesis/2013-12-02/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/kinesis/2013-12-02/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/kms/2014-11-01/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/kms/2014-11-01/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/lex-models/2017-04-19/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/lex-models/2017-04-19/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/logs/2014-03-28/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/logs/2014-03-28/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/mediaconvert/2017-08-29/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/mediaconvert/2017-08-29/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/medialive/2017-10-14/paginators-1.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/medialive/2017-10-14/paginators-1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/medialive/2017-10-14/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/medialive/2017-10-14/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/mediapackage/2017-10-12/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/mediapackage/2017-10-12/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/mq/2017-11-27/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/mq/2017-11-27/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/pinpoint/2016-12-01/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/pinpoint/2016-12-01/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/polly/2016-06-10/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/polly/2016-06-10/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/rds/2014-10-31/paginators-1.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/rds/2014-10-31/paginators-1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/rds/2014-10-31/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/rds/2014-10-31/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/redshift/2012-12-01/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/redshift/2012-12-01/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/rekognition/2016-06-27/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/rekognition/2016-06-27/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/resource-groups/2017-11-27/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/resource-groups/2017-11-27/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/sagemaker-runtime/2017-05-13/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/sagemaker-runtime/2017-05-13/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/sagemaker/2017-07-24/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/sagemaker/2017-07-24/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/secretsmanager/2017-10-17/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/secretsmanager/2017-10-17/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/snowball/2016-06-30/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/snowball/2016-06-30/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/ssm/2014-11-06/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/ssm/2014-11-06/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/storagegateway/2013-06-30/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/storagegateway/2013-06-30/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/transcribe/2017-10-26/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/transcribe/2017-10-26/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/waf-regional/2016-11-28/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/waf-regional/2016-11-28/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/waf/2015-08-24/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/waf/2015-08-24/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/xray/2016-04-12/service-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/data/xray/2016-04-12/service-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/endpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/endpoint.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/exceptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/exceptions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/handlers.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/handlers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/hooks.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/hooks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/parsers.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/parsers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/response.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/response.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/retryhandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/retryhandler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/serialize.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/serialize.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/session.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/session.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/stub.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/stub.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/botocore/utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -72,16 +111,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="base.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="base.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/settings/base.py">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="27" column="23" lean-forward="true" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file leaf-file-name="production.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="production.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/settings/production.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="78" column="28" selection-start-line="78" selection-start-column="28" selection-end-line="78" selection-end-column="28" />
+            <state relative-caret-position="741">
+              <caret line="92" column="53" selection-start-line="92" selection-start-column="53" selection-end-line="92" selection-end-column="53" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -92,8 +135,8 @@
       <file leaf-file-name=".env" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.env">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+            <state relative-caret-position="435">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
             </state>
           </provider>
         </entry>
@@ -148,8 +191,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/bootcamp/templates/qa/question_sample_5.html" />
-        <option value="$PROJECT_DIR$/bootcamp/templates/qa/question_sample_6.html" />
         <option value="$PROJECT_DIR$/bootcamp/templates/qa/question_form_7.html" />
         <option value="$PROJECT_DIR$/bootcamp/templates/qa/question_form_8.html" />
         <option value="$PROJECT_DIR$/bootcamp/templates/qa/question_list_7.html" />
@@ -199,6 +240,8 @@
         <option value="$PROJECT_DIR$/bootcamp/static/js/qa.js" />
         <option value="$PROJECT_DIR$/bootcamp/templates/qa/question_main.html" />
         <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/config/settings/production.py" />
+        <option value="$PROJECT_DIR$/config/settings/base.py" />
       </list>
     </option>
   </component>
@@ -228,6 +271,17 @@
               <item name="bootcamp" type="b2602c69:ProjectViewProjectNode" />
               <item name="bootcamp" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="bootcamp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bootcamp" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bootcamp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bootcamp" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="settings" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -237,7 +291,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="SearchEverywhereHistoryKey" value=".env&#9;FILE&#9;file:///Users/abok/Documents/Development/Atameken2/bootcamp/.env&#10;production&#9;FILE&#9;file:///Users/abok/Documents/Development/Atameken2/bootcamp/config/settings/production.py&#10;base.py&#9;FILE&#9;file:///Users/abok/Documents/Development/Atameken2/bootcamp/config/settings/base.py&#10;base&#9;FILE&#9;file:///Users/abok/Documents/Development/Atameken2/bootcamp/config/settings/base.py&#10;production.py&#9;FILE&#9;file:///Users/abok/Documents/Development/Atameken2/bootcamp/config/settings/production.py&#10;local.py&#9;FILE&#9;file:///Users/abok/Documents/Development/Atameken2/bootcamp/config/settings/local.py&#10;models&#9;FILE&#9;file:///Users/abok/Documents/Development/Atameken2/bootcamp/bootcamp/qa/models.py&#10;mode&#9;FILE&#9;file:///Users/abok/Documents/Development/Atameken2/bootcamp/bootcamp/articles/models.py&#10;model&#9;FILE&#9;file:///Users/abok/Documents/Development/Atameken2/bootcamp/bootcamp/articles/models.py&#10;arti&#9;FILE&#9;file:///Users/abok/Documents/Development/Atameken2/bootcamp/bootcamp/templates/articles/article_detail.html&#10;home.&#9;FILE&#9;file:///Users/abok/Documents/Development/Atameken2/bootcamp/bootcamp/templates/pages/home.html&#10;home&#9;RUN_CONFIGURATION&#9;home.html&#10;ReverseMan&#9;null&#9;null&#10;answer_set&#9;ACTION&#9;null&#10;FileField&#9;null&#9;null&#10;mailgun&#9;FILE&#9;file:///Users/abok/Documents/Development/Atameken2/bootcamp/env/lib/python3.6/site-packages/anymail/backends/mailgun.py" />
+    <property name="SearchEverywhereHistoryKey" value=".aws&#9;null&#9;null&#10;.env&#9;FILE&#9;file:///Users/abok/Documents/Development/Atameken2/bootcamp/.env&#10;production&#9;FILE&#9;file:///Users/abok/Documents/Development/Atameken2/bootcamp/config/settings/production.py&#10;base.py&#9;FILE&#9;file:///Users/abok/Documents/Development/Atameken2/bootcamp/config/settings/base.py&#10;base&#9;FILE&#9;file:///Users/abok/Documents/Development/Atameken2/bootcamp/config/settings/base.py&#10;production.py&#9;FILE&#9;file:///Users/abok/Documents/Development/Atameken2/bootcamp/config/settings/production.py&#10;local.py&#9;FILE&#9;file:///Users/abok/Documents/Development/Atameken2/bootcamp/config/settings/local.py&#10;models&#9;FILE&#9;file:///Users/abok/Documents/Development/Atameken2/bootcamp/bootcamp/qa/models.py&#10;mode&#9;FILE&#9;file:///Users/abok/Documents/Development/Atameken2/bootcamp/bootcamp/articles/models.py&#10;model&#9;FILE&#9;file:///Users/abok/Documents/Development/Atameken2/bootcamp/bootcamp/articles/models.py&#10;arti&#9;FILE&#9;file:///Users/abok/Documents/Development/Atameken2/bootcamp/bootcamp/templates/articles/article_detail.html&#10;home.&#9;FILE&#9;file:///Users/abok/Documents/Development/Atameken2/bootcamp/bootcamp/templates/pages/home.html&#10;home&#9;RUN_CONFIGURATION&#9;home.html&#10;ReverseMan&#9;null&#9;null&#10;answer_set&#9;ACTION&#9;null&#10;FileField&#9;null&#9;null&#10;mailgun&#9;FILE&#9;file:///Users/abok/Documents/Development/Atameken2/bootcamp/env/lib/python3.6/site-packages/anymail/backends/mailgun.py" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQL" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -296,13 +350,13 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32969698" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32969698" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4985694" visible="true" weight="0.32969698" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8661845" visible="true" weight="0.19456366" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4985694" visible="true" weight="0.32969698" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8643761" visible="true" weight="0.19456366" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.3297568" />
       <window_info anchor="right" id="SciView" order="4" weight="0.3297568" />
       <window_info id="Structure" order="1" sideWeight="0.10488246" side_tool="true" weight="0.14306152" />
-      <window_info id="Favorites" order="2" sideWeight="0.13381556" side_tool="true" visible="true" weight="0.19456366" />
+      <window_info id="Favorites" order="2" sideWeight="0.13562387" side_tool="true" visible="true" weight="0.19456366" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -325,13 +379,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bootcamp/templates/qa/answer_form_3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="102" selection-start-line="15" selection-start-column="102" selection-end-line="15" selection-end-column="102" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bootcamp/templates/qa/answer_form_2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -676,23 +723,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/settings/base.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
+    <entry file="file://$PROJECT_DIR$/env/bin/aws">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
-        </state>
+        <state relative-caret-position="-1" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/settings/production.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="78" column="28" selection-start-line="78" selection-start-column="28" selection-end-line="78" selection-end-column="28" />
+        <state relative-caret-position="741">
+          <caret line="92" column="53" selection-start-line="92" selection-start-column="53" selection-end-line="92" selection-end-column="53" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/settings/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="23" lean-forward="true" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
         </state>
       </provider>
     </entry>
