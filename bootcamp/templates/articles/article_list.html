@@ -37,12 +37,12 @@
             <div class="card-body">
               <h2 class="card-title" style="text-align: center;text-transform: uppercase;">{{ article.title|title }}</h2>
               <p class="card-text">{{ article.get_markdown|safe|truncatechars:150 }}</p>
-              <a href="{% url 'articles:article' article.slug %}" class="btn btn-primary" style="background-color: #004a7a">{% trans 'Подробнее' %} &rarr;</a>
+              <a href="{% url 'articles:article' article.slug %}" class="btn btn-primary" style="background-color: #004a7a">{% trans 'Читать дальше' %} &rarr;</a>
             </div>
             <div class="card-footer text-muted">
               <i class="lead fa fa-user"></i> Автор:
               <a href="{% url 'users:detail' article.user.username %}"> {{ article.user.get_profile_name|title }}</a>
-              <div style="float:right">{% trans 'Опубликован в' %} {{ article.timestamp|date:'G:i | d.m.Y '  }}</div>
+              <div style="float:right">{% trans 'Опубликовано в' %} {{ article.timestamp|date:'G:i | d.m.Y '  }}</div>
 
               <!-- {% for tag in article.tags.names %}
                 <a href="#">#{{ tag }}</a>

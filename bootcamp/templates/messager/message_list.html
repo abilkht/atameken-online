@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 {% load static i18n %}
 {% load thumbnail %}
-{% block title %}{% trans 'Сообщения' %}{% endblock %}
+{% block title %}{% trans 'Сообщения' %}
+{% endblock %}
 
 {% block head %}
   <link href="{% static 'css/messager.css' %}" rel="stylesheet">
@@ -13,22 +14,25 @@
     <!-- <h1>{{ request.user.get_profile_name|title }} {% trans 'Диалоги' %}</h1> -->
     <!-- <h3>Контакты</h3> -->
   </div>
+<!--
   <div class="row" style="margin-top: 1em;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  transition: all 0.3s cubic-bezier(.25,.8,.25,1);width:auto;height:auto; background: #F5F5F5">
-    <div class="col-md-3 list-group users-list" style="">
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);width:auto;height:auto; background: #F5F5F5;">
+    <div class="col-md-3 list-group users-list" style="height:100%">
       {% for user in users_list %}
         <a href="{% url 'messager:conversation_detail' user.username  %}"
            class="list-group-item list-group-item-action {% if active == user.username %}active{% endif %}">
           {% thumbnail user.picture "x30" as im %}
-            <img src="{{ im.url }}" alt="{% trans 'Фото Профиля' %}" class="rounded" style="width:30px;height:30px">
+            <img src="{{ im.url }}" alt="{% trans 'Фото Профиля' %}">
           {% empty %}
-            <img src="{% static 'img/user.png' %}" height="30px" alt="{% trans 'Нет фото профиля' %}" class="rounded"/>
+            <img src="{% static 'img/user.png' %}" height="30px" alt="{% trans 'Нет фото профиля' %}" />
           {% endthumbnail %}
           {{ user.get_profile_name|title }}
         </a>
       {% endfor %}
-    </div>
-    <div id="conversation" class="col card" style="width:40%;height:40%;margin-left:-15px" >
+    </div> -->
+    <div id="conversation" class="col card" style="width:80%;height:40rem;margin:auto;" >
+      <h3 style="color: #004a7a;text-align: center;">Служба поддержки Atameken <font color="#ffb100">Online</font></h3>
+      <hr>
       <div class="messages-list">
         {% if message_list %}
           {% for message in message_list %}
@@ -39,9 +43,10 @@
          <hr>
           <!-- <p>{% trans "Напишите что-нибудь" %}</p> -->
         {% endif %}
+
         <li class="send-message"></li>
       </div>
-      <div style="margin-bottom: : 10px; margin-top: 10px; float:left">
+      <div style="margin-bottom: 10px; margin-top: 10px; float:left">
       <form role="form" method="post" action="#" id="send">
       <div class="col">
       <label class="sr-only" for="inlineFormInputGroupUsername">Username</label>
@@ -51,7 +56,7 @@
         </div>
         {% csrf_token %}
             <input type="hidden" name="to" value="{{ active }}">
-            <input class="form-control" type="text" name="message" style="width:100px" placeholder="{% trans 'Написать...' %}" maxlength="1000" autocomplete="off">
+            <input class="form-control" type="text" name="message"  placeholder="{% trans 'Написать...' %}" maxlength="1000" autocomplete="off">
       </div>
     </div>
     </div>

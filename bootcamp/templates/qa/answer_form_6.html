@@ -13,7 +13,7 @@
     </ol>
   </nav>
 <div class="card" style="padding:10px; box-shadow: 0 0 10px rgba(0,0,0,0.5);margin-right: auto;margin-left: auto;margin-top:10px">
-  <form action="{% url 'qa:propose_answer6' view.kwargs.question_id %}" id="answerForm" method="post" role="form">
+  <form action="{% url 'qa:propose_answer6' view.kwargs.question_id %}" enctype="multipart/form-data" id="answerForm" method="post" role="form">
     {% csrf_token %}
     {{ form|crispy }}
     <div class="form-group">

@@ -1,3 +1,4 @@
+import os
 from django.conf import settings
 from django.db import models
 from django.db.models import Count
@@ -52,14 +53,15 @@ class Article(models.Model):
         settings.AUTH_USER_MODEL, null=True, related_name="author",
         on_delete=models.SET_NULL)
     image = models.ImageField(
-        _('Featured image'), upload_to='articles_pictures/%Y/%m/%d/')
+        _('Картинка статьи'), upload_to='articles_pictures/%Y/%m/%d/')
     timestamp = models.DateTimeField(auto_now_add=True)
-    title = models.CharField(max_length=255, null=False, unique=True)
+    title = models.CharField(_('Заголовок'), max_length=255, null=False, unique=True)
     slug = models.SlugField(max_length=80, null=True, blank=True)
     status = models.CharField(max_length=1, choices=STATUS, default=DRAFT)
-    content = MarkdownxField()
+    content = MarkdownxField(_('Контент'))
     edited = models.BooleanField(default=False)
-    tags = TaggableManager()
+    tags = TaggableManager(_('Тэги'))
+    file = models.FileField(_('Загрузить файл'), upload_to='article_files/%Y/%m/%d/', blank=True)
     objects = ArticleQuerySet.as_manager()
 
     class Meta:
@@ -79,6 +81,9 @@ class Article(models.Model):
 
     def get_markdown(self):
         return markdownify(self.content)
+
+    def filename(self):
+        return os.path.basename(self.file.name)
 
 
 def notify_comment(**kwargs):

@@ -27,16 +27,16 @@
         <div class="question-info options">
           <h3 class="{% if question.has_answer %}bg-success text-white{% endif %}">{{ question.count_answers }}</h3>
           <small class="text-secondary">{% trans 'Ответы' %}</small>
-          <i id="questionUpVote" class="fa fa-chevron-up vote  up-vote question-vote{% if request.user in question.get_upvoters %} voted{% endif %}" aria-hidden="true" title="{% trans 'Click to up vote; click again to toggle' %}"></i>
+          <i id="questionUpVote" class="fa fa-chevron-up vote  up-vote question-vote{% if request.user in question.get_upvoters %} voted{% endif %}" aria-hidden="true" title="{% trans 'Нажмите для голосования вверх; нажмите снова, чтобы переключиться' %}"></i>
           <h3 id="questionVotes">{{ question.total_votes }}</h3>
-          <i id="questionDownVote" class="fa fa-chevron-down vote down-vote question-vote{% if request.user in question.get_downvoters %} voted{% endif %}" aria-hidden="true" title="{% trans 'Click to down vote; click again to toggle' %}"></i>
+          <i id="questionDownVote" class="fa fa-chevron-down vote down-vote question-vote{% if request.user in question.get_downvoters %} voted{% endif %}" aria-hidden="true" title="{% trans 'Нажмите для голосования вниз; нажмите снова, чтобы переключиться' %}"></i>
           <small class="text-secondary">{% trans 'Голосы' %}</small>
         </div>
       </div>
       <div class="col-md-11" style="margin-top:1.2rem">
         <p>{{ question.get_markdown|safe }}</p>
             {% if question.file %}
-          <p>Прикрепленный файл: <a href="{{ question.file.url }}">{{ question.file }}</a></p>
+          <p>Прикрепленный файл: <span class="fa fa-folder" style="color:#ffb100"></span> <a href="{{ question.file.url }}">{{ question.filename }}</a></p>
             {% endif %}
         {% if question.tags.names %}
             <p>
@@ -63,7 +63,7 @@
       <ul class="col-md-12">
         {% for answer in question.answer_set.all %}
           {% include 'qa/answer_sample.html' with answer=answer %}
-        {% empty %}
+
           <div class="text-center">
            <!--  <h6>{% trans 'Нажимая на кнопку, вы принимаете условия пользовательского соглашения.' %}</h6> -->
 <!--             <p style="opacity:0.7;font-size:13px">{% trans 'Нажимая на кнопку, вы принимаете <b>условия пользовательского соглашения.<b>' %}</p> -->

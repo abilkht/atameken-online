@@ -1,4 +1,5 @@
 import uuid
+import os
 from collections import Counter
 
 from django.conf import settings
@@ -34,6 +35,167 @@ class Vote(models.Model):
     class Meta:
         verbose_name = _("Vote")
         verbose_name_plural = _("Votes")
+        index_together = ("content_type", "object_id")
+        unique_together = ("user", "content_type", "object_id")
+
+
+class Vote2(models.Model):
+    """Model class to host every vote, made with ContentType framework to
+    allow a single model connected to Questions and Answers."""
+    uuid_id = models.UUIDField(
+        primary_key=True, default=uuid.uuid4, editable=False)
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    timestamp = models.DateTimeField(auto_now_add=True)
+    value = models.BooleanField(default=True)
+    content_type = models.ForeignKey(ContentType,
+                                     blank=True, null=True, related_name="votes_on2", on_delete=models.CASCADE)
+    object_id = models.CharField(
+        max_length=50, blank=True, null=True)
+    vote = GenericForeignKey(
+        "content_type", "object_id")
+
+    class Meta:
+        verbose_name = _("Vote2")
+        verbose_name_plural = _("Votes2")
+        index_together = ("content_type", "object_id")
+        unique_together = ("user", "content_type", "object_id")
+
+
+class Vote3(models.Model):
+    """Model class to host every vote, made with ContentType framework to
+    allow a single model connected to Questions and Answers."""
+    uuid_id = models.UUIDField(
+        primary_key=True, default=uuid.uuid4, editable=False)
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    timestamp = models.DateTimeField(auto_now_add=True)
+    value = models.BooleanField(default=True)
+    content_type = models.ForeignKey(ContentType,
+                                     blank=True, null=True, related_name="votes_on3", on_delete=models.CASCADE)
+    object_id = models.CharField(
+        max_length=50, blank=True, null=True)
+    vote = GenericForeignKey(
+        "content_type", "object_id")
+
+    class Meta:
+        verbose_name = _("Vote3")
+        verbose_name_plural = _("Votes3")
+        index_together = ("content_type", "object_id")
+        unique_together = ("user", "content_type", "object_id")
+
+
+class Vote4(models.Model):
+    """Model class to host every vote, made with ContentType framework to
+    allow a single model connected to Questions and Answers."""
+    uuid_id = models.UUIDField(
+        primary_key=True, default=uuid.uuid4, editable=False)
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    timestamp = models.DateTimeField(auto_now_add=True)
+    value = models.BooleanField(default=True)
+    content_type = models.ForeignKey(ContentType,
+                                     blank=True, null=True, related_name="votes_on4", on_delete=models.CASCADE)
+    object_id = models.CharField(
+        max_length=50, blank=True, null=True)
+    vote = GenericForeignKey(
+        "content_type", "object_id")
+
+    class Meta:
+        verbose_name = _("Vote4")
+        verbose_name_plural = _("Votes4")
+        index_together = ("content_type", "object_id")
+        unique_together = ("user", "content_type", "object_id")
+
+
+class Vote5(models.Model):
+    """Model class to host every vote, made with ContentType framework to
+    allow a single model connected to Questions and Answers."""
+    uuid_id = models.UUIDField(
+        primary_key=True, default=uuid.uuid4, editable=False)
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    timestamp = models.DateTimeField(auto_now_add=True)
+    value = models.BooleanField(default=True)
+    content_type = models.ForeignKey(ContentType,
+                                     blank=True, null=True, related_name="votes_on5", on_delete=models.CASCADE)
+    object_id = models.CharField(
+        max_length=50, blank=True, null=True)
+    vote = GenericForeignKey(
+        "content_type", "object_id")
+
+    class Meta:
+        verbose_name = _("Vote5")
+        verbose_name_plural = _("Votes5")
+        index_together = ("content_type", "object_id")
+        unique_together = ("user", "content_type", "object_id")
+
+
+class Vote6(models.Model):
+    """Model class to host every vote, made with ContentType framework to
+    allow a single model connected to Questions and Answers."""
+    uuid_id = models.UUIDField(
+        primary_key=True, default=uuid.uuid4, editable=False)
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    timestamp = models.DateTimeField(auto_now_add=True)
+    value = models.BooleanField(default=True)
+    content_type = models.ForeignKey(ContentType,
+                                     blank=True, null=True, related_name="votes_on6", on_delete=models.CASCADE)
+    object_id = models.CharField(
+        max_length=50, blank=True, null=True)
+    vote = GenericForeignKey(
+        "content_type", "object_id")
+
+    class Meta:
+        verbose_name = _("Vote6")
+        verbose_name_plural = _("Votes6")
+        index_together = ("content_type", "object_id")
+        unique_together = ("user", "content_type", "object_id")
+
+
+class Vote7(models.Model):
+    """Model class to host every vote, made with ContentType framework to
+    allow a single model connected to Questions and Answers."""
+    uuid_id = models.UUIDField(
+        primary_key=True, default=uuid.uuid4, editable=False)
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    timestamp = models.DateTimeField(auto_now_add=True)
+    value = models.BooleanField(default=True)
+    content_type = models.ForeignKey(ContentType,
+                                     blank=True, null=True, related_name="votes_on7", on_delete=models.CASCADE)
+    object_id = models.CharField(
+        max_length=50, blank=True, null=True)
+    vote = GenericForeignKey(
+        "content_type", "object_id")
+
+    class Meta:
+        verbose_name = _("Vote7")
+        verbose_name_plural = _("Votes7")
+        index_together = ("content_type", "object_id")
+        unique_together = ("user", "content_type", "object_id")
+
+
+class Vote8(models.Model):
+    """Model class to host every vote, made with ContentType framework to
+    allow a single model connected to Questions and Answers."""
+    uuid_id = models.UUIDField(
+        primary_key=True, default=uuid.uuid4, editable=False)
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    timestamp = models.DateTimeField(auto_now_add=True)
+    value = models.BooleanField(default=True)
+    content_type = models.ForeignKey(ContentType,
+                                     blank=True, null=True, related_name="votes_on8", on_delete=models.CASCADE)
+    object_id = models.CharField(
+        max_length=50, blank=True, null=True)
+    vote = GenericForeignKey(
+        "content_type", "object_id")
+
+    class Meta:
+        verbose_name = _("Vote8")
+        verbose_name_plural = _("Votes8")
         index_together = ("content_type", "object_id")
         unique_together = ("user", "content_type", "object_id")
 
@@ -282,7 +444,7 @@ class Question(models.Model):
     total_votes = models.IntegerField(default=0)
     votes = GenericRelation(Vote)
     tags = TaggableManager(verbose_name='Тэги')
-    file = models.FileField(verbose_name='Загрузить файл', upload_to='forum_files/%Y/%m/%d/', default='')
+    file = models.FileField(verbose_name='Загрузить файл', upload_to='forum_files/%Y/%m/%d/', blank=True)
     objects = QuestionQuerySet.as_manager()
 
     class Meta:
@@ -328,6 +490,9 @@ class Question(models.Model):
     def get_markdown(self):
         return markdownify(self.content)
 
+    def filename(self):
+        return os.path.basename(self.file.name)
+
 
 class Question2(models.Model):
     """Model class to contain every question [2] in the forum."""
@@ -347,9 +512,9 @@ class Question2(models.Model):
     content = MarkdownxField(verbose_name='Контент')
     has_answer = models.BooleanField(default=False)
     total_votes = models.IntegerField(default=0)
-    votes = GenericRelation(Vote)
+    votes = GenericRelation(Vote2)
     tags = TaggableManager(verbose_name='Тэги')
-    file = models.FileField(verbose_name='Загрузить файл', upload_to='forum_files/%Y/%m/%d/', default='')
+    file = models.FileField(verbose_name='Загрузить файл', upload_to='forum_files/%Y/%m/%d/', blank=True)
     objects = Question2QuerySet.as_manager()
 
     class Meta:
@@ -395,6 +560,9 @@ class Question2(models.Model):
     def get_markdown(self):
         return markdownify(self.content)
 
+    def filename(self):
+        return os.path.basename(self.file.name)
+
 
 class Question3(models.Model):
     """Model class to contain every question [3] in the forum."""
@@ -414,9 +582,9 @@ class Question3(models.Model):
     content = MarkdownxField(verbose_name='Контент')
     has_answer = models.BooleanField(default=False)
     total_votes = models.IntegerField(default=0)
-    votes = GenericRelation(Vote)
+    votes = GenericRelation(Vote3)
     tags = TaggableManager(verbose_name='Тэги')
-    file = models.FileField(verbose_name='Загрузить файл', upload_to='forum_files/%Y/%m/%d/', default='')
+    file = models.FileField(verbose_name='Загрузить файл', upload_to='forum_files/%Y/%m/%d/', blank=True)
     objects = Question3QuerySet.as_manager()
 
     class Meta:
@@ -462,6 +630,9 @@ class Question3(models.Model):
     def get_markdown(self):
         return markdownify(self.content)
 
+    def filename(self):
+        return os.path.basename(self.file.name)
+
 
 class Question4(models.Model):
     """Model class to contain every question [4] in the forum."""
@@ -481,9 +652,9 @@ class Question4(models.Model):
     content = MarkdownxField(verbose_name='Контент')
     has_answer = models.BooleanField(default=False)
     total_votes = models.IntegerField(default=0)
-    votes = GenericRelation(Vote)
+    votes = GenericRelation(Vote4)
     tags = TaggableManager(verbose_name='Тэги')
-    file = models.FileField(verbose_name='Загрузить файл', upload_to='forum_files/%Y/%m/%d/', default='')
+    file = models.FileField(verbose_name='Загрузить файл', upload_to='forum_files/%Y/%m/%d/', blank=True)
     objects = Question4QuerySet.as_manager()
 
     class Meta:
@@ -529,6 +700,9 @@ class Question4(models.Model):
     def get_markdown(self):
         return markdownify(self.content)
 
+    def filename(self):
+        return os.path.basename(self.file.name)
+
 
 class Question5(models.Model):
     """Model class to contain every question [5] in the forum."""
@@ -548,9 +722,9 @@ class Question5(models.Model):
     content = MarkdownxField(verbose_name='Контент')
     has_answer = models.BooleanField(default=False)
     total_votes = models.IntegerField(default=0)
-    votes = GenericRelation(Vote)
+    votes = GenericRelation(Vote5)
     tags = TaggableManager(verbose_name='Тэги')
-    file = models.FileField(verbose_name='Загрузить файл', upload_to='forum_files/%Y/%m/%d/', default='')
+    file = models.FileField(verbose_name='Загрузить файл', upload_to='forum_files/%Y/%m/%d/', blank=True)
     objects = Question5QuerySet.as_manager()
 
     class Meta:
@@ -596,6 +770,9 @@ class Question5(models.Model):
     def get_markdown(self):
         return markdownify(self.content)
 
+    def filename(self):
+        return os.path.basename(self.file.name)
+
 
 class Question6(models.Model):
     """Model class to contain every question [6] in the forum."""
@@ -615,9 +792,9 @@ class Question6(models.Model):
     content = MarkdownxField(verbose_name='Контент')
     has_answer = models.BooleanField(default=False)
     total_votes = models.IntegerField(default=0)
-    votes = GenericRelation(Vote)
+    votes = GenericRelation(Vote6)
     tags = TaggableManager(verbose_name='Тэги')
-    file = models.FileField(verbose_name='Загрузить файл', upload_to='forum_files/%Y/%m/%d/', default='')
+    file = models.FileField(verbose_name='Загрузить файл', upload_to='forum_files/%Y/%m/%d/', blank=True)
     objects = Question6QuerySet.as_manager()
 
     class Meta:
@@ -663,6 +840,9 @@ class Question6(models.Model):
     def get_markdown(self):
         return markdownify(self.content)
 
+    def filename(self):
+        return os.path.basename(self.file.name)
+
 
 class Question7(models.Model):
     """Model class to contain every question [7] in the forum."""
@@ -682,9 +862,9 @@ class Question7(models.Model):
     content = MarkdownxField(verbose_name='Контент')
     has_answer = models.BooleanField(default=False)
     total_votes = models.IntegerField(default=0)
-    votes = GenericRelation(Vote)
+    votes = GenericRelation(Vote7)
     tags = TaggableManager(verbose_name='Тэги')
-    file = models.FileField(verbose_name='Загрузить файл', upload_to='forum_files/%Y/%m/%d/', default='')
+    file = models.FileField(verbose_name='Загрузить файл', upload_to='forum_files/%Y/%m/%d/', blank=True)
     objects = Question7QuerySet.as_manager()
 
     class Meta:
@@ -730,6 +910,9 @@ class Question7(models.Model):
     def get_markdown(self):
         return markdownify(self.content)
 
+    def filename(self):
+        return os.path.basename(self.file.name)
+
 
 class Question8(models.Model):
     """Model class to contain every question [8] in the forum."""
@@ -749,9 +932,9 @@ class Question8(models.Model):
     content = MarkdownxField(verbose_name='Контент')
     has_answer = models.BooleanField(default=False)
     total_votes = models.IntegerField(default=0)
-    votes = GenericRelation(Vote)
+    votes = GenericRelation(Vote8)
     tags = TaggableManager(verbose_name='Тэги')
-    file = models.FileField(verbose_name='Загрузить файл', upload_to='forum_files/%Y/%m/%d/', default='')
+    file = models.FileField(verbose_name='Загрузить файл', upload_to='forum_files/%Y/%m/%d/', blank=True)
     objects = Question8QuerySet.as_manager()
 
     class Meta:
@@ -797,6 +980,9 @@ class Question8(models.Model):
     def get_markdown(self):
         return markdownify(self.content)
 
+    def filename(self):
+        return os.path.basename(self.file.name)
+
 
 class Answer(models.Model):
     """Model class to contain every answer in the forum and to link it
@@ -810,6 +996,7 @@ class Answer(models.Model):
     timestamp = models.DateTimeField(auto_now_add=True)
     is_answer = models.BooleanField(default=False)
     votes = GenericRelation(Vote)
+    file = models.FileField(verbose_name='Загрузить файл', upload_to='forum_files/%Y/%m/%d/', blank=True)
 
     class Meta:
         ordering = ["-is_answer", "-timestamp"]
@@ -845,6 +1032,9 @@ class Answer(models.Model):
         self.question.has_answer = True
         self.question.save()
 
+    def filename(self):
+        return os.path.basename(self.file.name)
+
 
 class Answer2(models.Model):
     """Model class to contain every answer [2] in the forum and to link it
@@ -857,7 +1047,8 @@ class Answer2(models.Model):
     total_votes = models.IntegerField(default=0)
     timestamp = models.DateTimeField(auto_now_add=True)
     is_answer = models.BooleanField(default=False)
-    votes = GenericRelation(Vote)
+    votes = GenericRelation(Vote2)
+    file = models.FileField(verbose_name='Загрузить файл', upload_to='forum_files/%Y/%m/%d/', blank=True)
 
     class Meta:
         ordering = ["-is_answer", "-timestamp"]
@@ -893,6 +1084,9 @@ class Answer2(models.Model):
         self.question.has_answer = True
         self.question.save()
 
+    def filename(self):
+        return os.path.basename(self.file.name)
+
 
 class Answer3(models.Model):
     """Model class to contain every answer [3] in the forum and to link it
@@ -905,7 +1099,8 @@ class Answer3(models.Model):
     total_votes = models.IntegerField(default=0)
     timestamp = models.DateTimeField(auto_now_add=True)
     is_answer = models.BooleanField(default=False)
-    votes = GenericRelation(Vote)
+    votes = GenericRelation(Vote3)
+    file = models.FileField(verbose_name='Загрузить файл', upload_to='forum_files/%Y/%m/%d/', blank=True)
 
     class Meta:
         ordering = ["-is_answer", "-timestamp"]
@@ -941,6 +1136,9 @@ class Answer3(models.Model):
         self.question.has_answer = True
         self.question.save()
 
+    def filename(self):
+        return os.path.basename(self.file.name)
+
 
 class Answer4(models.Model):
     """Model class to contain every answer [4] in the forum and to link it
@@ -953,7 +1151,8 @@ class Answer4(models.Model):
     total_votes = models.IntegerField(default=0)
     timestamp = models.DateTimeField(auto_now_add=True)
     is_answer = models.BooleanField(default=False)
-    votes = GenericRelation(Vote)
+    votes = GenericRelation(Vote4)
+    file = models.FileField(verbose_name='Загрузить файл', upload_to='forum_files/%Y/%m/%d/', blank=True)
 
     class Meta:
         ordering = ["-is_answer", "-timestamp"]
@@ -989,6 +1188,9 @@ class Answer4(models.Model):
         self.question.has_answer = True
         self.question.save()
 
+    def filename(self):
+        return os.path.basename(self.file.name)
+
 
 class Answer5(models.Model):
     """Model class to contain every answer [5] in the forum and to link it
@@ -1001,7 +1203,8 @@ class Answer5(models.Model):
     total_votes = models.IntegerField(default=0)
     timestamp = models.DateTimeField(auto_now_add=True)
     is_answer = models.BooleanField(default=False)
-    votes = GenericRelation(Vote)
+    votes = GenericRelation(Vote5)
+    file = models.FileField(verbose_name='Загрузить файл', upload_to='forum_files/%Y/%m/%d/', blank=True)
 
     class Meta:
         ordering = ["-is_answer", "-timestamp"]
@@ -1037,6 +1240,9 @@ class Answer5(models.Model):
         self.question.has_answer = True
         self.question.save()
 
+    def filename(self):
+        return os.path.basename(self.file.name)
+
 
 class Answer6(models.Model):
     """Model class to contain every answer [6] in the forum and to link it
@@ -1049,7 +1255,8 @@ class Answer6(models.Model):
     total_votes = models.IntegerField(default=0)
     timestamp = models.DateTimeField(auto_now_add=True)
     is_answer = models.BooleanField(default=False)
-    votes = GenericRelation(Vote)
+    votes = GenericRelation(Vote6)
+    file = models.FileField(verbose_name='Загрузить файл', upload_to='forum_files/%Y/%m/%d/', blank=True)
 
     class Meta:
         ordering = ["-is_answer", "-timestamp"]
@@ -1085,6 +1292,9 @@ class Answer6(models.Model):
         self.question.has_answer = True
         self.question.save()
 
+    def filename(self):
+        return os.path.basename(self.file.name)
+
 
 class Answer7(models.Model):
     """Model class to contain every answer [7] in the forum and to link it
@@ -1097,7 +1307,8 @@ class Answer7(models.Model):
     total_votes = models.IntegerField(default=0)
     timestamp = models.DateTimeField(auto_now_add=True)
     is_answer = models.BooleanField(default=False)
-    votes = GenericRelation(Vote)
+    votes = GenericRelation(Vote7)
+    file = models.FileField(verbose_name='Загрузить файл', upload_to='forum_files/%Y/%m/%d/', blank=True)
 
     class Meta:
         ordering = ["-is_answer", "-timestamp"]
@@ -1133,6 +1344,9 @@ class Answer7(models.Model):
         self.question.has_answer = True
         self.question.save()
 
+    def filename(self):
+        return os.path.basename(self.file.name)
+
 
 class Answer8(models.Model):
     """Model class to contain every answer [8] in the forum and to link it
@@ -1145,7 +1359,8 @@ class Answer8(models.Model):
     total_votes = models.IntegerField(default=0)
     timestamp = models.DateTimeField(auto_now_add=True)
     is_answer = models.BooleanField(default=False)
-    votes = GenericRelation(Vote)
+    votes = GenericRelation(Vote8)
+    file = models.FileField(verbose_name='Загрузить файл', upload_to='forum_files/%Y/%m/%d/', blank=True)
 
     class Meta:
         ordering = ["-is_answer", "-timestamp"]
@@ -1180,3 +1395,7 @@ class Answer8(models.Model):
         self.save()
         self.question.has_answer = True
         self.question.save()
+
+    def filename(self):
+        return os.path.basename(self.file.name)
+

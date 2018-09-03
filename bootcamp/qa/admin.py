@@ -52,47 +52,47 @@ class Question8Admin(admin.ModelAdmin):
 
 @admin.register(Answer)
 class AnswerAdmin(admin.ModelAdmin):
-    list_display = ('question', 'user', 'content', 'uuid_id', 'is_answer')
+    list_display = ('question', 'user', 'content', 'uuid_id', 'is_answer', 'file')
     list_filter = ('user', 'is_answer')
 
 
 @admin.register(Answer2)
 class Answer2Admin(admin.ModelAdmin):
-    list_display = ('question', 'user', 'content', 'uuid_id', 'is_answer')
+    list_display = ('question', 'user', 'content', 'uuid_id', 'is_answer', 'file')
     list_filter = ('user', 'is_answer')
 
 
 @admin.register(Answer3)
 class Answer3Admin(admin.ModelAdmin):
-    list_display = ('question', 'user', 'content', 'uuid_id', 'is_answer')
+    list_display = ('question', 'user', 'content', 'uuid_id', 'is_answer', 'file')
     list_filter = ('user', 'is_answer')
 
 
 @admin.register(Answer4)
 class Answer4Admin(admin.ModelAdmin):
-    list_display = ('question', 'user', 'content', 'uuid_id', 'is_answer')
+    list_display = ('question', 'user', 'content', 'uuid_id', 'is_answer', 'file')
     list_filter = ('user', 'is_answer')
 
 
 @admin.register(Answer5)
 class Answer5Admin(admin.ModelAdmin):
-    list_display = ('question', 'user', 'content', 'uuid_id', 'is_answer')
+    list_display = ('question', 'user', 'content', 'uuid_id', 'is_answer', 'file')
     list_filter = ('user', 'is_answer')
 
 
 @admin.register(Answer6)
 class Answer6Admin(admin.ModelAdmin):
-    list_display = ('question', 'user', 'content', 'uuid_id', 'is_answer')
+    list_display = ('question', 'user', 'content', 'uuid_id', 'is_answer', 'file')
     list_filter = ('user', 'is_answer')
 
 
 @admin.register(Answer7)
 class Answer7Admin(admin.ModelAdmin):
-    list_display = ('question', 'user', 'content', 'uuid_id', 'is_answer')
+    list_display = ('question', 'user', 'content', 'uuid_id', 'is_answer', 'file')
     list_filter = ('user', 'is_answer')
 
 
 @admin.register(Answer8)
 class Answer8Admin(admin.ModelAdmin):
-    list_display = ('question', 'user', 'content', 'uuid_id', 'is_answer')
+    list_display = ('question', 'user', 'content', 'uuid_id', 'is_answer', 'file')
     list_filter = ('user', 'is_answer')

@@ -4,5 +4,5 @@ from bootcamp.articles.models import Article
 
 @admin.register(Article)
 class ArticleAdmin(admin.ModelAdmin):
-    list_display = ('title', 'user', 'status')
+    list_display = ('title', 'user', 'status', 'file')
     list_filter = ('user', 'status', 'timestamp')

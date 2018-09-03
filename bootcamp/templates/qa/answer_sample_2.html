@@ -3,15 +3,15 @@
 <div class="row answer" answer-id="{{ answer.uuid_id }}">
   {% csrf_token %}
   <div class="col-md-1 options">
-    <i class="fa fa-chevron-up vote up-vote answer-vote {% if request.user in answer.get_upvoters %}voted{% endif %}" aria-hidden="true" title="{% trans 'Click to up vote; click again to toggle' %}"></i>
-    <span id="answerVotes" class="votes">{{ answer.total_votes }}</span>
-    <i class="fa fa-chevron-down vote down-vote answer-vote {% if request.user in answer.get_downvoters %}voted{% endif %}" aria-hidden="true" title="{% trans 'Click to down vote; click again to toggle' %}"></i>
+    <i class="fa fa-chevron-up vote up-vote answer-vote2 {% if request.user in answer.get_upvoters %}voted{% endif %}" aria-hidden="true" title="{% trans 'Нажмите для голосования вверх; нажмите снова, чтобы переключиться' %}"></i>
+    <span id="answerVotes2" class="votes">{{ answer.total_votes }}</span>
+    <i class="fa fa-chevron-down vote down-vote answer-vote2 {% if request.user in answer.get_downvoters %}voted{% endif %}" aria-hidden="true" title="{% trans 'Нажмите для голосования вниз; нажмите снова, чтобы переключиться' %}"></i>
     {% if answer.is_answer and user == question.user %}
-      <i id="acceptAnswer" class="fa fa-check accept accepted" aria-hidden="true" title="{% trans 'Click to unaccept the answer' %}"></i>
+      <i id="acceptAnswer2" class="fa fa-check accept accepted" aria-hidden="true" title="{% trans 'Нажмите, чтобы не принимать ответ' %}"></i>
     {% elif answer.is_answer %}
-      <i id="acceptAnswer" class="fa fa-check accept accepted" aria-hidden="true" style="cursor: default"></i>
+      <i id="acceptAnswer2" class="fa fa-check accept accepted" aria-hidden="true" style="cursor: default"></i>
     {% elif user == question.user %}
-      <i id="acceptAnswer" class="fa fa-check accept" aria-hidden="true" title="{% trans 'Click to accept the answer' %}"></i>
+      <i id="acceptAnswer2" class="fa fa-check accept" aria-hidden="true" title="{% trans 'Нажмите, чтобы принять ответ' %}"></i>
     {% endif %}
   </div>
   <div class="col-md-11" style="margin-top:1.2rem">
@@ -23,6 +23,9 @@
     </div>
     <div class="answer-description">
       {{ answer.get_markdown|safe }}
+        {% if answer.file %}
+                <p>Прикрепленный файл: <span class="fa fa-folder" style="color:#ffb100"></span><a href="{{ answer.file.url }}">{{ answer.filename }}</a></p>
+        {% endif %}
     </div>
   </div>
 </div>

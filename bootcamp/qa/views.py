@@ -92,7 +92,8 @@ class CreateAnswerView(LoginRequiredMixin, CreateView):
     View to create new answers for a given question
     """
     model = Answer
-    fields = ["content", ]
+    fields = ["content", "file", ]
+    template_name = "qa/answer_form.html"
 
     # message = _("Спасибо! Ваш ответ опубликован.")
 
@@ -177,7 +178,7 @@ class CreateAnswer2View(LoginRequiredMixin, CreateView):
     View [2] to create new answers for a given question
     """
     model = Answer2
-    fields = ["content", ]
+    fields = ["content", "file", ]
     template_name = "qa/answer_form_2.html"
 
     # message = _("Спасибо! Ваш ответ опубликован.")
@@ -263,8 +264,8 @@ class CreateAnswer3View(LoginRequiredMixin, CreateView):
     View [3] to create new answers for a given question
     """
     model = Answer3
+    fields = ["content", "file", ]
     template_name = "qa/answer_form_3.html"
-    fields = ["content", ]
 
     # message = _("Спасибо! Ваш ответ опубликован.")
 
@@ -349,8 +350,8 @@ class CreateAnswer4View(LoginRequiredMixin, CreateView):
     View [4] to create new answers for a given question
     """
     model = Answer4
+    fields = ["content", "file", ]
     template_name = "qa/answer_form_4.html"
-    fields = ["content", ]
 
     # message = _("Спасибо! Ваш ответ опубликован.")
 
@@ -435,8 +436,8 @@ class CreateAnswer5View(LoginRequiredMixin, CreateView):
     View [5] to create new answers for a given question
     """
     model = Answer5
+    fields = ["content", "file", ]
     template_name = "qa/answer_form_5.html"
-    fields = ["content", ]
 
     # message = _("Спасибо! Ваш ответ опубликован.")
 
@@ -521,8 +522,8 @@ class CreateAnswer6View(LoginRequiredMixin, CreateView):
     View [6] to create new answers for a given question
     """
     model = Answer6
+    fields = ["content", "file", ]
     template_name = "qa/answer_form_6.html"
-    fields = ["content", ]
 
     # message = _("Спасибо! Ваш ответ опубликован.")
 
@@ -607,9 +608,8 @@ class CreateAnswer7View(LoginRequiredMixin, CreateView):
     View [7] to create new answers for a given question
     """
     model = Answer7
+    fields = ["content", "file", ]
     template_name = "qa/answer_form_7.html"
-    fields = ["content", ]
-
     # message = _("Спасибо! Ваш ответ опубликован.")
 
     def form_valid(self, form):
@@ -693,9 +693,8 @@ class CreateAnswer8View(LoginRequiredMixin, CreateView):
     View [8] to create new answers for a given question
     """
     model = Answer8
+    fields = ["content", "file", ]
     template_name = "qa/answer_form_8.html"
-    fields = ["content", ]
-
     # message = _("Спасибо! Ваш ответ опубликован.")
 
     def form_valid(self, form):
@@ -712,6 +711,216 @@ class CreateAnswer8View(LoginRequiredMixin, CreateView):
 @login_required
 @ajax_required
 def question_vote(request):
+    """Function view to receive AJAX call, returns the count of votes a given
+    question has recieved."""
+    if request.method == "POST":
+        question_id = request.POST["question"]
+        value = None
+        if request.POST["value"] == "U":
+            value = True
+
+        else:
+            value = False
+
+        question = Question.objects.get(pk=question_id)
+        try:
+            question.votes.update_or_create(
+                user=request.user, defaults={"value": value}, )
+            question.count_votes()
+            return JsonResponse({"votes": question.total_votes})
+
+        except IntegrityError:
+            return JsonResponse({'status': 'false',
+                                 'message': _("Database integrity error.")},
+                                status=500)
+
+    else:
+        return HttpResponseBadRequest(content=_("Wrong request type."))
+
+
+@login_required
+@ajax_required
+def question_vote2(request):
+    """Function view to receive AJAX call, returns the count of votes a given
+    question has recieved."""
+    if request.method == "POST":
+        question_id = request.POST["question"]
+        value = None
+        if request.POST["value"] == "U":
+            value = True
+
+        else:
+            value = False
+
+        question = Question2.objects.get(pk=question_id)
+        try:
+            question.votes.update_or_create(
+                user=request.user, defaults={"value": value}, )
+            question.count_votes()
+            return JsonResponse({"votes": question.total_votes})
+
+        except IntegrityError:
+            return JsonResponse({'status': 'false',
+                                 'message': _("Database integrity error.")},
+                                status=500)
+
+    else:
+        return HttpResponseBadRequest(content=_("Wrong request type."))
+
+
+@login_required
+@ajax_required
+def question_vote3(request):
+    """Function view to receive AJAX call, returns the count of votes a given
+    question has recieved."""
+    if request.method == "POST":
+        question_id = request.POST["question"]
+        value = None
+        if request.POST["value"] == "U":
+            value = True
+
+        else:
+            value = False
+
+        question = Question3.objects.get(pk=question_id)
+        try:
+            question.votes.update_or_create(
+                user=request.user, defaults={"value": value}, )
+            question.count_votes()
+            return JsonResponse({"votes": question.total_votes})
+
+        except IntegrityError:
+            return JsonResponse({'status': 'false',
+                                 'message': _("Database integrity error.")},
+                                status=500)
+
+    else:
+        return HttpResponseBadRequest(content=_("Wrong request type."))
+
+
+@login_required
+@ajax_required
+def question_vote4(request):
+    """Function view to receive AJAX call, returns the count of votes a given
+    question has recieved."""
+    if request.method == "POST":
+        question_id = request.POST["question"]
+        value = None
+        if request.POST["value"] == "U":
+            value = True
+
+        else:
+            value = False
+
+        question = Question4.objects.get(pk=question_id)
+        try:
+            question.votes.update_or_create(
+                user=request.user, defaults={"value": value}, )
+            question.count_votes()
+            return JsonResponse({"votes": question.total_votes})
+
+        except IntegrityError:
+            return JsonResponse({'status': 'false',
+                                 'message': _("Database integrity error.")},
+                                status=500)
+
+    else:
+        return HttpResponseBadRequest(content=_("Wrong request type."))
+
+
+@login_required
+@ajax_required
+def question_vote5(request):
+    """Function view to receive AJAX call, returns the count of votes a given
+    question has recieved."""
+    if request.method == "POST":
+        question_id = request.POST["question"]
+        value = None
+        if request.POST["value"] == "U":
+            value = True
+
+        else:
+            value = False
+
+        question = Question5.objects.get(pk=question_id)
+        try:
+            question.votes.update_or_create(
+                user=request.user, defaults={"value": value}, )
+            question.count_votes()
+            return JsonResponse({"votes": question.total_votes})
+
+        except IntegrityError:
+            return JsonResponse({'status': 'false',
+                                 'message': _("Database integrity error.")},
+                                status=500)
+
+    else:
+        return HttpResponseBadRequest(content=_("Wrong request type."))
+
+
+@login_required
+@ajax_required
+def question_vote6(request):
+    """Function view to receive AJAX call, returns the count of votes a given
+    question has recieved."""
+    if request.method == "POST":
+        question_id = request.POST["question"]
+        value = None
+        if request.POST["value"] == "U":
+            value = True
+
+        else:
+            value = False
+
+        question = Question6.objects.get(pk=question_id)
+        try:
+            question.votes.update_or_create(
+                user=request.user, defaults={"value": value}, )
+            question.count_votes()
+            return JsonResponse({"votes": question.total_votes})
+
+        except IntegrityError:
+            return JsonResponse({'status': 'false',
+                                 'message': _("Database integrity error.")},
+                                status=500)
+
+    else:
+        return HttpResponseBadRequest(content=_("Wrong request type."))
+
+
+@login_required
+@ajax_required
+def question_vote7(request):
+    """Function view to receive AJAX call, returns the count of votes a given
+    question has recieved."""
+    if request.method == "POST":
+        question_id = request.POST["question"]
+        value = None
+        if request.POST["value"] == "U":
+            value = True
+
+        else:
+            value = False
+
+        question = Question7.objects.get(pk=question_id)
+        try:
+            question.votes.update_or_create(
+                user=request.user, defaults={"value": value}, )
+            question.count_votes()
+            return JsonResponse({"votes": question.total_votes})
+
+        except IntegrityError:
+            return JsonResponse({'status': 'false',
+                                 'message': _("Database integrity error.")},
+                                status=500)
+
+    else:
+        return HttpResponseBadRequest(content=_("Wrong request type."))
+
+
+@login_required
+@ajax_required
+def question_vote8(request):
     """Function view to receive AJAX call, returns the count of votes a given
     question has recieved."""
     if request.method == "POST":
@@ -771,12 +980,327 @@ def answer_vote(request):
 
 @login_required
 @ajax_required
+def answer_vote2(request):
+    """Function view to receive AJAX call, returns the count of votes a given
+    answer has recieved."""
+    if request.method == "POST":
+        answer_id = request.POST["answer"]
+        value = None
+        if request.POST["value"] == "U":
+            value = True
+
+        else:
+            value = False
+
+        answer = Answer2.objects.get(uuid_id=answer_id)
+        try:
+            answer.votes.update_or_create(
+                user=request.user, defaults={"value": value}, )
+            answer.count_votes()
+            return JsonResponse({"votes": answer.total_votes})
+
+        except IntegrityError:
+            return JsonResponse({'status': 'false',
+                                 'message': _("Database integrity error.")},
+                                status=500)
+
+    else:
+        return HttpResponseBadRequest(content=_("Wrong request type."))
+
+
+@login_required
+@ajax_required
+def answer_vote3(request):
+    """Function view to receive AJAX call, returns the count of votes a given
+    answer has recieved."""
+    if request.method == "POST":
+        answer_id = request.POST["answer"]
+        value = None
+        if request.POST["value"] == "U":
+            value = True
+
+        else:
+            value = False
+
+        answer = Answer3.objects.get(uuid_id=answer_id)
+        try:
+            answer.votes.update_or_create(
+                user=request.user, defaults={"value": value}, )
+            answer.count_votes()
+            return JsonResponse({"votes": answer.total_votes})
+
+        except IntegrityError:
+            return JsonResponse({'status': 'false',
+                                 'message': _("Database integrity error.")},
+                                status=500)
+
+    else:
+        return HttpResponseBadRequest(content=_("Wrong request type."))
+
+
+@login_required
+@ajax_required
+def answer_vote4(request):
+    """Function view to receive AJAX call, returns the count of votes a given
+    answer has recieved."""
+    if request.method == "POST":
+        answer_id = request.POST["answer"]
+        value = None
+        if request.POST["value"] == "U":
+            value = True
+
+        else:
+            value = False
+
+        answer = Answer4.objects.get(uuid_id=answer_id)
+        try:
+            answer.votes.update_or_create(
+                user=request.user, defaults={"value": value}, )
+            answer.count_votes()
+            return JsonResponse({"votes": answer.total_votes})
+
+        except IntegrityError:
+            return JsonResponse({'status': 'false',
+                                 'message': _("Database integrity error.")},
+                                status=500)
+
+    else:
+        return HttpResponseBadRequest(content=_("Wrong request type."))
+
+
+@login_required
+@ajax_required
+def answer_vote5(request):
+    """Function view to receive AJAX call, returns the count of votes a given
+    answer has recieved."""
+    if request.method == "POST":
+        answer_id = request.POST["answer"]
+        value = None
+        if request.POST["value"] == "U":
+            value = True
+
+        else:
+            value = False
+
+        answer = Answer5.objects.get(uuid_id=answer_id)
+        try:
+            answer.votes.update_or_create(
+                user=request.user, defaults={"value": value}, )
+            answer.count_votes()
+            return JsonResponse({"votes": answer.total_votes})
+
+        except IntegrityError:
+            return JsonResponse({'status': 'false',
+                                 'message': _("Database integrity error.")},
+                                status=500)
+
+    else:
+        return HttpResponseBadRequest(content=_("Wrong request type."))
+
+
+@login_required
+@ajax_required
+def answer_vote6(request):
+    """Function view to receive AJAX call, returns the count of votes a given
+    answer has recieved."""
+    if request.method == "POST":
+        answer_id = request.POST["answer"]
+        value = None
+        if request.POST["value"] == "U":
+            value = True
+
+        else:
+            value = False
+
+        answer = Answer6.objects.get(uuid_id=answer_id)
+        try:
+            answer.votes.update_or_create(
+                user=request.user, defaults={"value": value}, )
+            answer.count_votes()
+            return JsonResponse({"votes": answer.total_votes})
+
+        except IntegrityError:
+            return JsonResponse({'status': 'false',
+                                 'message': _("Database integrity error.")},
+                                status=500)
+
+    else:
+        return HttpResponseBadRequest(content=_("Wrong request type."))
+
+
+@login_required
+@ajax_required
+def answer_vote7(request):
+    """Function view to receive AJAX call, returns the count of votes a given
+    answer has recieved."""
+    if request.method == "POST":
+        answer_id = request.POST["answer"]
+        value = None
+        if request.POST["value"] == "U":
+            value = True
+
+        else:
+            value = False
+
+        answer = Answer7.objects.get(uuid_id=answer_id)
+        try:
+            answer.votes.update_or_create(
+                user=request.user, defaults={"value": value}, )
+            answer.count_votes()
+            return JsonResponse({"votes": answer.total_votes})
+
+        except IntegrityError:
+            return JsonResponse({'status': 'false',
+                                 'message': _("Database integrity error.")},
+                                status=500)
+
+    else:
+        return HttpResponseBadRequest(content=_("Wrong request type."))
+
+
+@login_required
+@ajax_required
+def answer_vote8(request):
+    """Function view to receive AJAX call, returns the count of votes a given
+    answer has recieved."""
+    if request.method == "POST":
+        answer_id = request.POST["answer"]
+        value = None
+        if request.POST["value"] == "U":
+            value = True
+
+        else:
+            value = False
+
+        answer = Answer8.objects.get(uuid_id=answer_id)
+        try:
+            answer.votes.update_or_create(
+                user=request.user, defaults={"value": value}, )
+            answer.count_votes()
+            return JsonResponse({"votes": answer.total_votes})
+
+        except IntegrityError:
+            return JsonResponse({'status': 'false',
+                                 'message': _("Database integrity error.")},
+                                status=500)
+
+    else:
+        return HttpResponseBadRequest(content=_("Wrong request type."))
+
+
+@login_required
+@ajax_required
 def accept_answer(request):
     """Function view to receive AJAX call, marks as accepted a given answer for
     an also provided question."""
     if request.method == "POST":
         answer_id = request.POST["answer"]
         answer = Answer.objects.get(uuid_id=answer_id)
+        answer.accept_answer()
+        return JsonResponse({'status': 'true'}, status=200)
+
+    else:
+        return HttpResponseBadRequest(content=_("Wrong request type."))
+
+
+@login_required
+@ajax_required
+def accept_answer2(request):
+    """Function view to receive AJAX call, marks as accepted a given answer for
+    an also provided question."""
+    if request.method == "POST":
+        answer_id = request.POST["answer"]
+        answer = Answer2.objects.get(uuid_id=answer_id)
+        answer.accept_answer()
+        return JsonResponse({'status': 'true'}, status=200)
+
+    else:
+        return HttpResponseBadRequest(content=_("Wrong request type."))
+
+
+@login_required
+@ajax_required
+def accept_answer3(request):
+    """Function view to receive AJAX call, marks as accepted a given answer for
+    an also provided question."""
+    if request.method == "POST":
+        answer_id = request.POST["answer"]
+        answer = Answer3.objects.get(uuid_id=answer_id)
+        answer.accept_answer()
+        return JsonResponse({'status': 'true'}, status=200)
+
+    else:
+        return HttpResponseBadRequest(content=_("Wrong request type."))
+
+
+@login_required
+@ajax_required
+def accept_answer4(request):
+    """Function view to receive AJAX call, marks as accepted a given answer for
+    an also provided question."""
+    if request.method == "POST":
+        answer_id = request.POST["answer"]
+        answer = Answer4.objects.get(uuid_id=answer_id)
+        answer.accept_answer()
+        return JsonResponse({'status': 'true'}, status=200)
+
+    else:
+        return HttpResponseBadRequest(content=_("Wrong request type."))
+
+
+@login_required
+@ajax_required
+def accept_answer5(request):
+    """Function view to receive AJAX call, marks as accepted a given answer for
+    an also provided question."""
+    if request.method == "POST":
+        answer_id = request.POST["answer"]
+        answer = Answer5.objects.get(uuid_id=answer_id)
+        answer.accept_answer()
+        return JsonResponse({'status': 'true'}, status=200)
+
+    else:
+        return HttpResponseBadRequest(content=_("Wrong request type."))
+
+
+@login_required
+@ajax_required
+def accept_answer6(request):
+    """Function view to receive AJAX call, marks as accepted a given answer for
+    an also provided question."""
+    if request.method == "POST":
+        answer_id = request.POST["answer"]
+        answer = Answer6.objects.get(uuid_id=answer_id)
+        answer.accept_answer()
+        return JsonResponse({'status': 'true'}, status=200)
+
+    else:
+        return HttpResponseBadRequest(content=_("Wrong request type."))
+
+
+@login_required
+@ajax_required
+def accept_answer7(request):
+    """Function view to receive AJAX call, marks as accepted a given answer for
+    an also provided question."""
+    if request.method == "POST":
+        answer_id = request.POST["answer"]
+        answer = Answer7.objects.get(uuid_id=answer_id)
+        answer.accept_answer()
+        return JsonResponse({'status': 'true'}, status=200)
+
+    else:
+        return HttpResponseBadRequest(content=_("Wrong request type."))
+
+
+@login_required
+@ajax_required
+def accept_answer8(request):
+    """Function view to receive AJAX call, marks as accepted a given answer for
+    an also provided question."""
+    if request.method == "POST":
+        answer_id = request.POST["answer"]
+        answer = Answer8.objects.get(uuid_id=answer_id)
         answer.accept_answer()
         return JsonResponse({'status': 'true'}, status=200)
 

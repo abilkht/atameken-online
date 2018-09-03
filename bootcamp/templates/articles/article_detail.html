@@ -34,10 +34,13 @@
         {% empty %}
           <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="Фото карточки">
         {% endthumbnail %}
-        <!-- <img src="{{ MEDIA_URL }}{{ article.image }}" lt="{% trans 'Featured Image' %}" class="card-img-top"> -->
+        <!-- <img src="{{ MEDIA_URL }}{{ article.image }}" lt="{% trans 'Картинка статьи' %}" class="card-img-top"> -->
         <hr>
         <!-- Post Content -->
         <p class="card-text">{{ article.get_markdown|safe }}</p>
+            {% if article.file %}
+                <p style="font-size:1.2rem">   <b>Прикрепленный файл:</b>  <span class="fa fa-folder" style="color:#ffb100"></span> <a href="{{ article.file.url }}">{{ article.filename }}</a></p>
+            {% endif %}
         <hr>
 
         <!-- Comments Form -->
