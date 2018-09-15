@@ -12,13 +12,13 @@
 {% block content %}
   <div class="card text-center profile" style="width:70%; margin: auto; margin-top:10px; margin-bottom:10px; box-shadow: 0 0 10px rgba(0,0,0,0.5); background: #F5F5F5">
     <div class="user-profile" style="text-align: center">
-      {% if user.name %}<h3 class="font-weight-bold">{{ user.name }}</h3>{% endif %}
+      {% if user.name %}<h3 class="font-weight-bold" style="margin-top:1rem">{{ user.name }}</h3>{% endif %}
       {% if user.picture %}
         {% thumbnail user.picture "x250" as im %}
-          <img src="{{ im.url }}" alt="Картинка профиля" id="pic" style="width:50%;padding-top: 10px" class="rounded-circle">
+          <img src="{{ im.url }}" alt="Картинка профиля" id="pic" style="width:50%;margin-top:10px;margin-bottom:10px;box-shadow: 0 0 20px rgba(0.5,0,0.5,0.5);" class="card-img-top">
         {% endthumbnail %}
       {% else %}
-        <img src="{% static 'img/user.png' %}" alt="Нет фото" class="rounded-circle" style="width:50%; padding-top: 10px"/>
+        <img src="{% static 'img/user.png' %}" alt="Нет фото" class="card-img-top" style="width:50%; padding-top: 10px"/>
       {% endif %}
       <form enctype="multipart/form-data" class="form-horizontal" method="post" action="{% url 'users:update' %}" style="width:90%; margin:auto">
         {% csrf_token %}

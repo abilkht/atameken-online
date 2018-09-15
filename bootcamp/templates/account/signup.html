@@ -5,25 +5,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>{% trans 'Вход Аккаунта' %}</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-  	<link rel="icon" type="image/png" href="{% static 'img/atahome.png' %}">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="{% static 'fonts/Linearicons-Free-v1.0.0/icon-font.min.css' %}">
-	<link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}">
-	<link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+ <title>{% trans 'Вход Аккаунта' %}</title>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="icon" type="image/png" href="{% static 'img/atahome.png' %}">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ <link rel="stylesheet" type="text/css" href="{% static 'fonts/Linearicons-Free-v1.0.0/icon-font.min.css' %}">
+ <link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}">
+ <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
 </head>
 <body>
 
-	<div class="limiter">
-		<div class="container-login100">
-			<div class="wrap-login100 p-l-85 p-r-85 p-t-55 p-b-55" style="box-shadow: 0 0 10px rgba(0,0,0,0.5); background-color: #ebebeb;">
+ <div class="limiter">
+  <div class="container-login100">
+   <div class="wrap-login100 p-l-85 p-r-85 p-t-55 p-b-55" style="box-shadow: 0 0 10px rgba(0,0,0,0.5); background-color: #ebebeb;">
         <span class="login100-form-title p-b-32" style="text-align: center; margin-bottom:-10px">{% trans 'Регистрация' %}</span>
-				<span class="txt3">
+    <span class="txt3">
            <center> <p>{% blocktrans %}Если вы уже зарегистрированы, то <a href="{{ login_url }}" style="color:#004a7a;">авторизуйтесь</a>.{% endblocktrans %}</p></center>
-				</span>
+    </span>
             <br>
+
 
         <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
           {% csrf_token %}
@@ -32,12 +33,17 @@
           <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" class="form-control"/>
           {% endif %}
           <div class="form-group container-login100-form-btn">
-            <button type="submit" class="btn btn-secondary" style="background-color: #004a7a;width:100%;margin-top: 20px">{% trans 'Зарегистрироваться' %}</button>
+
+            <button type="submit" class="btn btn-secondary" style="background-color: #004a7a;width:100%;margin-top: 20px" id="btnSubmit" disabled>{% trans 'Зарегистрироваться' %}</button>
           </div>
         </form>
-			</div>
-		</div>
-	</div>
+        <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" value="option1" id="chkAgree" onclick="goFurther()">
+              <small>* Я соглашаюсь с <a href="" style="font-size:100%">правилами использования</a> портала Atameken Online.</small>
+          </div>
+   </div>
+  </div>
+ </div>
 </body>
 </html>
 <style type="text/css">
@@ -50,3 +56,11 @@
     }
 
 </style>
+<script type="text/javascript">
+function goFurther(){
+if (document.getElementById("chkAgree").checked == true)
+document.getElementById("btnSubmit").disabled = false;
+else
+document.getElementById("btnSubmit").disabled = true;
+}
+</script>

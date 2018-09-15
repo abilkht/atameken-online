@@ -3,6 +3,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import CreateView, ListView, UpdateView, DetailView
 from django.urls import reverse
 from django.utils.translation import ugettext_lazy as _
+from hitcount.views import HitCountDetailView
 
 from bootcamp.helpers import AuthorRequiredMixin
 from bootcamp.articles.models import Article
@@ -63,6 +64,7 @@ class EditArticleView(LoginRequiredMixin, AuthorRequiredMixin, UpdateView):
         return reverse('articles:list')
 
 
-class DetailArticleView(LoginRequiredMixin, DetailView):
+class DetailArticleView(LoginRequiredMixin, HitCountDetailView):
     """Basic DetailView implementation to call an individual article."""
     model = Article
+    count_hit = True

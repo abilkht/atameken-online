@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% load static i18n %}
 {% load comments crispy_forms_tags thumbnail humanize %}
+{% load hitcount_tags %}
+
 
 {% block title %}{{ article.title|title }}{% endblock %}
 
@@ -17,16 +19,14 @@
       <!-- Post Content Column -->
       <div class="col-lg-8">
         <!-- Title -->
-        <h2 class="mt-4" id="titleArticle" style=" text-transform:uppercase;text-align: center;">{{ article.title|title }}</h2>
+        <h2 class="mt-4" id="titleArticle" style=" text-transform:uppercase;text-align: center;"> {{ article.title|title }}</h2>
         <hr>
         <!-- Author -->
 
-        <i class="lead fa fa-user"></i> Автор:
-          <a href="{% url 'users:detail' article.user.username %}">{{ article.user.get_profile_name|title }}</a>
-        </p>
-
-        <!-- Date/Time -->
-        <p><i class="lead fa fa-clock-o"></i>{% trans ' Опубликован в' %} {{ article.timestamp|date:'d.m.Y, G:i '  }}  </p>
+        <i class="lead fa fa-user"></i>
+          <a href="{% url 'users:detail' article.user.username %}"> {{ article.user.get_profile_name|title }}</a>
+&nbsp;|&nbsp;&nbsp;<i class="lead fa fa-clock-o"></i>  {{ article.timestamp|date:'d.m.Y, G:i '  }}
+         |&nbsp;&nbsp;<i class="lead fa fa-eye"></i> {% get_hit_count for article %}
         <hr>
         <!-- Featured Image -->
         {% thumbnail article.image "900x300" as im %}
@@ -38,11 +38,14 @@
         <hr>
         <!-- Post Content -->
         <p class="card-text">{{ article.get_markdown|safe }}</p>
+        <hr>
             {% if article.file %}
                 <p style="font-size:1.2rem">   <b>Прикрепленный файл:</b>  <span class="fa fa-folder" style="color:#ffb100"></span> <a href="{{ article.file.url }}">{{ article.filename }}</a></p>
             {% endif %}
         <hr>
 
+        <p>Ссылка на соответствующее обсуждение: <a href="http://localhost:8000/qa/question-detail-7/1/">Нажмите чтобы обсудить</a></p>
+        <hr>
         <!-- Comments Form -->
         <div class="card my-4">
           <h5 class="card-header">{% trans 'Оставить комментарий' %}:</h5>

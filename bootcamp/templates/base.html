@@ -38,7 +38,7 @@
                 </div>
 
                 <div>
-                  <a class="navbar-brand" href="{% url 'news:list' %}" style="color: #004a7a;" id="company">
+                  <a class="navbar-brand" href="{% url 'articles:list' %}" style="color: #004a7a;" id="company">
                     <img src="https://pbs.twimg.com/profile_images/514398182051041280/0Bxydy03.png" width="30" height="30" class="d-inline-block align-top" alt="">
                     Atameken <font color="#ffb100">Online</font></a>
                 </div>
@@ -67,11 +67,11 @@
                 </ul>
 
                 <ul class="menu navbar-nav mr-auto">
+{#                  <li class="nav-item">#}
+{#                    <a class="nav-link" href="{% url 'news:list' %}" style="color: #004a7a;">{% trans 'Новости' %} <span class="sr-only">(current)</span></a>#}
+{#                  </li>#}
                   <li class="nav-item">
-                    <a class="nav-link" href="{% url 'news:list' %}" style="color: #004a7a;">{% trans 'Новости' %} <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url 'articles:list' %}" style="color: #004a7a;">Лента</a>
+                    <a class="nav-link" href="{% url 'articles:list' %}" style="color: #004a7a;">Новостная лента</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="{% url 'qa:question_main' %}" style="color: #004a7a;">{% trans 'Обсуждения' %}</a>

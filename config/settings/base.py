@@ -81,6 +81,7 @@ THIRD_PARTY_APPS = [
     'graphene_django',
     'markdownx',
     'taggit',
+    'hitcount',
 ]
 LOCAL_APPS = [
     'bootcamp.users.apps.UsersConfig',
