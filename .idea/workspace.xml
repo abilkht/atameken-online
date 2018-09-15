@@ -2,48 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a6c94aa-ae33-4415-9930-5acbfd8452ac" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/articles/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/articles/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/templates/account/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/templates/account/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/templates/articles/article_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/templates/articles/article_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/templates/qa/question_fake_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/templates/qa/question_fake_main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/templates/qa/question_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/templates/qa/question_main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/templates/users/user_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/templates/users/user_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/templates/users/user_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/templates/users/user_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/users/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootcamp/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/bootcamp/users/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/allauth/account/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/allauth/account/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/allauth/templates/account/messages/email_confirmation_sent.txt" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/allauth/templates/account/messages/email_confirmation_sent.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/allauth/templates/account/messages/email_confirmed.txt" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/allauth/templates/account/messages/email_confirmed.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/allauth/templates/account/messages/logged_in.txt" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/allauth/templates/account/messages/logged_in.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/allauth/templates/account/messages/logged_out.txt" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/allauth/templates/account/messages/logged_out.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/allauth/templates/account/messages/password_changed.txt" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/allauth/templates/account/messages/password_changed.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/allauth/templates/account/messages/password_set.txt" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/allauth/templates/account/messages/password_set.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/allauth/templates/account/messages/unverified_primary_email.txt" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/allauth/templates/account/messages/unverified_primary_email.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/compose/GITSHA" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/compose/GITSHA" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/compose/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/compose/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/compose/cli/docker_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/compose/cli/docker_client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/compose/config/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/compose/config/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/compose/config/config_schema_v2.4.json" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/compose/config/config_schema_v2.4.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/compose/config/config_schema_v3.7.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/compose/config/interpolation.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/compose/config/interpolation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/compose/config/serialize.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/compose/config/serialize.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/compose/const.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/compose/const.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/compose/container.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/compose/container.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/compose/project.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/compose/project.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/compose/service.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/compose/service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/compose/volume.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/compose/volume.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/docker_compose-1.22.0.dist-info/INSTALLER" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/docker_compose-1.22.0.dist-info/METADATA" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/docker_compose-1.22.0.dist-info/RECORD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/docker_compose-1.22.0.dist-info/WHEEL" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/docker_compose-1.22.0.dist-info/entry_points.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/docker_compose-1.22.0.dist-info/pbr.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/docker_compose-1.22.0.dist-info/top_level.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -86,11 +45,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user_detail.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="user_detail.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bootcamp/templates/users/user_detail.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="335">
               <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="12" selection-start-column="12" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -148,7 +116,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/bootcamp/articles/forms.py" />
         <option value="$PROJECT_DIR$/bootcamp/templates/articles/article_list.html" />
         <option value="$PROJECT_DIR$/bootcamp/templates/pages/home.html" />
         <option value="$PROJECT_DIR$/bootcamp/articles/models.py" />
@@ -199,6 +166,7 @@
         <option value="$PROJECT_DIR$/env/lib/python3.6/site-packages/allauth/templates/account/messages/email_confirmed.txt" />
         <option value="$PROJECT_DIR$/env/lib/python3.6/site-packages/allauth/templates/account/messages/email_confirmation_sent.txt" />
         <option value="$PROJECT_DIR$/bootcamp/templates/users/user_detail.html" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -221,6 +189,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -237,7 +206,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -298,15 +266,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32969698" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50214595" side_tool="true" weight="0.32969698" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5028612" side_tool="true" weight="0.32969698" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32969698" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32969698" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49785408" visible="true" weight="0.32969698" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8499096" visible="true" weight="0.21459228" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49713877" visible="true" weight="0.32969698" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8499096" visible="true" weight="0.21745351" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.3297568" />
       <window_info anchor="right" id="SciView" order="4" weight="0.3297568" />
@@ -334,11 +303,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/env/lib/python3.6/site-packages/allauth/templates/account/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-274" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/env/lib/python3.6/site-packages/allauth/templates/account/logout.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -551,6 +515,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="335">
           <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" selection-start-column="12" selection-end-column="12" />
         </state>
       </provider>
     </entry>
