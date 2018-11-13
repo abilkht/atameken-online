@@ -1,1 +1,13 @@
-bootcamp.zip
+.elasticbeanstalk/
+
+.idea/
+
+.DS_Store
+
+.env
+
+env/
+
+staticfiles
+
+
