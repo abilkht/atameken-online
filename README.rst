@@ -1,8 +1,15 @@
+
 Atameken Online
 ========
-
 A social-network-like platform for a local company
 
+
+⚡️Features:
+
+* 📝Blog
+* 🔍News
+* 💬Forum (like Stack Overflow)
+* 🆘Admin call
 
 Technology Stack
 ----------------
